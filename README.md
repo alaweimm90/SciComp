@@ -1,4 +1,4 @@
-# SciComp: Professional Scientific Computing Portfolio
+# SciComp: Unified Scientific Computing Framework
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)](https://www.python.org/downloads/)
@@ -7,7 +7,16 @@
 [![Build Status](https://img.shields.io/badge/Build-Passing-green.svg)]()
 [![Coverage](https://img.shields.io/badge/Coverage-95%25-brightgreen.svg)]()
 
-*A comprehensive, cross-platform scientific computing framework for quantum physics, quantum computing, and physics-informed machine learning.*
+*A unified, cross-platform scientific computing framework for a wide range of topics in physics, mathematics, machine learning, and scientific computing — implemented in Python, MATLAB, and Mathematica.*
+
+**Core subject areas covered (fully implemented):**
+
+- Quantum Physics, Quantum Computing, Quantum Materials  
+- Statistical Physics, Condensed Matter, Spintronics  
+- ML Physics, Crystallography, Elasticity, FEM  
+- Thermal Transport, Optics, Signal Processing  
+- Control, Optimization, Linear Algebra, ODE/PDE  
+- Symbolic Algebra, Utils, Visualization
 
 **Author**: Dr. Meshal Alawein ([meshal@berkeley.edu](mailto:meshal@berkeley.edu))  
 **Institution**: University of California, Berkeley  
@@ -15,7 +24,7 @@
 
 ---
 
-## 🎯 Project Overview
+## Project Overview
 
 SciComp is a professional-grade scientific computing repository that showcases expertise in computational physics, quantum computing, and scientific machine learning. This comprehensive framework provides cross-platform implementations in Python, MATLAB, and Mathematica, designed for both research applications and educational purposes.
 
@@ -28,7 +37,7 @@ SciComp is a professional-grade scientific computing repository that showcases e
 🔧 **Cross-Platform**: Equivalent implementations across Python, MATLAB, and Mathematica  
 🎓 **Educational**: Comprehensive documentation, tutorials, and worked examples  
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Python Installation
 
@@ -68,7 +77,7 @@ plot.wavefunction(x, psi_0, title="Ground State Wavefunction")
 plot.show()
 ```
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```
 SciComp/
@@ -88,7 +97,7 @@ SciComp/
 └── docs/                    # Documentation
 ```
 
-## 🔬 Scientific Modules
+## Scientific Modules
 
 ### Quantum Physics
 - **Quantum Dynamics**: TDSE solver, wavepacket evolution, tunneling
@@ -108,7 +117,7 @@ SciComp/
 - **Quantum ML**: Variational classifiers, quantum kernels
 - **Scientific Computing ML**: Acceleration and optimization
 
-## 🎨 Berkeley Visual Identity
+## Berkeley Visual Identity
 
 All visualizations follow UC Berkeley's official color scheme and styling guidelines:
 
@@ -117,7 +126,7 @@ All visualizations follow UC Berkeley's official color scheme and styling guidel
 - **Layout**: Grid-free plots with inward-pointing ticks
 - **Standards**: Publication-ready figures with LaTeX formatting
 
-## 📊 Performance Benchmarks
+## Performance Benchmarks
 
 | Algorithm | Problem Size | Python | MATLAB | Mathematica |
 |-----------|-------------|---------|---------|-------------|
@@ -126,14 +135,14 @@ All visualizations follow UC Berkeley's official color scheme and styling guidel
 | VQE Optimization | 10-qubit system | 45.3s | - | 52.1s |
 | PINN Training | 10⁴ collocation points | 127s | - | 89s |
 
-## 🧪 Testing & Validation
+## Testing & Validation
 
 - **Python**: pytest with 95% coverage, property-based testing
 - **MATLAB**: Built-in unit testing framework
 - **Mathematica**: Verification notebooks with symbolic validation
 - **Cross-Platform**: Numerical equivalence tests across all implementations
 
-## 📚 Documentation
+## Documentation
 
 ### API References
 - [Python API](docs/api/python.md) - Complete function documentation
@@ -151,7 +160,7 @@ All visualizations follow UC Berkeley's official color scheme and styling guidel
 - [Quantum Mechanics](docs/theory/quantum_mechanics.md)
 - [Computational Methods](docs/theory/computational_methods.md)
 
-## 🎓 Educational Examples
+## Educational Examples
 
 ### Beginner Level
 - Particle in a box
@@ -171,7 +180,7 @@ All visualizations follow UC Berkeley's official color scheme and styling guidel
 - Neural quantum states
 - Topological quantum computing
 
-## 🔧 Development
+## Development
 
 ### Contributing
 1. Fork the repository
@@ -197,7 +206,7 @@ matlab -batch "runtests('tests/matlab')"
 python scripts/validate_cross_platform.py
 ```
 
-## 📖 Citation
+## Citation
 
 If you use SciComp in your research, please cite:
 
@@ -211,36 +220,47 @@ If you use SciComp in your research, please cite:
 }
 ```
 
-## 📜 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 **Copyright © 2025 Dr. Meshal Alawein — All rights reserved.**
 
-## 🤝 Connect & Collaborate
+## Connect & Collaborate
 
 <div align="center">
 
-**Dr. Meshal Alawein**  
-*Computational Physicist & Research Scientist*  
+<strong>Dr. Meshal Alawein</strong><br/>
+<em>Computational Physicist & Research Scientist</em><br/>
 University of California, Berkeley
 
 ---
 
-📧 **Email**: [meshal@berkeley.edu](mailto:meshal@berkeley.edu)  
-🌐 **Website**: [malawein.com](https://malawein.com)  
-🔗 **GitHub**: [@alaweimm90](https://github.com/alaweimm90)  
-💼 **LinkedIn**: [meshal-alawein](https://www.linkedin.com/in/meshal-alawein)  
-🔬 **Research Platform**: [simcore.dev](https://simcore.dev)  
-🎓 **Google Scholar**: [IB_E6GQAAAAJ](https://scholar.google.com/citations?user=IB_E6GQAAAAJ&hl=en)
+📧 <a href="mailto:meshal@berkeley.edu" style="color:#003262;">meshal@berkeley.edu</a>
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/meshal-alawein)
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/alaweimm90)
-[![Website](https://img.shields.io/badge/Website-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white)](https://malawein.com)
-[![Google Scholar](https://img.shields.io/badge/Google_Scholar-4285F4?style=for-the-badge&logo=google-scholar&logoColor=white)](https://scholar.google.com/citations?user=IB_E6GQAAAAJ&hl=en)
-[![Research](https://img.shields.io/badge/SimCore-FF6B35?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDJMMTMuMDkgOC4yNkwyMSA5TDEzLjA5IDE1Ljc0TDEyIDIyTDEwLjkxIDE1Ljc0TDMgOUwxMC45MSA4LjI2TDEyIDJaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K&logoColor=white)](https://simcore.dev)
+<a href="https://linkedin.com/in/meshal-alawein" title="LinkedIn">
+  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn" style="height:32px; margin:0 10px; fill:#003262;" />
+</a>
+<a href="https://github.com/alaweimm90" title="GitHub">
+  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub" style="height:32px; margin:0 10px; fill:#003262;" />
+</a>
+<a href="https://malawein.com" title="Website">
+  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/googlechrome.svg" alt="Website" style="height:32px; margin:0 10px; fill:#003262;" />
+</a>
+<a href="https://scholar.google.com/citations?user=IB_E6GQAAAAJ" title="Google Scholar">
+  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/googlescholar.svg" alt="Scholar" style="height:32px; margin:0 10px; fill:#003262;" />
+</a>
+<a href="https://simcore.dev" title="SimCore">
+  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/atom.svg" alt="SimCore" style="height:32px; margin:0 10px; fill:#FDB515;" />
+</a>
 
 </div>
+
+<p align="center"><em>
+Made with love, and a deep respect for the struggle.  
+For those still learning — from someone who still is.  
+Science can be hard. This is my way of helping. ⚛️
+</em></p>
 
 ---
 
