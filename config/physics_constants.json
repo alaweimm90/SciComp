@@ -1,0 +1,124 @@
+{
+  "fundamental_constants": {
+    "speed_of_light": {
+      "value": 299792458.0,
+      "unit": "m/s",
+      "symbol": "c",
+      "uncertainty": 0.0,
+      "source": "2018_CODATA"
+    },
+    "planck_constant": {
+      "value": 6.62607015e-34,
+      "unit": "J⋅s",
+      "symbol": "h",
+      "uncertainty": 0.0,
+      "source": "2018_CODATA"
+    },
+    "reduced_planck_constant": {
+      "value": 1.0545718176461565e-34,
+      "unit": "J⋅s",
+      "symbol": "ℏ",
+      "uncertainty": 0.0,
+      "source": "2018_CODATA"
+    },
+    "elementary_charge": {
+      "value": 1.602176634e-19,
+      "unit": "C",
+      "symbol": "e",
+      "uncertainty": 0.0,
+      "source": "2018_CODATA"
+    },
+    "boltzmann_constant": {
+      "value": 1.380649e-23,
+      "unit": "J/K",
+      "symbol": "kB",
+      "uncertainty": 0.0,
+      "source": "2018_CODATA"
+    },
+    "electron_mass": {
+      "value": 9.1093837015e-31,
+      "unit": "kg",
+      "symbol": "me",
+      "uncertainty": 2.8e-40,
+      "source": "2018_CODATA"
+    },
+    "proton_mass": {
+      "value": 1.67262192369e-27,
+      "unit": "kg",
+      "symbol": "mp",
+      "uncertainty": 5.1e-37,
+      "source": "2018_CODATA"
+    },
+    "fine_structure_constant": {
+      "value": 7.2973525693e-3,
+      "unit": "dimensionless",
+      "symbol": "α",
+      "uncertainty": 1.1e-12,
+      "source": "2018_CODATA"
+    },
+    "bohr_radius": {
+      "value": 5.29177210903e-11,
+      "unit": "m",
+      "symbol": "a₀",
+      "uncertainty": 8.0e-21,
+      "source": "2018_CODATA"
+    },
+    "hartree_energy": {
+      "value": 4.3597447222071e-18,
+      "unit": "J",
+      "symbol": "Eh",
+      "uncertainty": 8.5e-30,
+      "source": "2018_CODATA"
+    }
+  },
+  "derived_constants": {
+    "rydberg_energy": {
+      "value": 13.605693122994,
+      "unit": "eV",
+      "formula": "Eh/2",
+      "symbol": "Ry"
+    },
+    "classical_electron_radius": {
+      "value": 2.8179403262e-15,
+      "unit": "m",
+      "formula": "e²/(4πε₀mec²)",
+      "symbol": "re"
+    },
+    "compton_wavelength": {
+      "value": 2.42631023867e-12,
+      "unit": "m",
+      "formula": "h/(mec)",
+      "symbol": "λC"
+    }
+  },
+  "unit_conversions": {
+    "energy": {
+      "eV_to_J": 1.602176634e-19,
+      "Ry_to_eV": 13.605693122994,
+      "Ha_to_eV": 27.211386245988,
+      "cm-1_to_eV": 1.23984e-4
+    },
+    "length": {
+      "bohr_to_m": 5.29177210903e-11,
+      "angstrom_to_m": 1e-10,
+      "nm_to_m": 1e-9
+    },
+    "time": {
+      "atomic_time_to_s": 2.4188843265857e-17,
+      "fs_to_s": 1e-15,
+      "ps_to_s": 1e-12
+    }
+  },
+  "material_properties": {
+    "vacuum": {
+      "permittivity": 8.8541878128e-12,
+      "permeability": 1.25663706212e-6,
+      "impedance": 376.730313668
+    },
+    "typical_values": {
+      "semiconductor_bandgap_eV": [0.1, 3.5],
+      "metal_work_function_eV": [2.0, 6.0],
+      "superconductor_tc_K": [1.0, 100.0]
+    }
+  }
+}
