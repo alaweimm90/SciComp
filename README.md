@@ -238,7 +238,7 @@ University of California, Berkeley
 
 📧 <a href="mailto:meshal@berkeley.edu" style="color:#003262;">meshal@berkeley.edu</a>
 
-<a href="https://linkedin.com/in/meshal-alawein" title="LinkedIn">
+<a href="https://www.linkedin.com/in/meshal-alawein" title="LinkedIn">
   <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn" height="32" />
 </a>
 <a href="https://github.com/alaweimm90" title="GitHub">
@@ -247,7 +247,7 @@ University of California, Berkeley
 <a href="https://malawein.com" title="Website">
   <img src="https://img.shields.io/badge/Website-003262?style=flat&logo=googlechrome&logoColor=white" alt="Website" height="32" />
 </a>
-<a href="https://scholar.google.com/citations?user=IB_E6GQAAAAJ" title="Google Scholar">
+<a href="https://scholar.google.com/citations?user=IB_E6GQAAAAJ&hl=en" title="Google Scholar">
   <img src="https://img.shields.io/badge/Scholar-4285F4?style=flat&logo=googlescholar&logoColor=white" alt="Scholar" height="32" />
 </a>
 <a href="https://simcore.dev" title="SimCore">
@@ -256,9 +256,9 @@ University of California, Berkeley
 
 </div>
 
-<p align="center"><em>  
-Made with love, and a deep respect for the struggle.  
-For those still learning—from someone who still is.  
+<p align="center"><em>
+Made with love, and a deep respect for the struggle.<br/>
+For those still learning—from someone who still is.<br/>
 Science can be hard. This is my way of helping. ⚛️
 </em></p>
 
