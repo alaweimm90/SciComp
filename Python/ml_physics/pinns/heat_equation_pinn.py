@@ -14,10 +14,10 @@ where:
 - α is thermal diffusivity/diffusion coefficient
 - f(x,t) is source term
 
-Author: Meshal Alawein (meshal@berkeley.edu)
+Author: Dr. Meshal Alawein (meshal@berkeley.edu)
 Institution: University of California, Berkeley
 License: MIT
-Copyright © 2025 Meshal Alawein — All rights reserved.
+Copyright © 2025 Dr. Meshal Alawein — All rights reserved.
 """
 
 import numpy as np

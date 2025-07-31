@@ -3,7 +3,7 @@ message: "If you use this software, please cite it as below."
 type: software
 authors:
 - family-names: "Alawein"
-  given-names: "Meshal"
+  given-names: "Dr. Meshal"
   email: "meshal@berkeley.edu"
   affiliation: "University of California, Berkeley"
   orcid: "https://orcid.org/0009-0009-0009-0009"

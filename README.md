@@ -9,9 +9,9 @@
 
 *A comprehensive, cross-platform scientific computing framework for quantum physics, quantum computing, and physics-informed machine learning.*
 
-**Author**: Meshal Alawein ([meshal@berkeley.edu](mailto:meshal@berkeley.edu))  
+**Author**: Dr. Meshal Alawein ([meshal@berkeley.edu](mailto:meshal@berkeley.edu))  
 **Institution**: University of California, Berkeley  
-**License**: MIT © 2025 Meshal Alawein — All rights reserved
+**License**: MIT © 2025 Dr. Meshal Alawein — All rights reserved
 
 ---
 
@@ -203,7 +203,7 @@ If you use SciComp in your research, please cite:
 
 ```bibtex
 @software{alawein2025scicomp,
-  author = {Meshal Alawein},
+  author = {Dr. Meshal Alawein},
   title = {SciComp: Professional Scientific Computing Portfolio},
   url = {https://github.com/alaweimm90/SciComp},
   year = {2025},
@@ -215,13 +215,13 @@ If you use SciComp in your research, please cite:
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-**Copyright © 2025 Meshal Alawein — All rights reserved.**
+**Copyright © 2025 Dr. Meshal Alawein — All rights reserved.**
 
 ## 🤝 Connect & Collaborate
 
 <div align="center">
 
-**Meshal Alawein**  
+**Dr. Meshal Alawein**  
 *Computational Physicist & Research Scientist*  
 University of California, Berkeley
 

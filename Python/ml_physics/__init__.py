@@ -6,10 +6,10 @@ Cutting-edge ML techniques for scientific computing including physics-informed
 neural networks (PINNs), materials property prediction, quantum machine learning,
 and scientific computing acceleration.
 
-Author: Meshal Alawein (meshal@berkeley.edu)
+Author: Dr. Meshal Alawein (meshal@berkeley.edu)
 Institution: University of California, Berkeley
 License: MIT
-Copyright © 2025 Meshal Alawein — All rights reserved.
+Copyright © 2025 Dr. Meshal Alawein — All rights reserved.
 """
 
 from . import pinns

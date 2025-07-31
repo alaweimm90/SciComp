@@ -29,10 +29,10 @@ Comprehensive implementation of the Variational Quantum Eigensolver (VQE) \
 algorithm in Mathematica, featuring hardware-efficient ansatz circuits, \
 classical optimization, and Berkeley-styled visualization.
 
-Author: Meshal Alawein (meshal@berkeley.edu)
+Author: Dr. Meshal Alawein (meshal@berkeley.edu)
 Institution: University of California, Berkeley
 License: MIT
-Copyright \[Copyright] 2025 Meshal Alawein \[LongDash] All rights reserved.\
+Copyright \[Copyright] 2025 Dr. Meshal Alawein \[LongDash] All rights reserved.\
 \>", "Text",
  CellChangeTimes->{{3.9145123456791*^9, 3.9145123456792*^9}},
  ExpressionUUID->"12345678-1234-5678-9abc-123456789abd"],

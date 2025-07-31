@@ -5,14 +5,14 @@ SciComp: Professional Scientific Computing Portfolio
 A comprehensive, cross-platform scientific computing framework for quantum physics,
 quantum computing, and physics-informed machine learning.
 
-Author: Meshal Alawein (meshal@berkeley.edu)  
+Author: Dr. Meshal Alawein (meshal@berkeley.edu)  
 Institution: University of California, Berkeley
 License: MIT
-Copyright © 2025 Meshal Alawein — All rights reserved.
+Copyright © 2025 Dr. Meshal Alawein — All rights reserved.
 """
 
 __version__ = '1.0.0'
-__author__ = 'Meshal Alawein'
+__author__ = 'Dr. Meshal Alawein'
 __email__ = 'meshal@berkeley.edu'
 __institution__ = 'University of California, Berkeley'
 __license__ = 'MIT'
