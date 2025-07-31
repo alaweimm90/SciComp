@@ -27,10 +27,10 @@ function setBerkeleyDefaults()
 %
 % See also: BERKELEYPLOTSTYLE, PLOTQUANTUMSTATES
 %
-% Author: Meshal Alawein (meshal@berkeley.edu)
+% Author: Dr. Meshal Alawein (meshal@berkeley.edu)
 % Institution: University of California, Berkeley
 % License: MIT
-% Copyright © 2025 Meshal Alawein — All rights reserved.
+% Copyright © 2025 Dr. Meshal Alawein — All rights reserved.
 
 %% UC Berkeley Official Colors
 % Primary colors

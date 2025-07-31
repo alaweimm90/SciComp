@@ -34,10 +34,10 @@ Comprehensive Mathematica implementation of the quantum harmonic oscillator \
 with analytical eigenstates, time evolution, coherent states, and Wigner \
 function calculations.
 
-Author: Meshal Alawein (meshal@berkeley.edu)
+Author: Dr. Meshal Alawein (meshal@berkeley.edu)
 Institution: University of California, Berkeley
 License: MIT
-Copyright \[Copyright] 2025 Meshal Alawein \[LongDash] All rights reserved.\
+Copyright \[Copyright] 2025 Dr. Meshal Alawein \[LongDash] All rights reserved.\
 \>", "Text",
  CellChangeTimes->{{3.8820003*^9, 3.8820004*^9}},
  FontFamily->"Arial",

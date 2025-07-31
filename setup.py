@@ -4,10 +4,10 @@ SciComp: Professional Scientific Computing Portfolio
 
 Setup script for installing the SciComp Python package.
 
-Author: Meshal Alawein (meshal@berkeley.edu)
+Author: Dr. Meshal Alawein (meshal@berkeley.edu)
 Institution: University of California, Berkeley
 License: MIT
-Copyright © 2025 Meshal Alawein — All rights reserved.
+Copyright © 2025 Dr. Meshal Alawein — All rights reserved.
 """
 
 from setuptools import setup, find_packages
@@ -92,7 +92,7 @@ setup(
     description='Professional Scientific Computing Portfolio',
     long_description=read_file('README.md'),
     long_description_content_type='text/markdown',
-    author='Meshal Alawein',
+    author='Dr. Meshal Alawein',
     author_email='meshal@berkeley.edu',
     url='https://github.com/alaweimm90/SciComp',
     license='MIT',
