@@ -94,7 +94,7 @@ setup(
     long_description_content_type='text/markdown',
     author='Meshal Alawein',
     author_email='meshal@berkeley.edu',
-    url='https://github.com/meshalalawein/SciComp',
+    url='https://github.com/alaweimm90/SciComp',
     license='MIT',
     packages=find_packages(where='Python'),
     package_dir={'': 'Python'},
@@ -125,9 +125,11 @@ setup(
     ],
     project_urls={
         'Documentation': 'https://scicomp.readthedocs.io/',
-        'Source': 'https://github.com/meshalalawein/SciComp',
-        'Tracker': 'https://github.com/meshalalawein/SciComp/issues',
-        'Funding': 'https://github.com/sponsors/meshalalawein',
+        'Source': 'https://github.com/alaweimm90/SciComp',
+        'Tracker': 'https://github.com/alaweimm90/SciComp/issues',
+        'Website': 'https://malawein.com',
+        'LinkedIn': 'https://www.linkedin.com/in/meshal-alawein',
+        'Research': 'https://simcore.dev',
     },
     include_package_data=True,
     package_data={

@@ -16,6 +16,10 @@ __author__ = 'Meshal Alawein'
 __email__ = 'meshal@berkeley.edu'
 __institution__ = 'University of California, Berkeley'
 __license__ = 'MIT'
+__website__ = 'https://malawein.com'
+__github__ = 'https://github.com/alaweimm90'
+__linkedin__ = 'https://www.linkedin.com/in/meshal-alawein'
+__research__ = 'https://simcore.dev'
 
 # Import main modules
 from . import quantum_physics

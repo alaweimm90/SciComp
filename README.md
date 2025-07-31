@@ -34,7 +34,7 @@ SciComp is a professional-grade scientific computing repository that showcases e
 
 ```bash
 # Clone the repository
-git clone https://github.com/meshalalawein/SciComp.git
+git clone https://github.com/alaweimm90/SciComp.git
 cd SciComp
 
 # Create conda environment
@@ -205,7 +205,7 @@ If you use SciComp in your research, please cite:
 @software{alawein2025scicomp,
   author = {Meshal Alawein},
   title = {SciComp: Professional Scientific Computing Portfolio},
-  url = {https://github.com/meshalalawein/SciComp},
+  url = {https://github.com/alaweimm90/SciComp},
   year = {2025},
   institution = {University of California, Berkeley}
 }
@@ -217,12 +217,30 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Copyright © 2025 Meshal Alawein — All rights reserved.**
 
-## 🤝 Contact
+## 🤝 Connect & Collaborate
+
+<div align="center">
 
 **Meshal Alawein**  
-📧 Email: [meshal@berkeley.edu](mailto:meshal@berkeley.edu)  
-🏛️ Institution: University of California, Berkeley  
-🔗 GitHub: [@meshalalawein](https://github.com/meshalalawein)
+*Computational Physicist & Research Scientist*  
+University of California, Berkeley
+
+---
+
+📧 **Email**: [meshal@berkeley.edu](mailto:meshal@berkeley.edu)  
+🌐 **Website**: [malawein.com](https://malawein.com)  
+🔗 **GitHub**: [@alaweimm90](https://github.com/alaweimm90)  
+💼 **LinkedIn**: [meshal-alawein](https://www.linkedin.com/in/meshal-alawein)  
+🔬 **Research Platform**: [simcore.dev](https://simcore.dev)  
+🎓 **Google Scholar**: [IB_E6GQAAAAJ](https://scholar.google.com/citations?user=IB_E6GQAAAAJ&hl=en)
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/meshal-alawein)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/alaweimm90)
+[![Website](https://img.shields.io/badge/Website-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white)](https://malawein.com)
+[![Google Scholar](https://img.shields.io/badge/Google_Scholar-4285F4?style=for-the-badge&logo=google-scholar&logoColor=white)](https://scholar.google.com/citations?user=IB_E6GQAAAAJ&hl=en)
+[![Research](https://img.shields.io/badge/SimCore-FF6B35?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDJMMTMuMDkgOC4yNkwyMSA5TDEzLjA5IDE1Ljc0TDEyIDIyTDEwLjkxIDE1Ljc0TDMgOUwxMC45MSA4LjI2TDEyIDJaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K&logoColor=white)](https://simcore.dev)
+
+</div>
 
 ---
 
