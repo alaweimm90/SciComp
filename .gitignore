@@ -1,0 +1,29 @@
+# Python
+*.pyc
+__pycache__/
+.ipynb_checkpoints/
+*.egg-info/
+dist/
+build/
+
+# MATLAB
+*.asv
+*.m~
+
+# Mathematica  
+*.nb.bak
+
+# System files
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+
+# Large data files (use Git LFS)
+*.hdf5
+*.h5
+*.nc
+*.mat
+*.npy
+data/large/
+results/large/
