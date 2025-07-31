@@ -1,0 +1,51 @@
+{
+  "colors": {
+    "primary": {
+      "berkeley_blue": "#003262",
+      "california_gold": "#FDB515"
+    },
+    "secondary": {
+      "blue_dark": "#010133",
+      "gold_dark": "#FC9313",
+      "green_dark": "#00553A",
+      "rose_dark": "#770747",
+      "purple_dark": "#431170",
+      "red_dark": "#8C1515",
+      "orange_dark": "#D2691E",
+      "teal_dark": "#004C5A"
+    },
+    "neutral": {
+      "grey_light": "#D9D9D9",
+      "grey_medium": "#999999",
+      "grey_dark": "#666666",
+      "black": "#000000",
+      "white": "#FFFFFF"
+    }
+  },
+  "plot_settings": {
+    "line_width": 2,
+    "marker_size": 8,
+    "font_size_title": 16,
+    "font_size_labels": 12,
+    "font_size_legend": 10,
+    "axes_line_width": 1.5,
+    "use_grids": false,
+    "tick_direction": "in",
+    "figure_dpi": 100,
+    "save_dpi": 300
+  },
+  "typography": {
+    "font_family": "sans-serif",
+    "font_sans_serif": ["Arial", "Helvetica", "DejaVu Sans"],
+    "title_weight": "bold",
+    "title_color": "#003262"
+  },
+  "branding": {
+    "university": "University of California, Berkeley",
+    "colors_hex": {
+      "berkeley_blue": "#003262",
+      "california_gold": "#FDB515"
+    },
+    "usage_guidelines": "Follow UC Berkeley brand guidelines for official publications"
+  }
+}
