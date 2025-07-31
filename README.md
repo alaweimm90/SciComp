@@ -256,7 +256,7 @@ University of California, Berkeley
 
 </div>
 
-<p align="center"><em>
+<p align="center"><em>  
 Made with love, and a deep respect for the struggle.  
 For those still learning—from someone who still is.  
 Science can be hard. This is my way of helping. ⚛️
