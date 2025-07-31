@@ -239,29 +239,29 @@ University of California, Berkeley
 📧 <a href="mailto:meshal@berkeley.edu" style="color:#003262;">meshal@berkeley.edu</a>
 
 <a href="https://linkedin.com/in/meshal-alawein" title="LinkedIn">
-  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn" style="height:32px; margin:0 10px; fill:#003262;" />
+  <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn" height="32" />
 </a>
 <a href="https://github.com/alaweimm90" title="GitHub">
-  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub" style="height:32px; margin:0 10px; fill:#003262;" />
+  <img src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white" alt="GitHub" height="32" />
 </a>
 <a href="https://malawein.com" title="Website">
-  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/googlechrome.svg" alt="Website" style="height:32px; margin:0 10px; fill:#003262;" />
+  <img src="https://img.shields.io/badge/Website-003262?style=flat&logo=googlechrome&logoColor=white" alt="Website" height="32" />
 </a>
 <a href="https://scholar.google.com/citations?user=IB_E6GQAAAAJ" title="Google Scholar">
-  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/googlescholar.svg" alt="Scholar" style="height:32px; margin:0 10px; fill:#003262;" />
+  <img src="https://img.shields.io/badge/Scholar-4285F4?style=flat&logo=googlescholar&logoColor=white" alt="Scholar" height="32" />
 </a>
 <a href="https://simcore.dev" title="SimCore">
-  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/atom.svg" alt="SimCore" style="height:32px; margin:0 10px; fill:#FDB515;" />
+  <img src="https://img.shields.io/badge/SimCore-FDB515?style=flat&logo=atom&logoColor=white" alt="SimCore" height="32" />
 </a>
 
 </div>
 
 <p align="center"><em>
 Made with love, and a deep respect for the struggle.  
-For those still learning — from someone who still is.  
+For those still learning—from someone who still is.  
 Science can be hard. This is my way of helping. ⚛️
 </em></p>
 
 ---
 
-*Crafted with precision at UC Berkeley* 🐻💙💛
+*Crafted with love, 🐻 energy, and zero sleep.*
