@@ -371,15 +371,70 @@ user_data/
 personal_configs/
 
 # =============================================================================
-# Development Tools
+# Documentation
 # =============================================================================
 
-# Claude Code
-.claude/
-CLAUDE.md
+# Sphinx
+_build/
+_static/
+_templates/
 
-# Pre-commit
-.pre-commit-config.yaml.bak
+# LaTeX
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.idx
+*.ilg
+*.ind
+*.lof
+*.log
+*.lot
+*.out
+*.toc
+*.fmt
+*.fot
+*.cb
+*.cb2
+.*.lb
+*.dvi
+*.xdv
+*-converted-to.*
+*.brf
+*.lol
+*.nav
+*.snm
+*.vrb
+*.synctex.gz
+
+# =============================================================================
+# Version Control
+# =============================================================================
+
+# Git
+*.orig
+*.rej
+*.bak
+
+# Mercurial
+.hg/
+.hgignore
+.hgtags
+
+# =============================================================================
+# Cloud and Containers
+# =============================================================================
+
+# Docker
+Dockerfile.local
+docker-compose.override.yml
+
+# AWS
+.aws/
+
+# Google Cloud
+.gcloud/
 
 # =============================================================================
 # Security and Secrets
@@ -404,6 +459,71 @@ id_ed25519
 *.pub
 
 # =============================================================================
+# Backup Files
+# =============================================================================
+
+# Backup files
+*.backup
+*.bak
+*.old
+*.orig
+*_backup.*
+backup_*/
+
+# =============================================================================
+# Temporary Files
+# =============================================================================
+
+# General temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+*.swp
+*.swo
+
+# =============================================================================
+# Package Managers
+# =============================================================================
+
+# npm
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Conda
+.conda/
+
+# =============================================================================
+# Berkeley Research Data
+# =============================================================================
+
+# Large research datasets (use Git LFS or external storage)
+large_datasets/
+experimental_data/
+simulation_outputs/
+*.large
+
+# Sensitive research data
+confidential/
+proprietary/
+restricted/
+
+# =============================================================================
+# Performance and Profiling
+# =============================================================================
+
+# Profiling outputs
+*.prof
+profile_*
+.prof/
+
+# Memory profiling
+*.mprof
+memory_profiler_*
+
+# =============================================================================
 # Keep Important Files (Explicit Includes)
 # =============================================================================
 
@@ -417,6 +537,7 @@ id_ed25519
 !setup.cfg
 !pyproject.toml
 !Makefile
+!CLAUDE.md
 
 # Keep example data and assets
 !examples/**
@@ -426,3 +547,16 @@ id_ed25519
 # Keep essential configuration templates
 !**/config_template.*
 !**/example_config.*
+
+# =============================================================================
+# Final Notes
+# =============================================================================
+
+# This .gitignore follows Berkeley SciComp framework conventions
+# - Excludes temporary and generated files
+# - Preserves essential source code and documentation
+# - Protects sensitive data and large datasets
+# - Maintains professional development standards
+#
+# For questions: meshal@berkeley.edu
+# University of California, Berkeley
