@@ -1,43 +1,125 @@
 #!/usr/bin/env python3
 """
-SciComp: Professional Scientific Computing Portfolio
+Berkeley SciComp Framework - Main Package
+==========================================
 
-A comprehensive, cross-platform scientific computing framework for quantum physics,
-quantum computing, and physics-informed machine learning.
+UC Berkeley Scientific Computing Framework for multi-platform scientific
+computing, quantum physics, machine learning, and engineering applications.
 
-Author: Dr. Meshal Alawein (meshal@berkeley.edu)  
+This package provides:
+- Quantum Physics: Harmonic oscillators, time evolution, tunneling
+- Machine Learning Physics: PINNs, Neural Operators, Uncertainty Quantification  
+- Quantum Computing: Algorithms, Circuits, Gates
+- Visualization: Berkeley-styled plotting and analysis tools
+- Utilities: Parallel computing, file I/O, constants
+
+Author: Dr. Meshal Alawein (meshal@berkeley.edu)
 Institution: University of California, Berkeley
+Created: 2025
 License: MIT
-Copyright © 2025 Dr. Meshal Alawein — All rights reserved.
 """
 
-__version__ = '1.0.0'
-__author__ = 'Dr. Meshal Alawein'
-__email__ = 'meshal@berkeley.edu'
-__institution__ = 'University of California, Berkeley'
-__license__ = 'MIT'
-__website__ = 'https://malawein.com'
-__github__ = 'https://github.com/alaweimm90'
-__linkedin__ = 'https://www.linkedin.com/in/meshal-alawein'
-__research__ = 'https://simcore.dev'
+# Import from init_berkeley for backward compatibility
+from .init_berkeley import (
+    __version__,
+    __author__,
+    __email__,
+    __institution__,
+    __license__,
+    __copyright__,
+    FRAMEWORK_INFO,
+    BERKELEY_COLORS,
+    print_berkeley_banner,
+    get_version,
+    get_info,
+    check_modules,
+    MODULE_STATUS
+)
 
-# Import main modules
-from . import quantum_physics
-from . import quantum_computing
-from . import statistical_physics
-from . import condensed_matter
-from . import ml_physics
-from . import computational_methods
-from . import visualization
-from . import utils
+# Core module imports with error handling
+try:
+    from . import quantum_physics
+    QUANTUM_PHYSICS_AVAILABLE = True
+except ImportError:
+    QUANTUM_PHYSICS_AVAILABLE = False
+    quantum_physics = None
 
+try:
+    from . import ml_physics
+    ML_PHYSICS_AVAILABLE = True
+except ImportError:
+    ML_PHYSICS_AVAILABLE = False
+    ml_physics = None
+
+try:
+    from . import quantum_computing
+    QUANTUM_COMPUTING_AVAILABLE = True
+except ImportError:
+    QUANTUM_COMPUTING_AVAILABLE = False
+    quantum_computing = None
+
+try:
+    from . import quantum_materials
+    QUANTUM_MATERIALS_AVAILABLE = True
+except ImportError:
+    QUANTUM_MATERIALS_AVAILABLE = False
+    quantum_materials = None
+
+try:
+    from . import utils
+    UTILS_AVAILABLE = True
+except ImportError:
+    UTILS_AVAILABLE = False
+    utils = None
+
+try:
+    from . import visualization
+    VISUALIZATION_AVAILABLE = True
+except ImportError:
+    VISUALIZATION_AVAILABLE = False
+    visualization = None
+
+# Update module status
+MODULE_STATUS.update({
+    "quantum_physics": QUANTUM_PHYSICS_AVAILABLE,
+    "ml_physics": ML_PHYSICS_AVAILABLE,
+    "quantum_computing": QUANTUM_COMPUTING_AVAILABLE,
+    "quantum_materials": QUANTUM_MATERIALS_AVAILABLE,
+    "utils": UTILS_AVAILABLE,
+    "visualization": VISUALIZATION_AVAILABLE
+})
+
+# Define what gets imported with "from Python import *"
 __all__ = [
-    'quantum_physics',
-    'quantum_computing', 
-    'statistical_physics',
-    'condensed_matter',
-    'ml_physics',
-    'computational_methods',
-    'visualization',
-    'utils'
+    # Version and metadata
+    "__version__",
+    "__author__", 
+    "__email__",
+    "__institution__",
+    "__license__",
+    "__copyright__",
+    
+    # Framework info
+    "FRAMEWORK_INFO",
+    "BERKELEY_COLORS",
+    "MODULE_STATUS",
+    
+    # Utility functions
+    "print_berkeley_banner",
+    "get_version",
+    "get_info",
+    "check_modules",
+    
+    # Core modules (if available)
+    "quantum_physics",
+    "ml_physics", 
+    "quantum_computing",
+    "quantum_materials",
+    "utils",
+    "visualization"
 ]
+
+# Optional: Print banner on import (can be disabled with environment variable)
+import os
+if os.environ.get("BERKELEY_SCICOMP_QUIET", "").lower() not in ("1", "true", "yes"):
+    print_berkeley_banner()

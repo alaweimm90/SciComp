@@ -1,0 +1,116 @@
+# Berkeley SciComp Framework Requirements
+# UC Berkeley Scientific Computing Environment
+# Author: Dr. Meshal Alawein (meshal@berkeley.edu)
+# Institution: University of California, Berkeley
+# Created: 2025
+
+# Core Scientific Computing
+numpy>=1.24.0
+scipy>=1.10.0
+matplotlib>=3.6.0
+seaborn>=0.12.0
+
+# Machine Learning and Deep Learning
+tensorflow>=2.13.0
+tensorflow-probability>=0.20.0
+jax>=0.4.0
+jaxlib>=0.4.0
+flax>=0.7.0
+optax>=0.1.5
+
+# Quantum Computing (Optional)
+qiskit>=0.45.0
+cirq>=1.2.0
+
+# Physics and Engineering
+sympy>=1.12.0
+astropy>=5.3.0
+pint>=0.22.0  # Unit handling
+
+# Numerical Methods and Optimization
+scikit-learn>=1.3.0
+scikit-optimize>=0.9.0
+cvxpy>=1.3.0
+casadi>=3.6.0  # Nonlinear optimization
+
+# Visualization and Plotting
+plotly>=5.15.0
+bokeh>=3.2.0
+holoviews>=1.17.0
+panel>=1.2.0
+
+# Data Processing and Analysis
+pandas>=2.0.0
+xarray>=2023.6.0
+h5py>=3.9.0
+netcdf4>=1.6.4
+
+# Parallel Computing and Performance
+dask>=2023.7.0
+numba>=0.57.0
+mpi4py>=3.1.4
+joblib>=1.3.0
+
+# Testing and Development
+pytest>=7.4.0
+pytest-cov>=4.1.0
+pytest-xdist>=3.3.0
+black>=23.7.0
+isort>=5.12.0
+flake8>=6.0.0
+mypy>=1.5.0
+
+# Documentation
+sphinx>=7.1.0
+sphinx-rtd-theme>=1.3.0
+myst-parser>=2.0.0
+sphinx-autodoc-typehints>=1.24.0
+
+# Berkeley SciComp Specific
+# Custom packages and utilities
+ipython>=8.14.0
+jupyter>=1.0.0
+jupyterlab>=4.0.0
+notebook>=7.0.0
+
+# File I/O and Formats
+tifffile>=2023.7.10
+pillow>=10.0.0
+imageio>=2.31.0
+
+# Version Control and Collaboration
+gitpython>=3.1.32
+
+# Configuration and Environment
+python-dotenv>=1.0.0
+pyyaml>=6.0.1
+toml>=0.10.2
+
+# Berkeley Computing Environment
+# Specific versions for UC Berkeley HPC compatibility
+# These may need adjustment based on cluster specifications
+
+# Optional GPU Support (uncomment if CUDA available)
+# tensorflow-gpu>=2.13.0
+# jax[cuda11_pip]>=0.4.0
+# cupy-cuda11x>=12.0.0
+
+# Optional High-Performance Computing
+# mpi4py>=3.1.4  # Already included above
+# petsc4py>=3.19.0  # Uncomment for large-scale linear algebra
+# slepc4py>=3.19.0  # Uncomment for eigenvalue problems
+
+# Development Tools (Optional)
+# jupyterlab-git>=0.41.0
+# jupyterlab-lsp>=4.2.0
+# jupyter-book>=0.15.0
+
+# Platform-specific dependencies
+# Windows users may need:
+# pywin32>=306  # Windows-specific
+
+# macOS users may need:
+# pyobjc>=9.2  # macOS-specific
+
+# Linux HPC environments may need:
+# openmpi>=4.1.0  # System-dependent

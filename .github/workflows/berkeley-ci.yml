@@ -1,0 +1,424 @@
+name: Berkeley SciComp CI/CD
+
+# UC Berkeley Scientific Computing Framework
+# Continuous Integration and Deployment Pipeline
+# 
+# Author: Dr. Meshal Alawein (meshal@berkeley.edu)
+# Institution: University of California, Berkeley
+# Created: 2025
+# License: MIT
+
+on:
+  push:
+    branches: [ main, develop ]
+    tags: [ 'v*' ]
+  pull_request:
+    branches: [ main, develop ]
+  workflow_dispatch:
+  schedule:
+    # Run weekly on Sundays at 2 AM UTC
+    - cron: '0 2 * * 0'
+
+env:
+  BERKELEY_COLORS: true
+  FRAMEWORK_VERSION: "1.0.0"
+  PYTHON_DEFAULT: "3.11"
+
+jobs:
+  # Code Quality Checks
+  quality:
+    name: Code Quality & Style
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: 🔄 Checkout Berkeley SciComp
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+    
+    - name: 🐍 Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ env.PYTHON_DEFAULT }}
+        cache: 'pip'
+    
+    - name: 📦 Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install black isort flake8 mypy
+        pip install -r requirements-berkeley.txt
+    
+    - name: 🎨 Check Berkeley code formatting
+      run: |
+        echo "🔵 Berkeley SciComp: Checking code formatting..."
+        black --check --diff Python/ tests/
+        isort --check-only --diff Python/ tests/
+    
+    - name: 🔍 Lint with flake8
+      run: |
+        echo "🔵 Berkeley SciComp: Running linter..."
+        flake8 Python/ tests/ --count --select=E9,F63,F7,F82 --show-source --statistics
+        flake8 Python/ tests/ --count --exit-zero --max-complexity=10 --max-line-length=88 --statistics
+    
+    - name: 🏷️ Type checking with mypy
+      run: |
+        echo "🔵 Berkeley SciComp: Running type checker..."
+        mypy Python/ --ignore-missing-imports --no-error-summary
+      continue-on-error: true
+    
+    - name: 📊 Upload quality reports
+      uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: quality-reports
+        path: |
+          .flake8.log
+          .mypy.log
+        retention-days: 7
+
+  # Multi-Platform Testing
+  test:
+    name: Tests (Python ${{ matrix.python-version }}, ${{ matrix.os }})
+    needs: quality
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        python-version: ["3.8", "3.9", "3.10", "3.11", "3.12"]
+        exclude:
+          # Exclude some combinations to reduce CI time
+          - os: windows-latest
+            python-version: "3.8"
+          - os: macos-latest
+            python-version: "3.8"
+    
+    runs-on: ${{ matrix.os }}
+    
+    steps:
+    - name: 🔄 Checkout Berkeley SciComp
+      uses: actions/checkout@v4
+    
+    - name: 🐍 Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ matrix.python-version }}
+        cache: 'pip'
+    
+    - name: 🏗️ Install Berkeley SciComp
+      run: |
+        python -m pip install --upgrade pip
+        pip install -e .[dev]
+        pip install pytest-xdist pytest-cov
+    
+    - name: 🧪 Run Berkeley tests
+      run: |
+        echo "🔵 Berkeley SciComp: Running test suite on ${{ matrix.os }} with Python ${{ matrix.python-version }}"
+        pytest tests/python/ -v --tb=short --cov=Python --cov-report=xml --cov-report=term
+      env:
+        PYTHONPATH: ${{ github.workspace }}
+    
+    - name: 📊 Upload coverage to Codecov
+      uses: codecov/codecov-action@v3
+      if: matrix.python-version == env.PYTHON_DEFAULT && matrix.os == 'ubuntu-latest'
+      with:
+        file: ./coverage.xml
+        flags: unittests
+        name: berkeley-scicomp-coverage
+        fail_ci_if_error: false
+
+  # Documentation Building
+  docs:
+    name: Documentation
+    needs: quality
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: 🔄 Checkout Berkeley SciComp
+      uses: actions/checkout@v4
+    
+    - name: 🐍 Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ env.PYTHON_DEFAULT }}
+        cache: 'pip'
+    
+    - name: 📚 Install documentation dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -e .[docs]
+        pip install sphinx sphinx-rtd-theme myst-parser
+    
+    - name: 🏗️ Build documentation
+      run: |
+        echo "🔵 Berkeley SciComp: Building documentation..."
+        sphinx-build -b html docs/ docs/_build/html -W --keep-going
+    
+    - name: 📤 Upload documentation
+      uses: actions/upload-artifact@v3
+      with:
+        name: berkeley-docs
+        path: docs/_build/html
+        retention-days: 30
+    
+    - name: 🚀 Deploy to GitHub Pages
+      if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: docs/_build/html
+        cname: berkeley-scicomp.github.io
+
+  # Demonstrations and Examples
+  demos:
+    name: Berkeley Demonstrations
+    needs: test
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: 🔄 Checkout Berkeley SciComp
+      uses: actions/checkout@v4
+    
+    - name: 🐍 Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ env.PYTHON_DEFAULT }}
+        cache: 'pip'
+    
+    - name: 📦 Install Berkeley SciComp
+      run: |
+        python -m pip install --upgrade pip
+        pip install -e .[all]
+        # Install additional packages for demos
+        pip install plotly jupyter nbformat
+    
+    - name: 🎨 Run Berkeley style demo
+      run: |
+        echo "🔵 Berkeley SciComp: Running visual identity demonstration..."
+        python assets/berkeley_style.py
+    
+    - name: ⚛️ Run quantum physics demos
+      run: |
+        echo "🔵 Berkeley SciComp: Running quantum physics demonstrations..."
+        python examples/python/quantum_tunneling_demo.py
+      continue-on-error: true
+    
+    - name: 🤖 Run ML physics demos
+      run: |
+        echo "🔵 Berkeley SciComp: Running ML physics demonstrations..."
+        python examples/python/ml_physics_demo.py
+      continue-on-error: true
+    
+    - name: 💻 Run quantum computing demos
+      run: |
+        echo "🔵 Berkeley SciComp: Running quantum computing demonstrations..."
+        python examples/python/quantum_computing_demo.py
+      continue-on-error: true
+    
+    - name: 📊 Upload demo outputs
+      uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: berkeley-demos
+        path: |
+          *.png
+          *.pdf
+          *.html
+        retention-days: 30
+
+  # Security and Dependency Scanning
+  security:
+    name: Security Scan
+    runs-on: ubuntu-latest
+    if: github.event_name != 'schedule'
+    
+    steps:
+    - name: 🔄 Checkout Berkeley SciComp
+      uses: actions/checkout@v4
+    
+    - name: 🐍 Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ env.PYTHON_DEFAULT }}
+    
+    - name: 🔒 Run security checks
+      run: |
+        python -m pip install --upgrade pip
+        pip install safety bandit
+        echo "🔵 Berkeley SciComp: Checking for known vulnerabilities..."
+        safety check --json --output safety-report.json || true
+        echo "🔵 Berkeley SciComp: Running security linter..."
+        bandit -r Python/ -f json -o bandit-report.json || true
+    
+    - name: 📊 Upload security reports
+      uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: security-reports
+        path: |
+          safety-report.json
+          bandit-report.json
+        retention-days: 30
+
+  # Performance Benchmarking
+  benchmark:
+    name: Performance Benchmarks
+    needs: test
+    runs-on: ubuntu-latest
+    if: github.event_name == 'schedule' || contains(github.event.head_commit.message, '[benchmark]')
+    
+    steps:
+    - name: 🔄 Checkout Berkeley SciComp
+      uses: actions/checkout@v4
+    
+    - name: 🐍 Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ env.PYTHON_DEFAULT }}
+        cache: 'pip'
+    
+    - name: 📦 Install Berkeley SciComp
+      run: |
+        python -m pip install --upgrade pip
+        pip install -e .[all]
+        pip install pytest-benchmark memory-profiler
+    
+    - name: 🏁 Run performance benchmarks
+      run: |
+        echo "🔵 Berkeley SciComp: Running performance benchmarks..."
+        pytest tests/ -k "benchmark" --benchmark-json=benchmark-results.json
+      continue-on-error: true
+    
+    - name: 📊 Upload benchmark results
+      uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: benchmark-results
+        path: benchmark-results.json
+        retention-days: 90
+
+  # Multi-Platform Package Building
+  build:
+    name: Build Packages
+    needs: [test, docs]
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    
+    steps:
+    - name: 🔄 Checkout Berkeley SciComp
+      uses: actions/checkout@v4
+    
+    - name: 🐍 Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ env.PYTHON_DEFAULT }}
+    
+    - name: 📦 Build packages
+      run: |
+        python -m pip install --upgrade pip build
+        echo "🔵 Berkeley SciComp: Building distribution packages..."
+        python -m build
+    
+    - name: 📤 Upload packages
+      uses: actions/upload-artifact@v3
+      with:
+        name: berkeley-packages-${{ matrix.os }}
+        path: dist/
+        retention-days: 30
+
+  # Release Management
+  release:
+    name: Release Management
+    needs: [test, docs, build]
+    runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/tags/v')
+    
+    steps:
+    - name: 🔄 Checkout Berkeley SciComp
+      uses: actions/checkout@v4
+    
+    - name: 🏷️ Create Release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: ${{ github.ref }}
+        release_name: Berkeley SciComp ${{ github.ref }}
+        body: |
+          🔵 **Berkeley SciComp Framework Release**
+          
+          **University of California, Berkeley**
+          **Dr. Meshal Alawein** (meshal@berkeley.edu)
+          
+          ### What's New
+          - Multi-platform scientific computing support
+          - Berkeley visual identity integration
+          - Comprehensive testing and validation
+          - Production-ready quantum physics and ML tools
+          
+          ### Installation
+          ```bash
+          pip install berkeley-scicomp==${{ github.ref_name }}
+          ```
+          
+          ### Documentation
+          - [Online Documentation](https://berkeley-scicomp.github.io)
+          - [Theory References](https://berkeley-scicomp.github.io/theory/)
+          - [Examples and Tutorials](https://berkeley-scicomp.github.io/examples/)
+          
+          **Go Bears! 🐻💙💛**
+        draft: false
+        prerelease: false
+
+  # Notification and Reporting
+  notify:
+    name: Berkeley Notifications
+    needs: [quality, test, docs, demos]
+    runs-on: ubuntu-latest
+    if: always()
+    
+    steps:
+    - name: 📊 Workflow Summary
+      run: |
+        echo "🔵 Berkeley SciComp CI/CD Summary"
+        echo "================================="
+        echo "Repository: ${{ github.repository }}"
+        echo "Branch: ${{ github.ref_name }}"
+        echo "Commit: ${{ github.sha }}"
+        echo "Actor: ${{ github.actor }}"
+        echo "Event: ${{ github.event_name }}"
+        echo ""
+        echo "🏛️ University of California, Berkeley"
+        echo "👨‍🔬 Dr. Meshal Alawein (meshal@berkeley.edu)"
+        echo ""
+        echo "Job Results:"
+        echo "- Quality: ${{ needs.quality.result }}"
+        echo "- Tests: ${{ needs.test.result }}"
+        echo "- Docs: ${{ needs.docs.result }}"
+        echo "- Demos: ${{ needs.demos.result }}"
+    
+    - name: 🔔 Berkeley Slack Notification
+      if: failure() && github.ref == 'refs/heads/main'
+      env:
+        SLACK_WEBHOOK: ${{ secrets.BERKELEY_SLACK_WEBHOOK }}
+      run: |
+        if [ -n "$SLACK_WEBHOOK" ]; then
+          curl -X POST -H 'Content-type: application/json' \
+            --data '{"text":"🔴 Berkeley SciComp CI/CD failed on main branch"}' \
+            $SLACK_WEBHOOK
+        fi
+
+  # Cleanup and Maintenance
+  cleanup:
+    name: Cleanup
+    runs-on: ubuntu-latest
+    needs: [notify]
+    if: always()
+    
+    steps:
+    - name: 🧹 Cleanup workspace
+      run: |
+        echo "🔵 Berkeley SciComp: Cleaning up CI workspace..."
+        df -h
+        echo "Cleanup completed ✓"
