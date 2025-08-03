@@ -1,0 +1,140 @@
+[4.0K]  .
+├── [ 12K]  CHANGELOG.md
+├── [1.3K]  CITATION.cff
+├── [3.5K]  CLAUDE.md
+├── [ 12K]  CODE_OF_CONDUCT.md
+├── [ 13K]  CONTRIBUTING.md
+├── [1.0K]  LICENSE
+├── [2.3K]  LICENSE.txt
+├── [4.0K]  MATLAB
+│   ├── [4.0K]  engineering
+│   │   └── [ 37K]  heat_transfer_analysis.m
+│   ├── [4.0K]  quantum_computing
+│   │   └── [ 24K]  VQE.m
+│   ├── [4.0K]  quantum_physics
+│   │   ├── [ 21K]  QuantumHarmonic.m
+│   │   └── [ 19K]  schrodinger_solver.m
+│   ├── [7.5K]  startup.m
+│   ├── [4.0K]  statistical_physics
+│   │   └── [ 26K]  MonteCarloIsing.m
+│   └── [4.0K]  visualization
+│       └── [7.9K]  setBerkeleyDefaults.m
+├── [ 14K]  Makefile
+├── [4.0K]  Mathematica
+│   ├── [4.0K]  QuantumPhysics
+│   │   ├── [ 38K]  QuantumHarmonic.nb
+│   │   └── [ 38K]  VQEAlgorithm.nb
+│   └── [4.0K]  quantum_physics
+│       └── [ 20K]  quantum_harmonic_oscillator.nb
+├── [4.0K]  Python
+│   ├── [3.1K]  __init__.py
+│   ├── [4.6K]  init_berkeley.py
+│   ├── [4.0K]  ml_physics
+│   │   ├── [ 652]  __init__.py
+│   │   ├── [4.0K]  materials_ml
+│   │   │   ├── [1.2K]  __init__.py
+│   │   │   └── [ 27K]  property_prediction.py
+│   │   ├── [4.0K]  neural_operators
+│   │   │   ├── [ 36K]  deeponet.py
+│   │   │   └── [ 24K]  fourier_neural_operator.py
+│   │   └── [4.0K]  pinns
+│   │       ├── [ 982]  __init__.py
+│   │       ├── [ 34K]  elasticity_pinn.py
+│   │       ├── [ 24K]  heat_equation_pinn.py
+│   │       ├── [ 32K]  navier_stokes_pinn.py
+│   │       ├── [ 18K]  schrodinger_pinn.py
+│   │       └── [ 28K]  wave_equation_pinn.py
+│   ├── [4.0K]  quantum_computing
+│   │   ├── [ 557]  __init__.py
+│   │   ├── [4.0K]  algorithms
+│   │   │   ├── [1013]  __init__.py
+│   │   │   ├── [ 26K]  grover.py
+│   │   │   ├── [ 25K]  qaoa.py
+│   │   │   └── [ 21K]  vqe.py
+│   │   └── [4.0K]  circuits
+│   │       └── [ 30K]  quantum_gates.py
+│   ├── [4.0K]  quantum_materials
+│   │   └── [4.0K]  two_dimensional
+│   │       └── [ 27K]  graphene.py
+│   ├── [4.0K]  quantum_physics
+│   │   ├── [ 604]  __init__.py
+│   │   ├── [4.0K]  electronic_structure
+│   │   │   ├── [1.1K]  __init__.py
+│   │   │   ├── [ 21K]  band_structure.py
+│   │   │   ├── [ 22K]  density_of_states.py
+│   │   │   └── [ 21K]  strain_engineering.py
+│   │   ├── [4.0K]  many_body
+│   │   │   ├── [1.3K]  __init__.py
+│   │   │   ├── [ 24K]  exact_diagonalization.py
+│   │   │   └── [ 29K]  quantum_monte_carlo.py
+│   │   └── [4.0K]  quantum_dynamics
+│   │       ├── [1.0K]  __init__.py
+│   │       ├── [ 19K]  harmonic_oscillator.py
+│   │       ├── [ 24K]  quantum_tunneling.py
+│   │       ├── [ 20K]  tdse_solver.py
+│   │       └── [ 25K]  wavepacket_evolution.py
+│   ├── [4.0K]  utils
+│   │   ├── [1.1K]  __init__.py
+│   │   ├── [ 18K]  cli.py
+│   │   ├── [8.6K]  constants.py
+│   │   ├── [ 15K]  file_io.py
+│   │   ├── [ 15K]  parallel.py
+│   │   └── [ 13K]  units.py
+│   └── [4.0K]  visualization
+│       ├── [1.1K]  __init__.py
+│       └── [ 18K]  berkeley_style.py
+├── [9.5K]  README.md
+├── [ 14K]  SECURITY.md
+├── [   0]  ScieComp-tree.txt
+├── [4.0K]  assets
+│   ├── [ 15K]  BerkeleyStyle.wl
+│   ├── [ 14K]  STYLE_GUIDE.md
+│   ├── [ 16K]  berkeley_style.m
+│   └── [ 18K]  berkeley_style.py
+├── [6.9K]  berkeley_config.json
+├── [9.0K]  berkeley_setup.py
+├── [4.0K]  config
+│   ├── [1.2K]  berkeley_theme.json
+│   └── [2.8K]  physics_constants.json
+├── [4.0K]  docs
+│   ├── [ 14K]  README.md
+│   └── [4.0K]  theory
+│       ├── [ 13K]  computational_methods.md
+│       ├── [ 17K]  engineering_applications.md
+│       ├── [ 12K]  ml_physics_theory.md
+│       └── [9.4K]  quantum_mechanics_theory.md
+├── [1.3K]  environment.yml
+├── [4.0K]  examples
+│   ├── [4.0K]  beginner
+│   │   └── [ 10K]  harmonic_oscillator_demo.py
+│   ├── [4.0K]  cross_platform
+│   │   └── [ 27K]  quantum_harmonic_comparison.py
+│   ├── [4.0K]  intermediate
+│   │   └── [ 15K]  vqe_demo.py
+│   ├── [4.0K]  mathematica
+│   │   └── [ 23K]  symbolic_quantum_analysis_demo.nb
+│   ├── [4.0K]  matlab
+│   │   └── [ 16K]  heat_transfer_demo.m
+│   └── [4.0K]  python
+│       ├── [ 39K]  ml_physics_demo.py
+│       ├── [ 34K]  quantum_computing_demo.py
+│       └── [ 17K]  quantum_tunneling_demo.py
+├── [9.0K]  gitignore_berkeley.txt
+├── [7.1K]  pyproject.toml
+├── [2.3K]  requirements-berkeley.txt
+├── [6.1K]  requirements-dev.txt
+├── [ 506]  requirements.txt
+├── [4.4K]  setup.py
+└── [4.0K]  tests
+    ├── [4.0K]  mathematica
+    │   └── [ 19K]  test_symbolic_quantum.nb
+    ├── [4.0K]  matlab
+    │   └── [ 18K]  test_heat_transfer.m
+    ├── [4.0K]  python
+    │   ├── [ 12K]  test_harmonic_oscillator.py
+    │   ├── [ 24K]  test_ml_physics.py
+    │   ├── [ 26K]  test_quantum_computing.py
+    │   └── [ 27K]  test_quantum_physics.py
+    └── [ 24K]  run_all_tests.py
+
+41 directories, 97 files
