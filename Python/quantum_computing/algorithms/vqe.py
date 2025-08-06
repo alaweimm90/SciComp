@@ -39,6 +39,15 @@ try:
     QISKIT_AVAILABLE = True
 except ImportError:
     QISKIT_AVAILABLE = False
+    # Define placeholders for type hints when Qiskit is not available
+    class QuantumCircuit:
+        pass
+    class SparsePauliOp:
+        pass
+    class Statevector:
+        pass
+    class Estimator:
+        pass
     warnings.warn("Qiskit not available. VQE will use classical simulation only.")
 
 class VQEAnsatz(ABC):
