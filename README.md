@@ -9,14 +9,17 @@
 
 *A unified, cross-platform scientific computing framework for a wide range of topics in physics, mathematics, machine learning, and scientific computing — implemented in Python, MATLAB, and Mathematica.*
 
-**Core subject areas covered (fully implemented):**
+**Core subject areas covered:**
 
-- Quantum Physics, Quantum Computing, Quantum Materials  
-- Statistical Physics, Condensed Matter, Spintronics  
-- ML Physics, Crystallography, Elasticity, FEM  
-- Thermal Transport, Optics, Signal Processing  
-- Control, Optimization, Linear Algebra, ODE/PDE  
-- Symbolic Algebra, Utils, Visualization
+**Fully Implemented (Cross-Platform):**
+- Control Systems, Crystallography, Elasticity, FEM
+- Linear Algebra, Machine Learning, Monte Carlo, Multiphysics
+- ODE/PDE Solvers, Optics, Optimization, Signal Processing
+- Stochastic Processes
+
+**Python-Specialized:**
+- Quantum Physics, Quantum Computing, ML Physics
+- Scientific Plotting and Visualization
 
 **Author**: Dr. Meshal Alawein ([meshal@berkeley.edu](mailto:meshal@berkeley.edu))  
 **Institution**: University of California, Berkeley  
@@ -110,6 +113,19 @@ SciComp/
 - **Circuits**: Gate optimization, decomposition, universal gates
 - **Noise Models**: Decoherence, gate errors, error mitigation
 - **Backends**: Simulator interfaces, hardware connectivity
+
+### Signal Processing
+- **Core Operations**: Signal generation, filtering, peak detection, envelope extraction
+- **Spectral Analysis**: FFT, spectrograms, power spectral density, wavelets, time-frequency
+- **Advanced Methods**: Adaptive filtering (LMS, NLMS, RLS), mel spectrograms, cepstrum
+- **Applications**: Audio processing, communications, biomedical signals
+
+### Stochastic Processes
+- **Brownian Motion**: Standard, geometric, fractional, and bridge processes
+- **Random Walks**: Simple, self-avoiding, Lévy walks in multiple dimensions
+- **SDEs**: Multiple numerical schemes (Euler-Maruyama, Milstein, Strong Taylor)
+- **Special Processes**: Ornstein-Uhlenbeck, jump-diffusion (Merton model)
+- **Applications**: Financial modeling, physics simulations, Monte Carlo methods
 
 ### Physics-Informed Machine Learning
 - **PINNs**: Schrödinger equation, heat equation, wave equation
