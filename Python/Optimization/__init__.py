@@ -34,7 +34,7 @@ from .linear_programming import *
 from .multi_objective import *
 from .genetic_algorithms import *
 from .utils import *
-from .visualization import *
+# from .visualization import *  # TODO: Implement visualization module
 
 # Package metadata
 __version__ = '1.0.0'
@@ -86,7 +86,7 @@ __all__ = [
     'ConvergenceAnalysis',
     
     # Visualization
-    'OptimizationVisualizer'
+    # 'OptimizationVisualizer'  # TODO: Implement visualization module
 ]
 
 def demo():
