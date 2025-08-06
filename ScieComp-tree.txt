@@ -1,7 +1,7 @@
 [4.0K]  .
 ├── [ 12K]  CHANGELOG.md
 ├── [1.3K]  CITATION.cff
-├── [3.5K]  CLAUDE.md
+├── [ 35K]  DEPLOYMENT_GUIDE.md
 ├── [ 12K]  CODE_OF_CONDUCT.md
 ├── [ 13K]  CONTRIBUTING.md
 ├── [1.0K]  LICENSE

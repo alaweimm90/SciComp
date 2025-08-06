@@ -537,7 +537,8 @@ memory_profiler_*
 !setup.cfg
 !pyproject.toml
 !Makefile
-!CLAUDE.md
+# Configuration files
+!config/*.json
 
 # Keep example data and assets
 !examples/**

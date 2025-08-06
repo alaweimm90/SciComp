@@ -334,8 +334,8 @@ Validating: Quantum Physics, ML Physics, Engineering Analysis
         try:
             doc_files = [
                 'README.md',
-                'CLAUDE.md',
-                'Python/README.md'
+                'Python/README.md',
+                'USAGE_EXAMPLES.md'
             ]
             
             docs_valid = True
