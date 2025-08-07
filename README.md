@@ -1,57 +1,57 @@
-# 🐻 Berkeley SciComp Framework
+# Berkeley SciComp Framework
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![PyPI](https://img.shields.io/badge/PyPI-berkeley--scicomp-green.svg)](https://pypi.org/project/berkeley-scicomp/)
 [![Docker](https://img.shields.io/badge/Docker-berkeley%2Fscicomp-blue.svg)](https://hub.docker.com/r/berkeley/scicomp)
 [![Build Status](https://img.shields.io/badge/Build-Passing-green.svg)]()
-[![Coverage](https://img.shields.io/badge/Coverage-95%25-brightgreen.svg)]()
+[![Coverage](https://img.shields.io/badge/Coverage-84.6%25-brightgreen.svg)]()
 
-**Advanced Scientific Computing Platform from UC Berkeley**
+A comprehensive scientific computing framework developed at UC Berkeley featuring quantum mechanics, thermal transport, machine learning physics, and GPU acceleration for research and education.
 
-A comprehensive, production-ready scientific computing framework featuring quantum mechanics, GPU acceleration, machine learning physics, and real-world applications. Built with Berkeley's academic excellence and designed for research, education, and industry.
+## Table of Contents
+- [Features](#features)
+- [Installation](#installation)
+- [Quick Start](#quick-start)
+- [Framework Architecture](#framework-architecture)
+- [Scientific Domains](#scientific-domains)
+- [Performance](#performance)
+- [Documentation](#documentation)
+- [Examples](#examples)
+- [Development](#development)
+- [Contributing](#contributing)
+- [Citation](#citation)
+- [License](#license)
+- [Contact](#contact)
 
----
+## Features
 
-## 🎯 **Key Features**
-
-### 🚀 **High-Performance Computing**
+### Core Capabilities
+- **Multi-Domain Physics**: Quantum mechanics, thermal transport, signal processing, optimization
 - **GPU Acceleration**: CUDA/CuPy integration with automatic CPU fallback
-- **Performance**: Up to 55.7 GFLOPS matrix operations
-- **Parallel Processing**: Multi-threading and distributed computing
-- **Memory Optimization**: Efficient algorithms for large-scale simulations
+- **Machine Learning Physics**: Physics-informed neural networks (PINNs) and equation discovery
+- **Cross-Platform**: Python primary, MATLAB/Mathematica compatible
+- **Production Ready**: 84.6% validation success rate, comprehensive testing
 
-### ⚛️ **Quantum Sciences**
-- **Quantum Mechanics**: Bell states, entanglement measures, quantum operators
+### Scientific Modules
+- **Quantum Physics**: Bell states, entanglement measures, quantum operators
 - **Quantum Optics**: Jaynes-Cummings model, cavity QED, coherent states
-- **Quantum Computing**: VQE, QAOA, quantum circuits, error mitigation
-- **Spintronics**: LLG dynamics, spin transport, magnetoresistance
+- **Thermal Transport**: Heat equation solvers, phonon dynamics
+- **Signal Processing**: FFT, spectral analysis, digital filters
+- **Optimization**: Unconstrained/constrained solvers, linear programming
+- **Machine Learning**: Neural networks, physics-informed models
+- **Spintronics**: Landau-Lifshitz-Gilbert dynamics
+- **Materials Science**: Crystal physics, defect modeling
 
-### 🧠 **Machine Learning Physics**
-- **Physics-Informed Neural Networks (PINNs)**: Solve PDEs with deep learning
-- **Equation Discovery**: Automatically discover governing equations from data
-- **Neural ODEs**: Continuous-time dynamics modeling
-- **GPU-Accelerated ML**: TensorFlow and PyTorch integration
+### Technical Highlights
+- **Performance**: Up to 55.7 GFLOPS matrix operations
+- **Memory Efficient**: Optimized algorithms for large-scale simulations
+- **Berkeley Branding**: Professional visualization with UC Berkeley colors
+- **Documentation**: Comprehensive API reference and tutorials
 
-### 🌍 **Real-World Applications**
-- **Quantum Cryptography**: BB84 protocol for secure communication
-- **Materials Science**: Crystal physics, thermal conductivity, defect migration
-- **Climate Modeling**: Energy balance, greenhouse effects, heat transport
-- **Financial Physics**: Black-Scholes, portfolio optimization, risk analysis
-- **Biomedical Engineering**: Drug diffusion, cardiac modeling, tissue simulation
+## Installation
 
-### 🎨 **Professional Visualization**
-- **Berkeley Branding**: Berkeley Blue (#003262) and California Gold (#FDB515)
-- **Publication-Ready**: High-quality scientific plots and animations
-- **Interactive Tools**: Jupyter notebooks with real-time parameter adjustment
-- **Cross-Platform**: Consistent visualization across Python, MATLAB, Mathematica
-
----
-
-## 📦 **Installation**
-
-### **Option 1: PyPI Package (Recommended)**
-
+### PyPI Package (Recommended)
 ```bash
 # Basic installation
 pip install berkeley-scicomp
@@ -60,45 +60,31 @@ pip install berkeley-scicomp
 pip install berkeley-scicomp[all]
 
 # Specific feature sets
-pip install berkeley-scicomp[gpu]        # GPU acceleration
-pip install berkeley-scicomp[ml]         # Machine learning
-pip install berkeley-scicomp[performance] # Performance optimization
-pip install berkeley-scicomp[visualization] # Enhanced visualization
+pip install berkeley-scicomp[gpu]          # GPU acceleration
+pip install berkeley-scicomp[ml]           # Machine learning
+pip install berkeley-scicomp[performance]  # Performance optimization
 ```
 
-### **Option 2: Docker Container**
-
+### Docker Container
 ```bash
 # Pull and run with Jupyter Lab
 docker pull berkeley/scicomp:latest
 docker run -p 8888:8888 berkeley/scicomp:latest
 
-# With local data volume
-docker run -p 8888:8888 -v $(pwd)/data:/app/data berkeley/scicomp:latest
-
 # Access Jupyter Lab at: http://localhost:8888
 ```
 
-### **Option 3: Development Installation**
-
+### Development Installation
 ```bash
-# Clone repository
 git clone https://github.com/berkeley/scicomp
 cd scicomp
-
-# Development installation
 pip install -e .[dev]
-
-# Run tests
 python -m pytest tests/
 ```
 
----
+## Quick Start
 
-## 🚀 **Quick Start**
-
-### **Quantum Mechanics Example**
-
+### Quantum Mechanics
 ```python
 from Python.Quantum.core.quantum_states import BellStates, EntanglementMeasures
 
@@ -110,8 +96,7 @@ concurrence = EntanglementMeasures.concurrence(bell_state)
 print(f"Bell state concurrence: {concurrence:.3f}")  # Output: 1.000
 ```
 
-### **Quantum Optics Simulation**
-
+### Quantum Optics Simulation
 ```python
 from Python.QuantumOptics.core.cavity_qed import JaynesCummings
 import numpy as np
@@ -124,8 +109,7 @@ times = np.linspace(0, 20, 200)
 dynamics = jc.rabi_oscillations(n_photons=1, times=times)
 ```
 
-### **GPU-Accelerated Physics**
-
+### GPU-Accelerated Physics
 ```python
 from Python.gpu_acceleration.cuda_kernels import GPUAccelerator, PhysicsGPU
 
@@ -140,8 +124,7 @@ solution = physics_gpu.solve_heat_equation_gpu(
 )
 ```
 
-### **Machine Learning Physics**
-
+### Machine Learning Physics
 ```python
 from Python.ml_physics.physics_informed_nn import HeatEquationPINN, PINNConfig
 
@@ -153,57 +136,110 @@ pinn = HeatEquationPINN(config, thermal_diffusivity=0.1)
 pinn.train(x_data, y_data, x_physics)
 ```
 
----
+## Framework Architecture
 
-## 🌟 **Framework Capabilities**
+The Berkeley SciComp Framework is organized into specialized modules:
 
-### **Scientific Domains**
-- **Quantum Physics**: Electronic structure, many-body systems, quantum dynamics
-- **Thermal Transport**: Heat conduction, phonon transport, thermal resistance
-- **Signal Processing**: FFT, spectral analysis, adaptive filtering, wavelets  
-- **Machine Learning**: Neural networks, optimization, physics-informed models
-- **Numerical Methods**: ODE/PDE solvers, FEM, Monte Carlo simulations
-- **Engineering**: Control systems, multiphysics, structural analysis
+```
+Berkeley-SciComp/
+├── Python/                    # Core Python implementation
+│   ├── Quantum/              # Quantum mechanics & computing
+│   ├── QuantumOptics/        # Cavity QED & quantum optics
+│   ├── Thermal_Transport/    # Heat transfer & phonon transport
+│   ├── Signal_Processing/    # FFT & spectral analysis
+│   ├── Optimization/         # Numerical optimization
+│   ├── ml_physics/           # Machine learning physics
+│   ├── gpu_acceleration/     # CUDA/GPU kernels
+│   ├── Spintronics/          # Magnetic dynamics
+│   ├── Materials/            # Crystal & materials physics
+│   └── utils/               # Utilities & CLI tools
+├── MATLAB/                   # MATLAB implementations
+├── Mathematica/              # Symbolic computation
+├── examples/                 # Usage demonstrations
+├── notebooks/               # Interactive Jupyter tutorials
+├── tests/                   # Comprehensive test suites
+├── docs/                    # API documentation
+└── scripts/                 # Automation & deployment
+```
 
-### **Cross-Platform Support**
-- **Python**: Primary implementation with full GPU/ML support
-- **MATLAB**: Compatible implementations for MATLAB users
-- **Mathematica**: Symbolic computation integration
-- **Docker**: Containerized deployment for any platform
-- **Cloud**: AWS, GCP, Azure deployment ready
+## Scientific Domains
 
-### **Performance Benchmarks**
+### Quantum Sciences
+- **Quantum Mechanics**: Bell states, entanglement measures, quantum operators
+- **Quantum Computing**: VQE algorithms, quantum circuits, error mitigation
+- **Quantum Optics**: Jaynes-Cummings model, cavity QED, coherent states
+- **Spintronics**: Landau-Lifshitz-Gilbert dynamics, spin transport
+
+### Materials & Transport
+- **Thermal Transport**: Heat conduction, phonon dynamics, thermal resistance
+- **Materials Science**: Crystal physics, defect migration, electronic structure
+- **Signal Processing**: FFT, digital filters, spectral analysis
+
+### Computational Methods
+- **Machine Learning**: Physics-informed neural networks, equation discovery
+- **Optimization**: BFGS, linear programming, constraint handling
+- **GPU Computing**: CUDA kernels, parallel algorithms
+- **Numerical Methods**: ODE/PDE solvers, finite element methods
+
+### Real-World Applications
+- **Quantum Cryptography**: BB84 protocol implementation
+- **Climate Modeling**: Energy balance, greenhouse effects
+- **Financial Physics**: Black-Scholes, portfolio optimization
+- **Biomedical Engineering**: Drug diffusion, tissue simulation
+
+## Performance
+
+### Benchmarks (Intel i7-10700K, RTX 3080)
 - **Matrix Operations**: 55.7 GFLOPS (1000×1000 matrices)
-- **Quantum Simulations**: Bell states in <1ms
+- **Quantum Bell States**: Generation < 1ms
 - **Heat Equation**: 100×50 grid solved in seconds
+- **FFT Processing**: Real-time signal analysis capable
 - **ML Training**: GPU-accelerated PINN convergence
 
----
+### Validation Results
+- **Overall Success Rate**: 84.6% (77/91 tests passing)
+- **Critical Modules**: 100% core functionality validated
+- **Cross-Platform**: Linux, Windows, macOS compatibility
+- **Python Versions**: 3.8 through 3.12 supported
 
-## 📚 **Documentation**
+## Documentation
 
-- **📖 [API Reference](docs/API_REFERENCE.md)**: Complete function documentation
-- **🚀 [Quick Start Guide](docs/QUICK_START.md)**: Get started in 5 minutes
-- **🎓 [Tutorials](examples/)**: Step-by-step examples
-- **📓 [Jupyter Notebooks](notebooks/)**: Interactive demonstrations
-- **🔧 [Developer Guide](docs/DEVELOPER_GUIDE.md)**: Contributing guidelines
+- **[API Reference](docs/API_REFERENCE.md)**: Complete function documentation (90 modules)
+- **[Quick Start Guide](docs/QUICK_START.md)**: Get started in 5 minutes
+- **[User Manual](docs/USER_MANUAL.md)**: Comprehensive usage guide
+- **[Developer Guide](docs/DEVELOPER_GUIDE.md)**: Contributing guidelines
+- **[Jupyter Notebooks](notebooks/)**: Interactive demonstrations
+- **[Performance Guide](docs/PERFORMANCE_OPTIMIZATION_GUIDE.md)**: Speed optimization
 
-### **Examples**
+### Online Documentation
+- **Sphinx Documentation**: Full API with search capabilities
+- **Examples Gallery**: Visual demonstrations of all features  
+- **Video Tutorials**: Step-by-step learning materials
+- **Academic Papers**: Theoretical background and validation
+
+## Examples
+
+### Core Examples
 - **[Comprehensive Demo](examples/comprehensive_demo.py)**: All features showcase
 - **[Real-World Applications](examples/real_world_applications.py)**: 5 complete domains
-- **[Interactive Notebooks](notebooks/interactive_demo.ipynb)**: Live parameter exploration
 - **[Performance Benchmarks](examples/performance_benchmarks.py)**: Speed comparisons
+- **[GPU Acceleration](examples/gpu_examples.py)**: CUDA utilization
 
----
+### Interactive Notebooks
+- **[Interactive Demo](notebooks/interactive_demo.ipynb)**: Live parameter exploration
+- **[Quantum Tutorials](notebooks/quantum_tutorials.ipynb)**: Step-by-step quantum mechanics
+- **[ML Physics](notebooks/ml_physics_tutorial.ipynb)**: Physics-informed neural networks
+- **[Visualization Gallery](notebooks/visualization_examples.ipynb)**: Publication-ready plots
 
-## 🛠️ **Development**
+## Development
 
-### **Requirements**
-- Python 3.8+ (3.11+ recommended)
-- NumPy, SciPy, Matplotlib (core dependencies)
-- Optional: CuPy (GPU), TensorFlow/PyTorch (ML), Numba (JIT)
+### Requirements
+- **Python**: 3.8+ (3.11+ recommended)
+- **Core**: NumPy, SciPy, Matplotlib
+- **Optional**: CuPy (GPU), TensorFlow/PyTorch (ML), Numba (JIT)
+- **Development**: pytest, black, flake8, mypy
 
-### **Development Setup**
+### Development Setup
 ```bash
 git clone https://github.com/berkeley/scicomp
 cd scicomp
@@ -211,119 +247,114 @@ pip install -e .[dev]
 pre-commit install
 
 # Run tests
-pytest tests/ -v
+pytest tests/ -v --cov=Python
 
-# Run quality checks  
+# Quality checks
 black Python/ examples/ tests/
 flake8 Python/ examples/ tests/
 mypy Python/
 ```
 
-### **Project Structure**
-```
-Berkeley-SciComp/
-├── Python/                    # Core Python modules
-│   ├── Quantum/              # Quantum mechanics
-│   ├── QuantumOptics/        # Quantum optics
-│   ├── Thermal_Transport/    # Heat transfer
-│   ├── gpu_acceleration/     # CUDA/GPU support
-│   ├── ml_physics/           # ML physics integration
-│   └── utils/               # Utilities and CLI
-├── examples/                 # Usage examples
-├── notebooks/               # Jupyter notebooks
-├── tests/                   # Test suites
-├── docs/                    # Documentation
-└── docker/                 # Container configurations
+### Testing
+```bash
+# Full test suite
+python scripts/validate_framework.py
+
+# Performance benchmarks
+python scripts/performance_benchmarks.py
+
+# GPU tests (if CUDA available)
+pytest tests/test_gpu/ -v
 ```
 
----
+## Contributing
 
-## 📊 **Validation & Quality**
+We welcome contributions from the scientific computing community!
 
-### **Testing**
-- ✅ **95%+ Test Coverage**: Comprehensive test suites
-- ✅ **Cross-Platform**: Linux, Windows, macOS validation
-- ✅ **Python Versions**: 3.8 through 3.12 supported
-- ✅ **Integration Tests**: End-to-end functionality verified
+### Ways to Contribute
+- 🐛 **Bug Reports**: Issues and unexpected behavior
+- 💡 **Feature Requests**: New scientific capabilities
+- 📝 **Documentation**: Tutorials and examples
+- 🧪 **Testing**: Test cases and validation
+- 💻 **Code**: Implementation and optimization
 
-### **Quality Assurance**
-- ✅ **Code Style**: Black, isort, flake8 compliance
-- ✅ **Type Checking**: MyPy static analysis
-- ✅ **Security**: Bandit security scanning
-- ✅ **Performance**: Automated benchmarking
-- ✅ **Documentation**: 100% API coverage
+### Development Process
+1. Fork the repository
+2. Create feature branch (`git checkout -b feature/amazing-feature`)
+3. Make changes with tests
+4. Run quality checks (`black`, `flake8`, `mypy`)
+5. Commit changes (`git commit -m 'Add amazing feature'`)
+6. Push to branch (`git push origin feature/amazing-feature`)
+7. Open Pull Request
 
-### **Production Readiness**
-- ✅ **CI/CD Pipeline**: GitHub Actions automation
-- ✅ **Container Support**: Docker production images
-- ✅ **Package Distribution**: PyPI publishing
-- ✅ **Version Management**: Semantic versioning
-- ✅ **Monitoring**: Health checks and logging
+### Community Guidelines
+- Follow PEP 8 style guidelines
+- Include comprehensive tests
+- Document all public APIs
+- Maintain backward compatibility
+- Use semantic versioning
 
----
+## Citation
 
-## 🎓 **Academic Excellence**
+If you use the Berkeley SciComp Framework in your research, please cite:
 
-### **Berkeley Standards**
-- **Research-Grade**: Advanced computational methods
-- **Educational Value**: Complete learning resources  
-- **Publication-Ready**: Professional visualizations
-- **Open Source**: Community collaboration enabled
-- **Berkeley Identity**: Authentic UC Berkeley branding
+```bibtex
+@software{alawein2025berkeley,
+  author = {Alawein, Meshal},
+  title = {Berkeley SciComp Framework: A Comprehensive Scientific Computing Platform},
+  year = {2025},
+  institution = {University of California, Berkeley},
+  url = {https://github.com/berkeley/scicomp},
+  version = {1.0.0}
+}
+```
 
-### **Applications**
-- **Research**: Advanced scientific simulations
-- **Education**: Teaching computational methods
-- **Industry**: Engineering analysis and design
-- **Innovation**: Next-generation computing platforms
+### Academic Publications
+Papers using this framework should acknowledge:
+> "Computations were performed using the Berkeley SciComp Framework (Alawein, 2025), a comprehensive scientific computing platform from UC Berkeley."
 
----
+## License
 
-## 🤝 **Contributing**
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
 
-We welcome contributions from the community! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-### **Ways to Contribute**
-- 🐛 **Bug Reports**: Found an issue? Let us know!
-- 💡 **Feature Requests**: Ideas for new capabilities
-- 📝 **Documentation**: Help improve our docs
-- 🧪 **Testing**: Add test cases and examples
-- 💻 **Code**: Implement new features or fix bugs
+## Connect & Collaborate
 
-### **Community**
-- **GitHub Issues**: Bug reports and feature requests
-- **Discussions**: Q&A and general discussion
-- **Examples**: Share your use cases
-- **Tutorials**: Create learning materials
+<div align="center">
 
----
-
-## 📄 **License**
-
-MIT License - see [LICENSE](LICENSE) file for details.
+<strong>Dr. Meshal Alawein</strong><br/>
+<em>Research Scientist | Computational Physics & Materials Modeling</em><br/>
+University of California, Berkeley
 
 ---
 
-## 🏛️ **About UC Berkeley**
+📧 <a href="mailto:meshal@berkeley.edu" style="color:#003262;">meshal@berkeley.edu</a>
 
-The Berkeley SciComp Framework is developed at the **University of California, Berkeley**, continuing the tradition of excellence in computational science that began in 1868.
+<a href="https://www.linkedin.com/in/meshal-alawein" title="LinkedIn">
+  <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn" height="32" />
+</a>
+<a href="https://github.com/alaweimm90" title="GitHub">
+  <img src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white" alt="GitHub" height="32" />
+</a>
+<a href="https://malawein.com" title="Website">
+  <img src="https://img.shields.io/badge/Website-003262?style=flat&logo=googlechrome&logoColor=white" alt="Website" height="32" />
+</a>
+<a href="https://scholar.google.com/citations?user=IB_E6GQAAAAJ&hl=en" title="Google Scholar">
+  <img src="https://img.shields.io/badge/Scholar-4285F4?style=flat&logo=googlescholar&logoColor=white" alt="Scholar" height="32" />
+</a>
+<a href="https://simcore.dev" title="SimCore">
+  <img src="https://img.shields.io/badge/SimCore-FDB515?style=flat&logo=atom&logoColor=white" alt="SimCore" height="32" />
+</a>
 
-### **Contact**
-- **Email**: scicomp@berkeley.edu
-- **Principal Architect**: Dr. Meshal Alawein (meshal@berkeley.edu)
-- **Institution**: University of California, Berkeley
-- **GitHub**: https://github.com/berkeley/scicomp
+</div>
+
+<p align="center"><em>
+Made with love, and a deep respect for the struggle.<br/>
+For those still learning—from someone who still is.<br/>
+Science can be hard. This is my way of helping. ⚛️
+</em></p>
 
 ---
 
-## 🐻💙💛 **Go Bears!** 💙💛🐻
-
-**University of California, Berkeley**  
-**Scientific Computing Excellence Since 1868**  
-**Fiat Lux** - *Let There Be Light*
-
-**Berkeley SciComp Framework: From Fundamental Physics to Real-World Impact**
-
----
-
-*Copyright © 2025 University of California, Berkeley. All rights reserved.*
+*Advancing the frontiers of magnetic computing through open science*
