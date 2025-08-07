@@ -378,6 +378,9 @@ personal_configs/
 .vscode/
 .idea/
 
+# Documentation builds
+docs/_build/
+
 # Pre-commit
 .pre-commit-config.yaml.bak
 
