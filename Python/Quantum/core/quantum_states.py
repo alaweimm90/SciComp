@@ -43,6 +43,15 @@ class QuantumState:
         if norm > 1e-10:
             self.state_vector /= norm
     
+    def is_normalized(self, tolerance: float = 1e-10) -> bool:
+        """Check if state is normalized."""
+        if self.is_density_matrix:
+            trace = np.trace(self.density_matrix)
+            return abs(trace - 1.0) < tolerance
+        else:
+            norm = np.linalg.norm(self.state_vector)
+            return abs(norm - 1.0) < tolerance
+    
     def _validate_density_matrix(self):
         """Validate density matrix properties."""
         # Check Hermiticity

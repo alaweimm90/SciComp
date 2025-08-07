@@ -29,8 +29,11 @@ import matplotlib.pyplot as plt
 from pathlib import Path
 import warnings
 
-from ...utils.constants import hbar, me
-from ...visualization.berkeley_style import BerkeleyPlot
+# Physical constants and Berkeley styling
+hbar = 1.0545718e-34  # Reduced Planck constant (J⋅s)
+me = 9.1093837e-31    # Electron mass (kg)
+BERKELEY_BLUE = '#003262'
+CALIFORNIA_GOLD = '#FDB515'
 
 class ComplexDense(keras.layers.Layer):
     """Complex-valued dense layer for quantum wavefunctions."""

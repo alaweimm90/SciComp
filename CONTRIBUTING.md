@@ -1,6 +1,11 @@
 # Contributing to Berkeley SciComp Framework
 
-Welcome to the UC Berkeley Scientific Computing Framework! We're excited that you're interested in contributing to this comprehensive scientific computing platform.
+![Berkeley SciComp](https://img.shields.io/badge/Berkeley-SciComp-003262?style=flat-square&logo=university)
+[![Contributors Welcome](https://img.shields.io/badge/contributors-welcome-brightgreen?style=flat-square)](https://github.com/berkeley/scicomp/contribute)
+
+**Welcome to the Berkeley SciComp community!** 🐻
+
+We're excited that you're interested in contributing to our scientific computing framework. This guide will help you get started with contributing code, documentation, examples, or bug reports.
 
 **Author**: Dr. Meshal Alawein (meshal@berkeley.edu)  
 **Institution**: University of California, Berkeley  
@@ -8,7 +13,19 @@ Welcome to the UC Berkeley Scientific Computing Framework! We're excited that yo
 
 ---
 
-## 🎯 Quick Start
+## 🎯 How to Contribute
+
+### Ways to Contribute
+
+1. **🐛 Bug Reports**: Found an issue? Let us know!
+2. **💡 Feature Requests**: Ideas for new capabilities
+3. **📝 Documentation**: Improve our docs and examples
+4. **🧪 Testing**: Add test cases and improve coverage
+5. **💻 Code**: Implement new features or fix bugs
+6. **🎓 Examples**: Create tutorials and use cases
+7. **📊 Benchmarks**: Performance analysis and optimization
+
+### Quick Start
 
 1. **Fork** the repository
 2. **Clone** your fork locally

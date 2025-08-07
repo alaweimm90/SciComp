@@ -37,8 +37,10 @@ import matplotlib.pyplot as plt
 from typing import Optional, Tuple, Union, Callable, Dict, List, Any
 from dataclasses import dataclass
 import warnings
-from ...utils.constants import pi
-from ...visualization.berkeley_style import BerkeleyPlot
+# Constants and Berkeley styling
+pi = np.pi
+BERKELEY_BLUE = '#003262'
+CALIFORNIA_GOLD = '#FDB515'
 
 @dataclass
 class FNOConfig:

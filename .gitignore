@@ -374,9 +374,9 @@ personal_configs/
 # Development Tools
 # =============================================================================
 
-# Claude Code
-.claude/
-CLAUDE.md
+# Development tools
+.vscode/
+.idea/
 
 # Pre-commit
 .pre-commit-config.yaml.bak

@@ -79,6 +79,10 @@ class JaynesCummings:
         
         return states
     
+    def eigenvalues(self) -> np.ndarray:
+        """Get eigenvalues of Jaynes-Cummings Hamiltonian."""
+        return np.linalg.eigvals(self.H)
+    
     def rabi_oscillations(self, n_photons: int, times: np.ndarray) -> Dict[str, np.ndarray]:
         """
         Calculate Rabi oscillations for initial Fock state.

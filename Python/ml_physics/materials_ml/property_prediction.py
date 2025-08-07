@@ -51,7 +51,9 @@ except ImportError:
     PYMATGEN_AVAILABLE = False
     warnings.warn("PyMatGen not available. Some features will be limited.")
 
-from ...visualization.berkeley_style import BerkeleyPlot, BERKELEY_BLUE, CALIFORNIA_GOLD
+# Berkeley styling constants
+BERKELEY_BLUE = '#003262'
+CALIFORNIA_GOLD = '#FDB515'
 
 class MaterialsPropertyPredictor:
     """

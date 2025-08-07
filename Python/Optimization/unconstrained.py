@@ -457,6 +457,7 @@ class BFGS(UnconstrainedOptimizer):
         
         # Initial gradient
         grad = self._evaluate_gradient(gradient, objective, x)
+        prev_f_val = None
         
         for iteration in range(self.max_iterations):
             # Check convergence
@@ -466,6 +467,15 @@ class BFGS(UnconstrainedOptimizer):
                 message = f"Gradient norm below tolerance: {grad_norm:.2e}"
                 break
             
+            # Get current function value for convergence check
+            f_val = self._evaluate_function(objective, x)
+            if iteration > 0 and prev_f_val is not None:
+                if abs(f_val - prev_f_val) < self.tolerance * max(1.0, abs(f_val)):
+                    success = True
+                    message = f"Function value converged: df = {abs(f_val - prev_f_val):.2e}"
+                    break
+            prev_f_val = f_val
+            
             # Compute search direction
             try:
                 p = -np.linalg.solve(B, grad)
@@ -474,8 +484,7 @@ class BFGS(UnconstrainedOptimizer):
                 p = -grad
                 B = np.eye(n)  # Reset Hessian approximation
             
-            # Line search
-            f_val = self._evaluate_function(objective, x)
+            # Line search (f_val already computed above)
             alpha = self._line_search(objective, gradient, x, p, f_val, grad)
             
             # Update

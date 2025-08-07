@@ -29,8 +29,10 @@ from pathlib import Path
 import time
 from dataclasses import dataclass
 
-from ...utils.constants import pi
-from ...visualization.berkeley_style import BerkeleyPlot, BERKELEY_BLUE, CALIFORNIA_GOLD
+# Constants and Berkeley styling
+pi = np.pi
+BERKELEY_BLUE = '#003262'
+CALIFORNIA_GOLD = '#FDB515'
 
 @dataclass
 class WaveEquationConfig:

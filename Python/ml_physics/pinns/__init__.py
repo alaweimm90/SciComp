@@ -14,7 +14,7 @@ Copyright © 2025 Dr. Meshal Alawein — All rights reserved.
 from .schrodinger_pinn import *
 from .heat_equation_pinn import *
 from .wave_equation_pinn import *
-from .materials_pinn import *
+from .elasticity_pinn import *
 
 __all__ = [
     # Schrödinger PINN
@@ -26,6 +26,6 @@ __all__ = [
     # Wave Equation PINN
     'WaveEquationPINN', 'solve_wave_equation_pinn', 'acoustic_wave_pinn',
     
-    # Materials PINN
-    'MaterialsPINN', 'elastic_deformation_pinn', 'stress_strain_pinn'
+    # Elasticity PINN
+    'ElasticityPINN', 'elastic_deformation_pinn', 'stress_strain_pinn'
 ]
