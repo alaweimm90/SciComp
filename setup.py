@@ -3,6 +3,7 @@
 Berkeley SciComp Framework Setup
 
 Setup script for PyPI distribution of the Berkeley SciComp Framework.
+Production-ready scientific computing platform.
 """
 
 from setuptools import setup, find_packages

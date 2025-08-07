@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Getting Started with Berkeley SciComp Framework
+Quick Start Guide for Berkeley SciComp Framework
 ===============================================
 
 A complete beginner's guide to using the Berkeley SciComp Framework.

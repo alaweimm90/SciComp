@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Berkeley SciComp Framework - Comprehensive Validation Script
+Berkeley SciComp Framework - Complete Validation Script
 ============================================================
 
 This script performs comprehensive validation of the entire Berkeley SciComp

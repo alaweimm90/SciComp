@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "berkeley-scicomp"
 dynamic = ["version"]
-description = "Berkeley SciComp Framework - Advanced Scientific Computing Platform"
+description = "Berkeley SciComp Framework - Comprehensive Scientific Computing Platform"
 readme = "README.md"
 license = {text = "MIT"}
 authors = [

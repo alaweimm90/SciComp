@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Berkeley SciComp Framework - Comprehensive Test Runner
+Berkeley SciComp Framework - Complete Test Runner
 
 Master test runner that executes all test suites across Python, MATLAB, and
 Mathematica platforms. Provides unified reporting and validation of the entire

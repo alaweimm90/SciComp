@@ -1,4 +1,4 @@
-# Control - Mathematica
+# Control Systems - Mathematica
 
 ## Theory Background
 TODO: Add mathematical foundations

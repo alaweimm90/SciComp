@@ -3,7 +3,7 @@ FROM python:3.11-slim
 
 # Metadata
 LABEL maintainer="UC Berkeley SciComp Team <scicomp@berkeley.edu>"
-LABEL version="1.0.0"
+LABEL version="1.0.1"
 LABEL description="Berkeley SciComp Framework - Scientific Computing Excellence"
 
 # Set environment variables

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Berkeley SciComp Framework - Main Package
+Berkeley SciComp Framework - Core Python Package
 ==========================================
 
 UC Berkeley Scientific Computing Framework for multi-platform scientific
