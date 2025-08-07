@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Berkeley SciComp Framework - Real-World Applications
+SciComp - Real-World Applications
 
 Demonstrates practical applications of the framework in:
 - Quantum cryptography
@@ -665,7 +665,7 @@ def create_visualization(all_results):
     ax7.grid(True, alpha=0.3)
     
     # Add title
-    fig.suptitle('Berkeley SciComp Framework - Real-World Applications', 
+    fig.suptitle('SciComp - Real-World Applications', 
                 fontsize=18, fontweight='bold', color=berkeley_blue)
     
     plt.tight_layout()
@@ -704,7 +704,7 @@ def main():
     print("✅ Financial Physics: Option pricing and portfolio dynamics")
     print("✅ Biomedical Engineering: Drug diffusion and cardiac modeling")
     print("\n🐻 University of California, Berkeley - Go Bears! 💙💛")
-    print("Berkeley SciComp Framework: From Theory to Real-World Impact!")
+    print("SciComp: From Theory to Real-World Impact!")
     print("=" * 80)
 
 

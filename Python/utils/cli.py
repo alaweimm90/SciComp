@@ -34,7 +34,7 @@ RED = '\033[91m'
 YELLOW = '\033[93m'
 
 class BerkeleyCLI:
-    """Berkeley SciComp Framework Command Line Interface."""
+    """SciComp Command Line Interface."""
     
     def __init__(self):
         self.framework_root = Path(__file__).parent.parent.parent
@@ -57,7 +57,7 @@ class BerkeleyCLI:
         """Print Berkeley SciComp banner."""
         banner = f"""
 {BERKELEY_BLUE}{BOLD}================================================================
-Berkeley SciComp Framework - Command Line Interface
+SciComp - Command Line Interface
 ================================================================{RESET}
 
 {CALIFORNIA_GOLD}University of California, Berkeley{RESET}
@@ -225,7 +225,7 @@ License: MIT
     
     def show_config(self, args):
         """Show framework configuration."""
-        print(f"{BERKELEY_BLUE}Berkeley SciComp Framework Configuration{RESET}")
+        print(f"{BERKELEY_BLUE}SciComp Configuration{RESET}")
         print("=" * 50)
         
         if args.section:
@@ -323,7 +323,7 @@ def create_parser() -> argparse.ArgumentParser:
     """Create command-line argument parser."""
     parser = argparse.ArgumentParser(
         prog="berkeley-scicomp",
-        description="Berkeley SciComp Framework Command Line Interface",
+        description="SciComp Command Line Interface",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog=f"""
 {BERKELEY_BLUE}Examples:{RESET}

@@ -1,6 +1,6 @@
-# Berkeley SciComp Documentation
+# SciComp Documentation
 
-**Complete Scientific Computing Framework Documentation**
+**Complete Scientific Computing Suite Documentation**
 
 *Author: Dr. Meshal Alawein (meshal@berkeley.edu)*  
 *Institution: University of California, Berkeley*  

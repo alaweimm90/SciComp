@@ -1,5 +1,5 @@
 """
-Spintronics module for Berkeley SciComp Framework.
+Spintronics module for SciComp.
 
 Provides comprehensive spintronics simulation tools including:
 - Spin dynamics and magnetization evolution

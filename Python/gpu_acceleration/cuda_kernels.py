@@ -1,5 +1,5 @@
 """
-GPU acceleration support for Berkeley SciComp Framework.
+GPU acceleration support for SciComp.
 
 This module provides CUDA/GPU acceleration for computational physics using CuPy.
 Includes optimized kernels for quantum simulations, matrix operations, and FFTs.

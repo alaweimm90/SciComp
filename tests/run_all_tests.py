@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """
-Berkeley SciComp Framework - Complete Test Runner
+SciComp - Complete Test Runner
 
 Master test runner that executes all test suites across Python, MATLAB, and
 Mathematica platforms. Provides unified reporting and validation of the entire
-Berkeley SciComp scientific computing framework.
+SciComp scientific computing suite.
 
 Test Coverage:
 - Python: Quantum physics, ML physics, quantum computing
@@ -61,7 +61,7 @@ class BerkeleyTestRunner:
         banner = f"""
 {self.colors['berkeley_blue']}{self.colors['bold']}
 ================================================================
-Berkeley SciComp Framework - Comprehensive Test Suite
+SciComp - Comprehensive Test Suite
 ================================================================
 {self.colors['reset']}
 
@@ -462,7 +462,7 @@ Validating: Quantum Physics, ML Physics, Engineering Analysis
         
         print(f"\n{self.colors['berkeley_blue']}{self.colors['bold']}")
         print("=" * 70)
-        print("Berkeley SciComp Framework - Final Test Summary")
+        print("SciComp - Final Test Summary")
         print("=" * 70)
         print(f"{self.colors['reset']}")
         

@@ -921,7 +921,7 @@ def create_heat_operator_demo():
     """Create a demonstration of DeepONet for heat equation operator learning."""
     
     print("=" * 70)
-    print("Berkeley SciComp Framework")
+    print("SciComp")
     print("DeepONet: Heat Equation Operator Learning")
     print("=" * 70)
     

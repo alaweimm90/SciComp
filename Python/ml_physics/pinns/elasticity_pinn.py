@@ -850,7 +850,7 @@ def create_cantilever_demo():
     """Create a demonstration of cantilever beam analysis."""
     
     print("=" * 70)
-    print("Berkeley SciComp Framework")
+    print("SciComp")
     print("Elasticity PINN: Cantilever Beam Analysis")
     print("=" * 70)
     

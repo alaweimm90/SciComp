@@ -1,5 +1,5 @@
 """
-Advanced analytics and machine learning utilities for Berkeley SciComp Framework.
+Advanced analytics and machine learning utilities for SciComp.
 
 This module provides sophisticated analytics including:
 - Automated machine learning pipelines

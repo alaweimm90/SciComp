@@ -1,6 +1,6 @@
 # Machine Learning Physics Theory Reference
 
-**Berkeley SciComp Framework - ML Physics Foundation**
+**SciComp - ML Physics Foundation**
 
 *Author: Dr. Meshal Alawein (meshal@berkeley.edu)*  
 *Institution: University of California, Berkeley*  

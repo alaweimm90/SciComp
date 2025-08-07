@@ -1,10 +1,10 @@
-# Berkeley SciComp Framework - Installation Guide
+# SciComp - Installation Guide
 
-![Berkeley SciComp](https://img.shields.io/badge/Berkeley-SciComp-003262?style=flat-square&logo=university) 
+![Berkeley SciComp](https://img.shields.io/badge/SciComp-003262?style=flat-square&logo=university) 
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue?style=flat-square&logo=python)](https://python.org)
 [![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](../LICENSE)
 
-**Complete installation guide for the Berkeley SciComp Framework**
+**Complete installation guide for the SciComp**
 
 ---
 
@@ -640,7 +640,7 @@ MIT License - see [LICENSE](../LICENSE) file for details.
 
 ## 🏛️ About UC Berkeley
 
-The Berkeley SciComp Framework is developed at the **University of California, Berkeley**.
+The SciComp is developed at the **University of California, Berkeley**.
 
 **Contact Information**:
 - **Email**: scicomp@berkeley.edu

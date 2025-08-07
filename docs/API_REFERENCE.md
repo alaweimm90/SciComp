@@ -1,7 +1,7 @@
 
-# 🐻 Berkeley SciComp Framework - API Reference
+# 🐻 SciComp - API Reference
 
-![Berkeley SciComp](https://img.shields.io/badge/Berkeley-SciComp-003262?style=flat-square&logo=university)
+![Berkeley SciComp](https://img.shields.io/badge/SciComp-003262?style=flat-square&logo=university)
 
 **University of California, Berkeley**  
 **Scientific Computing Excellence Since 1868**
@@ -11,7 +11,7 @@
 
 ## Module Index
 
-Complete API reference for all modules in the Berkeley SciComp Framework.
+Complete API reference for all modules in the SciComp.
 
 ### Quantum Physics
 
@@ -63,7 +63,7 @@ Complete API reference for all modules in the Berkeley SciComp Framework.
 - **[optimization](optimization.md)** - `Python/Monte_Carlo/optimization.py`
   Monte Carlo Optimization Algorithms.
 - **[performance_optimizer](performance_optimizer.md)** - `Python/utils/performance_optimizer.py`
-  Performance optimization utilities for Berkeley SciComp Framework.
+  Performance optimization utilities for SciComp.
 - **[unconstrained](unconstrained.md)** - `Python/Optimization/unconstrained.py`
   Unconstrained Optimization Algorithms.
 - **[utils](utils.md)** - `Python/Optimization/utils.py`
@@ -85,7 +85,7 @@ Complete API reference for all modules in the Berkeley SciComp Framework.
 - **[physics_informed](physics_informed.md)** - `Python/Machine_Learning/physics_informed.py`
   Physics-Informed Machine Learning for Scientific Computing.
 - **[physics_informed_nn](physics_informed_nn.md)** - `Python/ml_physics/physics_informed_nn.py`
-  Physics-Informed Neural Networks (PINNs) for Berkeley SciComp Framework.
+  Physics-Informed Neural Networks (PINNs) for SciComp.
 - **[supervised](supervised.md)** - `Python/Machine_Learning/supervised.py`
   Supervised Learning Algorithms for Scientific Computing.
 - **[unsupervised](unsupervised.md)** - `Python/Machine_Learning/unsupervised.py`
@@ -96,16 +96,16 @@ Complete API reference for all modules in the Berkeley SciComp Framework.
 ### GPU Acceleration
 
 - **[cuda_kernels](cuda_kernels.md)** - `Python/gpu_acceleration/cuda_kernels.py`
-  GPU acceleration support for Berkeley SciComp Framework.
+  GPU acceleration support for SciComp.
 
 ### Utilities
 
 - **[advanced_analytics](advanced_analytics.md)** - `Python/utils/advanced_analytics.py`
-  Advanced analytics and machine learning utilities for Berkeley SciComp Framework.
+  Advanced analytics and machine learning utilities for SciComp.
 - **[cli](cli.md)** - `Python/utils/cli.py`
   Berkeley SciComp Command Line Interface.
 - **[cloud_integration](cloud_integration.md)** - `Python/utils/cloud_integration.py`
-  Cloud integration utilities for Berkeley SciComp Framework.
+  Cloud integration utilities for SciComp.
 - **[constants](constants.md)** - `Python/utils/constants.py`
   Physical Constants Module.
 - **[file_io](file_io.md)** - `Python/utils/file_io.py`

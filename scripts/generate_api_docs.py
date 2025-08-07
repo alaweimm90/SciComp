@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """
-Berkeley SciComp Framework - API Documentation Generator
+SciComp - API Documentation Generator
 ========================================================
 
 Automatically generates comprehensive API documentation for all modules
-in the Berkeley SciComp Framework, including cross-references, examples,
+in the SciComp, including cross-references, examples,
 and Berkeley-styled formatting.
 
 Author: UC Berkeley SciComp Team
@@ -46,9 +46,9 @@ class APIDocumentationGenerator:
         
         # Berkeley styling
         self.berkeley_header = """
-# 🐻 Berkeley SciComp Framework - API Reference
+# 🐻 SciComp - API Reference
 
-![Berkeley SciComp](https://img.shields.io/badge/Berkeley-SciComp-003262?style=flat-square&logo=university)
+![Berkeley SciComp](https://img.shields.io/badge/SciComp-003262?style=flat-square&logo=university)
 
 **University of California, Berkeley**  
 **Scientific Computing Excellence Since 1868**
@@ -266,7 +266,7 @@ class APIDocumentationGenerator:
         doc.append(self.berkeley_header)
         doc.append("## Module Index")
         doc.append("")
-        doc.append("Complete API reference for all modules in the Berkeley SciComp Framework.")
+        doc.append("Complete API reference for all modules in the SciComp.")
         doc.append("")
         
         # Group modules by category
@@ -408,7 +408,7 @@ class APIDocumentationGenerator:
 
 def main():
     """Main function."""
-    print(f"{Colors.BERKELEY_BLUE}🐻 Berkeley SciComp Framework - API Documentation Generator 🐻{Colors.RESET}")
+    print(f"{Colors.BERKELEY_BLUE}🐻 SciComp - API Documentation Generator 🐻{Colors.RESET}")
     print(f"{Colors.CALIFORNIA_GOLD}University of California, Berkeley{Colors.RESET}")
     print()
     

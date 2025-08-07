@@ -658,7 +658,7 @@ def run_tests():
     """Run all quantum computing tests with detailed output."""
     
     print("=" * 70)
-    print("Berkeley SciComp Framework")
+    print("SciComp")
     print("Quantum Computing Test Suite")
     print("=" * 70)
     print()

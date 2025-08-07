@@ -1,4 +1,4 @@
-# Berkeley SciComp Framework - Development Dependencies
+# SciComp - Development Dependencies
 # ====================================================
 #
 # Development and testing dependencies for the UC Berkeley Scientific

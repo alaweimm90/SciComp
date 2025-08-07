@@ -53,7 +53,7 @@ def main():
     """Main demonstration function."""
     
     print("=" * 70)
-    print("Berkeley SciComp Framework")
+    print("SciComp")
     print("Machine Learning Physics Comprehensive Demonstration")
     print("=" * 70)
     print()

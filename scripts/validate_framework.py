@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """
-Berkeley SciComp Framework - Complete Validation Script
-============================================================
+SciComp - Complete Validation Script
+====================================
 
-This script performs comprehensive validation of the entire Berkeley SciComp
-Framework, testing all major modules, performance benchmarks, and integration
+This script performs comprehensive validation of the entire SciComp
+suite, testing all major modules, performance benchmarks, and integration
 capabilities.
 
 Author: UC Berkeley SciComp Team
@@ -35,7 +35,7 @@ class Colors:
 def print_berkeley_header():
     """Print Berkeley SciComp header."""
     print(f"\n{Colors.BERKELEY_BLUE}{'='*80}{Colors.RESET}")
-    print(f"{Colors.BERKELEY_BLUE}{Colors.BOLD}🐻 Berkeley SciComp Framework - Comprehensive Validation 🐻{Colors.RESET}")
+    print(f"{Colors.BERKELEY_BLUE}{Colors.BOLD}🐻 SciComp - Comprehensive Validation 🐻{Colors.RESET}")
     print(f"{Colors.BERKELEY_BLUE}{'='*80}{Colors.RESET}")
     print(f"{Colors.CALIFORNIA_GOLD}University of California, Berkeley{Colors.RESET}")
     print(f"{Colors.CALIFORNIA_GOLD}Scientific Computing Excellence Since 1868{Colors.RESET}")
@@ -103,7 +103,7 @@ class ValidationResults:
                 print(f"{metric}: {value}")
         
         if success_rate >= 95:
-            print(f"\n{Colors.GREEN}{Colors.BOLD}🎉 EXCELLENT! Berkeley SciComp Framework is production ready! 🎉{Colors.RESET}")
+            print(f"\n{Colors.GREEN}{Colors.BOLD}🎉 EXCELLENT! SciComp is production ready! 🎉{Colors.RESET}")
             print(f"{Colors.BERKELEY_BLUE}🐻💙💛 Go Bears! 💙💛🐻{Colors.RESET}")
         elif success_rate >= 80:
             print(f"\n{Colors.CALIFORNIA_GOLD}{Colors.BOLD}✅ GOOD! Framework is mostly ready with minor issues{Colors.RESET}")
@@ -527,10 +527,10 @@ def main():
     
     # Exit with appropriate code
     if results.failed_tests == 0:
-        print(f"\n{Colors.GREEN}🚀 Berkeley SciComp Framework validation PASSED! Ready for deployment! 🚀{Colors.RESET}")
+        print(f"\n{Colors.GREEN}🚀 SciComp validation PASSED! Ready for deployment! 🚀{Colors.RESET}")
         return 0
     else:
-        print(f"\n{Colors.RED}❌ Berkeley SciComp Framework validation FAILED! {results.failed_tests} issues found.{Colors.RESET}")
+        print(f"\n{Colors.RED}❌ SciComp validation FAILED! {results.failed_tests} issues found.{Colors.RESET}")
         return 1
 
 if __name__ == "__main__":

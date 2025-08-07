@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Berkeley SciComp Framework
+SciComp
 ==========================
 
 UC Berkeley Scientific Computing Framework for multi-platform scientific
@@ -20,8 +20,8 @@ __institution__ = "University of California, Berkeley"
 __license__ = "MIT"
 __copyright__ = "Copyright © 2025 Dr. Meshal Alawein — All rights reserved."
 
-# Berkeley SciComp Framework metadata
-__title__ = "Berkeley SciComp Framework"
+# SciComp metadata
+__title__ = "SciComp"
 __description__ = "UC Berkeley Scientific Computing Framework"
 __url__ = "https://github.com/berkeley-scicomp/SciComp"
 __documentation__ = "https://berkeley-scicomp.readthedocs.io"
@@ -62,7 +62,7 @@ def print_berkeley_banner():
     
     banner = f"""
 {blue}{bold}================================================================
-Berkeley SciComp Framework v{__version__}
+SciComp v{__version__}
 ================================================================{reset}
 
 {gold}University of California, Berkeley{reset}

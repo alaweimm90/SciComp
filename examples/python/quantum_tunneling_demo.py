@@ -48,7 +48,7 @@ def main():
     """Main demonstration function."""
     
     print("=" * 70)
-    print("Berkeley SciComp Framework")
+    print("SciComp")
     print("Quantum Tunneling Demonstration")
     print("=" * 70)
     print()

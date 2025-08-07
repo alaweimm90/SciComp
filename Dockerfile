@@ -1,10 +1,10 @@
-# Berkeley SciComp Framework Docker Image
+# SciComp Docker Image
 FROM python:3.11-slim
 
 # Metadata
 LABEL maintainer="UC Berkeley SciComp Team <scicomp@berkeley.edu>"
 LABEL version="1.0.1"
-LABEL description="Berkeley SciComp Framework - Scientific Computing Excellence"
+LABEL description="SciComp - Cross-Platform Scientific Computing Suite"
 
 # Set environment variables
 ENV PYTHONUNBUFFERED=1 \

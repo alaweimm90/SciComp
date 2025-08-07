@@ -1,4 +1,4 @@
-# Berkeley SciComp Framework: Advanced Scientific Computing Platform for Quantum Physics
+# SciComp: A Cross-Platform Scientific Computing Suite for Research and Education
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python](https://img.shields.io/badge/Python-3.8+-green.svg)](https://www.python.org/)
@@ -27,10 +27,10 @@
 
 ## Project Overview
 
-**Berkeley SciComp Framework** implements a comprehensive scientific computing platform designed for quantum physics research, thermal transport studies, and machine learning applications. This research-grade multiscale toolkit enables the exploration of quantum phenomena through systematic GPU-accelerated simulations, revealing how quantum mechanics, thermal dynamics, and machine learning converge in modern computational physics applications across multiple programming environments.
+**SciComp** implements a comprehensive scientific computing platform designed for quantum physics research, thermal transport studies, and machine learning applications. This research-grade multiscale toolkit enables the exploration of quantum phenomena through systematic GPU-accelerated simulations, revealing how quantum mechanics, thermal dynamics, and machine learning converge in modern computational physics applications across multiple programming environments.
 
 <p align="center">
-  <img src="docs/images/berkeley_scicomp_overview.png" alt="Berkeley SciComp Framework Overview" width="800"/>
+  <img src="docs/images/scicomp_overview.png" alt="SciComp Overview" width="800"/>
   <br/>
   <em>Multi-domain scientific computing with quantum mechanics, GPU acceleration, and ML physics</em>
 </p>
@@ -65,7 +65,7 @@ cd scicomp
 pip install -e .
 
 # Verify installation
-python -c "import Python; print('Berkeley SciComp Framework loaded successfully')"
+python -c "import Python; print('SciComp loaded successfully')"
 ```
 
 ### Basic Usage
@@ -141,7 +141,7 @@ wolframscript -f tests/mathematica/test_symbolic_quantum.nb
 ## Repository Structure
 
 ```
-Berkeley-SciComp/
+SciComp/
 ├── Python/                     # Core Python implementation
 │   ├── Quantum/               # Quantum mechanics & computing
 │   ├── QuantumOptics/         # Cavity QED & quantum optics  
@@ -198,11 +198,11 @@ python tests/run_all_tests.py
 
 ## Citation
 
-If you use Berkeley SciComp Framework in your research, please cite:
+If you use SciComp in your research, please cite:
 
 ```bibtex
-@software{alawein2025berkeley,
-  title={Berkeley SciComp Framework: A Comprehensive Scientific Computing Platform},
+@software{alawein2025scicomp,
+  title={SciComp: A Cross-Platform Scientific Computing Suite for Research and Education},
   author={Alawein, Dr. Meshal},
   year={2025},
   url={https://github.com/berkeley/scicomp},
@@ -210,10 +210,10 @@ If you use Berkeley SciComp Framework in your research, please cite:
   institution={University of California, Berkeley}
 }
 
-@misc{berkeley_scicomp2025,
-  title={Berkeley SciComp Framework: Advanced Scientific Computing for Quantum Physics},
+@misc{scicomp2025,
+  title={SciComp: Cross-Platform Scientific Computing for Quantum Physics},
   author={Alawein, Meshal},
-  journal={UC Berkeley Scientific Computing},
+  journal={Scientific Computing Research},
   year={2025},
   institution={University of California, Berkeley}
 }

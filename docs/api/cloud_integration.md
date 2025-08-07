@@ -4,7 +4,7 @@
 
 ## Overview
 
-Cloud integration utilities for Berkeley SciComp Framework.
+Cloud integration utilities for SciComp.
 
 This module provides cloud computing integration including:
 - AWS, Google Cloud, Azure integration

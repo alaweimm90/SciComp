@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
-Quick Start Guide for Berkeley SciComp Framework
-===============================================
+Quick Start Guide for SciComp
+=============================
 
-A complete beginner's guide to using the Berkeley SciComp Framework.
+A complete beginner's guide to using SciComp.
 This tutorial covers basic usage, core concepts, and simple examples
 to get you started with scientific computing using our framework.
 
@@ -22,7 +22,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent.parent / "Python"))
 
 def main():
     """Main tutorial function."""
-    print("🎓 Berkeley SciComp Framework - Getting Started Tutorial")
+    print("🎓 SciComp - Getting Started Tutorial")
     print("=" * 60)
     print("Welcome to scientific computing excellence from UC Berkeley!")
     print()

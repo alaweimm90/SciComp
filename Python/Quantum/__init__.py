@@ -1,5 +1,5 @@
 """
-Quantum module for Berkeley SciComp Framework.
+Quantum module for SciComp.
 
 Provides comprehensive quantum mechanics tools including:
 - Quantum states and operators

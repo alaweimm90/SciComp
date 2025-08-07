@@ -4,7 +4,7 @@
 
 ## Overview
 
-Performance optimization utilities for Berkeley SciComp Framework.
+Performance optimization utilities for SciComp.
 
 This module provides advanced performance optimization including:
 - Just-in-time compilation with Numba

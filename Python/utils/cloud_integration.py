@@ -1,5 +1,5 @@
 """
-Cloud integration utilities for Berkeley SciComp Framework.
+Cloud integration utilities for SciComp.
 
 This module provides cloud computing integration including:
 - AWS, Google Cloud, Azure integration
@@ -397,7 +397,7 @@ class CloudComputing:
         yum install -y python3 python3-pip
         pip3 install numpy scipy matplotlib scikit-learn dask
         
-        # Install Berkeley SciComp Framework
+        # Install SciComp
         git clone https://github.com/berkeley/scicomp.git
         cd scicomp
         pip3 install -e .
@@ -503,10 +503,10 @@ RUN apt-get update && apt-get install -y \\
 RUN pip install --no-cache-dir \\
     {' '.join(requirements)}
 
-# Copy Berkeley SciComp Framework
+# Copy SciComp
 COPY . /app/
 
-# Install Berkeley SciComp Framework
+# Install SciComp
 RUN pip install -e .
 
 # Set environment variables
@@ -675,7 +675,7 @@ services:
         f.write(compose_content)
     
     # Create deployment README
-    readme_content = """# Berkeley SciComp Framework Deployment
+    readme_content = """# SciComp Deployment
 
 ## Docker Deployment
 

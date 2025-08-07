@@ -1,6 +1,6 @@
 # Quantum Mechanics Theory Reference
 
-**Berkeley SciComp Framework - Theoretical Foundation**
+**SciComp - Theoretical Foundation**
 
 *Author: Dr. Meshal Alawein (meshal@berkeley.edu)*  
 *Institution: University of California, Berkeley*  

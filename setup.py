@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
-Berkeley SciComp Framework Setup
+SciComp Setup
 
-Setup script for PyPI distribution of the Berkeley SciComp Framework.
-Production-ready scientific computing platform.
+Setup script for PyPI distribution of SciComp.
+A cross-platform scientific computing suite for research and education.
 """
 
 from setuptools import setup, find_packages

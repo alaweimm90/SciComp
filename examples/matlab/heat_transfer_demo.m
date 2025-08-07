@@ -26,7 +26,7 @@
 
 clear; close all; clc;
 
-fprintf('\n==== Berkeley SciComp Framework ====\n');
+fprintf('\n==== SciComp ====\n');
 fprintf('Heat Transfer Analysis Demonstration\n');
 fprintf('====================================\n\n');
 

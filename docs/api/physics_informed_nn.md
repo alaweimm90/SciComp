@@ -4,7 +4,7 @@
 
 ## Overview
 
-Physics-Informed Neural Networks (PINNs) for Berkeley SciComp Framework.
+Physics-Informed Neural Networks (PINNs) for SciComp.
 
 This module implements physics-informed machine learning for solving PDEs,
 discovering governing equations, and accelerating simulations.

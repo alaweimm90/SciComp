@@ -1,5 +1,5 @@
 """
-Thermal Transport module for Berkeley SciComp Framework.
+Thermal Transport module for SciComp.
 
 Provides comprehensive thermal transport simulation tools including:
 - Heat conduction and diffusion

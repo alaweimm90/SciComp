@@ -1,5 +1,5 @@
 """
-Quantum Optics module for Berkeley SciComp Framework.
+Quantum Optics module for SciComp.
 
 Provides comprehensive quantum optics tools including:
 - Cavity QED simulations

@@ -1,4 +1,4 @@
-%% Berkeley SciComp MATLAB Toolbox Startup Script
+%% SciComp MATLAB Toolbox Startup Script
 %
 % Initializes the SciComp scientific computing environment for MATLAB.
 % Sets up paths, configures Berkeley-themed plotting defaults, and 

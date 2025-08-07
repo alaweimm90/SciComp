@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
-Berkeley SciComp Framework - Deployment Script
+SciComp - Deployment Script
 ==============================================
 
-Automated deployment script for the Berkeley SciComp Framework.
+Automated deployment script for the SciComp.
 Handles PyPI publishing, Docker image building, and documentation deployment.
 
 Author: UC Berkeley SciComp Team
@@ -32,7 +32,7 @@ class Colors:
 def print_berkeley_header():
     """Print Berkeley deployment header."""
     print(f"\n{Colors.BERKELEY_BLUE}{'='*80}{Colors.RESET}")
-    print(f"{Colors.BERKELEY_BLUE}{Colors.BOLD}🐻 Berkeley SciComp Framework - Deployment Automation 🐻{Colors.RESET}")
+    print(f"{Colors.BERKELEY_BLUE}{Colors.BOLD}🐻 SciComp - Deployment Automation 🐻{Colors.RESET}")
     print(f"{Colors.BERKELEY_BLUE}{'='*80}{Colors.RESET}")
     print(f"{Colors.CALIFORNIA_GOLD}University of California, Berkeley{Colors.RESET}")
     print(f"{Colors.CALIFORNIA_GOLD}Deploying Scientific Computing Excellence{Colors.RESET}")
@@ -311,8 +311,8 @@ class DeploymentManager:
         # Create release
         release_command = [
             "gh", "release", "create", f"v{self.version}",
-            "--title", f"Berkeley SciComp Framework v{self.version}",
-            "--notes", f"Release v{self.version} of the Berkeley SciComp Framework",
+            "--title", f"SciComp v{self.version}",
+            "--notes", f"Release v{self.version} of the SciComp",
             "--draft"
         ]
         
@@ -327,7 +327,7 @@ class DeploymentManager:
         """Run full deployment pipeline."""
         print_berkeley_header()
         
-        print(f"Deploying Berkeley SciComp Framework v{self.version}")
+        print(f"Deploying SciComp v{self.version}")
         print(f"Target: {'Test PyPI' if test_pypi else 'Production PyPI'}")
         
         # Step-by-step deployment
@@ -365,7 +365,7 @@ class DeploymentManager:
         # Final result
         if not failed_steps:
             print(f"\n{Colors.GREEN}{Colors.BOLD}🎉 DEPLOYMENT SUCCESSFUL! 🎉{Colors.RESET}")
-            print(f"{Colors.BERKELEY_BLUE}Berkeley SciComp Framework v{self.version} deployed successfully!{Colors.RESET}")
+            print(f"{Colors.BERKELEY_BLUE}SciComp v{self.version} deployed successfully!{Colors.RESET}")
             print(f"{Colors.CALIFORNIA_GOLD}🐻💙💛 Go Bears! 💙💛🐻{Colors.RESET}")
             return True
         else:
@@ -375,7 +375,7 @@ class DeploymentManager:
 
 def main():
     """Main deployment function."""
-    parser = argparse.ArgumentParser(description="Berkeley SciComp Framework Deployment")
+    parser = argparse.ArgumentParser(description="SciComp Deployment")
     parser.add_argument("--production", action="store_true", 
                        help="Deploy to production PyPI (default: test PyPI)")
     parser.add_argument("--skip-tests", action="store_true",

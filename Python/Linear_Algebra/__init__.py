@@ -20,7 +20,7 @@ from .core.vector_operations import VectorOperations, VectorNorms
 from .core.linear_systems import DirectSolvers, IterativeSolvers, LinearSystemUtils, SolverResult
 
 __version__ = "1.0.0"
-__author__ = "Berkeley SciComp Framework"
+__author__ = "SciComp"
 
 __all__ = [
     # Matrix operations

@@ -58,7 +58,7 @@ from .utils.material_properties import (
 
 # Version information
 __version__ = "1.0.0"
-__author__ = "Berkeley SciComp Framework"
+__author__ = "SciComp"
 __email__ = "scicomp@berkeley.edu"
 
 # Package metadata

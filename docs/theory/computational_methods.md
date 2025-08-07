@@ -1,6 +1,6 @@
 # Computational Methods Theory Reference
 
-**Berkeley SciComp Framework - Computational Foundation**
+**SciComp - Computational Foundation**
 
 *Author: Dr. Meshal Alawein (meshal@berkeley.edu)*  
 *Institution: University of California, Berkeley*  

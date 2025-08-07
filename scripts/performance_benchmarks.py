@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
-Berkeley SciComp Framework - Performance Benchmarks
+SciComp - Performance Benchmarks
 ===================================================
 
-Comprehensive performance benchmarking suite for the Berkeley SciComp Framework.
+Comprehensive performance benchmarking suite for the SciComp.
 Tests computational efficiency across all major modules and provides detailed
 performance metrics for optimization and deployment planning.
 
@@ -35,7 +35,7 @@ class Colors:
 def print_berkeley_header():
     """Print Berkeley performance benchmark header."""
     print(f"\n{Colors.BERKELEY_BLUE}{'='*80}{Colors.RESET}")
-    print(f"{Colors.BERKELEY_BLUE}{Colors.BOLD}🐻 Berkeley SciComp Framework - Performance Benchmarks 🐻{Colors.RESET}")
+    print(f"{Colors.BERKELEY_BLUE}{Colors.BOLD}🐻 SciComp - Performance Benchmarks 🐻{Colors.RESET}")
     print(f"{Colors.BERKELEY_BLUE}{'='*80}{Colors.RESET}")
     print(f"{Colors.CALIFORNIA_GOLD}University of California, Berkeley{Colors.RESET}")
     print(f"{Colors.CALIFORNIA_GOLD}Scientific Computing Performance Excellence{Colors.RESET}")

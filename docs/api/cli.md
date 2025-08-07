@@ -46,7 +46,7 @@ Main CLI entry point.
 
 ### `BerkeleyCLI`
 
-Berkeley SciComp Framework Command Line Interface.
+SciComp Command Line Interface.
 
 #### Methods
 

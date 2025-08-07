@@ -1,5 +1,5 @@
 """
-Symbolic Algebra module for Berkeley SciComp Framework.
+Symbolic Algebra module for SciComp.
 
 Provides comprehensive symbolic computation tools including:
 - Expression manipulation and simplification

@@ -596,7 +596,7 @@ def run_tests():
     """Run all ML physics tests with detailed output."""
     
     print("=" * 70)
-    print("Berkeley SciComp Framework")
+    print("SciComp")
     print("Machine Learning Physics Test Suite")
     print("=" * 70)
     print()

@@ -1,6 +1,6 @@
-# 🚀 Berkeley SciComp Framework - GPU Testing Guide
+# 🚀 SciComp - GPU Testing Guide
 
-![Berkeley SciComp](https://img.shields.io/badge/Berkeley-SciComp-003262?style=flat-square&logo=university)
+![Berkeley SciComp](https://img.shields.io/badge/SciComp-003262?style=flat-square&logo=university)
 [![GPU Support](https://img.shields.io/badge/GPU-CUDA%20ready-green?style=flat-square)](https://github.com/berkeley/scicomp)
 
 **University of California, Berkeley**  
@@ -10,7 +10,7 @@
 
 ## 🎯 **GPU Testing Overview**
 
-The Berkeley SciComp Framework includes GPU acceleration support through CuPy and CUDA kernels. When GPU hardware is available, comprehensive testing should be performed to validate performance and correctness.
+The SciComp includes GPU acceleration support through CuPy and CUDA kernels. When GPU hardware is available, comprehensive testing should be performed to validate performance and correctness.
 
 ## 🔧 **GPU Testing Environment Setup**
 
@@ -240,7 +240,7 @@ jobs:
 
 **⚠️ GPU Testing Pending Hardware Availability**
 
-The Berkeley SciComp Framework includes complete GPU acceleration code with CPU fallbacks. GPU testing requires:
+The SciComp includes complete GPU acceleration code with CPU fallbacks. GPU testing requires:
 1. NVIDIA GPU hardware with CUDA support
 2. Proper CUDA/CuPy installation
 3. Performance validation against CPU baselines

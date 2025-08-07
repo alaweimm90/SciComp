@@ -3,7 +3,7 @@
 Basic Physics Examples
 ======================
 
-Simple physics examples using the Berkeley SciComp Framework.
+Simple physics examples using the SciComp.
 Perfect for students learning computational physics or researchers
 getting started with numerical methods.
 

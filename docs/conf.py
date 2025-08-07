@@ -1,5 +1,5 @@
 # Configuration file for the Sphinx documentation builder.
-# Berkeley SciComp Framework Documentation
+# SciComp Documentation
 
 import os
 import sys
@@ -9,7 +9,7 @@ import datetime
 sys.path.insert(0, os.path.abspath('../Python'))
 
 # -- Project information -----------------------------------------------------
-project = 'Berkeley SciComp Framework'
+project = 'SciComp'
 copyright = f'{datetime.datetime.now().year}, University of California, Berkeley'
 author = 'Dr. Meshal Alawein, UC Berkeley SciComp Team'
 release = '1.0.0'
@@ -41,7 +41,7 @@ html_theme_options = {
 }
 
 # Berkeley branding
-html_title = f"Berkeley SciComp Framework v{version}"
+html_title = f"SciComp v{version}"
 
 # -- Extension configuration -------------------------------------------------
 

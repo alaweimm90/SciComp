@@ -36,7 +36,7 @@ def main():
     print("🧠🔬 Advanced Quantum Machine Learning Integration")
     print("=" * 60)
     print("Demonstrating cutting-edge quantum-classical hybrid methods")
-    print("from the Berkeley SciComp Framework")
+    print("from the SciComp")
     print()
     
     # Create output directory

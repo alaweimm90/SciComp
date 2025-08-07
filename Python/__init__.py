@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """
-Berkeley SciComp Framework - Core Python Package
+SciComp - Core Python Package
 ==========================================
 
-UC Berkeley Scientific Computing Framework for multi-platform scientific
-computing, quantum physics, machine learning, and engineering applications.
+A cross-platform scientific computing suite for research and education,
+featuring quantum physics, machine learning, and engineering applications.
 
 This package provides:
 - Quantum Physics: Harmonic oscillators, time evolution, tunneling

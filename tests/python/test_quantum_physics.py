@@ -708,7 +708,7 @@ def run_tests():
     """Run all tests with detailed output."""
     
     print("=" * 70)
-    print("Berkeley SciComp Framework")
+    print("SciComp")
     print("Quantum Physics Test Suite")
     print("=" * 70)
     print()

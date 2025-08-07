@@ -809,7 +809,7 @@ def create_cavity_flow_demo():
     """Create a demonstration of lid-driven cavity flow."""
     
     print("=" * 70)
-    print("Berkeley SciComp Framework")
+    print("SciComp")
     print("Navier-Stokes PINN: Lid-Driven Cavity Flow")
     print("=" * 70)
     
