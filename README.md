@@ -292,4 +292,4 @@ Science can be hard. This is my way of helping. ⚛️
 
 ---
 
-*Advancing the frontiers of magnetic computing through open science*
+*Crafted with love, 🐻 energy, and zero sleep.*
