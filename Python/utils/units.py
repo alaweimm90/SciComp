@@ -1,28 +1,22 @@
 #!/usr/bin/env python3
 """
 Unit Conversion Module
-
 Provides comprehensive unit conversion capabilities for scientific computing,
 including energy, length, time, mass, and other physical quantities.
-
 Author: Dr. Meshal Alawein (meshal@berkeley.edu)
 Institution: University of California, Berkeley
 License: MIT
 Copyright © 2025 Dr. Meshal Alawein — All rights reserved.
 """
-
 import numpy as np
 from typing import Dict, Union, Optional
 from .constants import *
-
 class UnitConverter:
     """
     Comprehensive unit conversion utility for scientific computing.
-    
     Supports conversion between various units commonly used in physics,
     chemistry, and materials science.
     """
-    
     def __init__(self):
         """Initialize the unit converter with predefined conversion factors."""
         self._energy_conversions = self._init_energy_conversions()
@@ -32,7 +26,6 @@ class UnitConverter:
         self._temperature_conversions = self._init_temperature_conversions()
         self._pressure_conversions = self._init_pressure_conversions()
         self._magnetic_field_conversions = self._init_magnetic_field_conversions()
-    
     def _init_energy_conversions(self) -> Dict[str, float]:
         """Initialize energy conversion factors to Joules."""
         return {
@@ -56,7 +49,6 @@ class UnitConverter:
             'mK': kb * 1e-3,
             'kBT_300K': kb * 300,
         }
-    
     def _init_length_conversions(self) -> Dict[str, float]:
         """Initialize length conversion factors to meters."""
         return {
@@ -77,7 +69,6 @@ class UnitConverter:
             'in': 0.0254,
             'mil': 0.0254e-3,
         }
-    
     def _init_time_conversions(self) -> Dict[str, float]:
         """Initialize time conversion factors to seconds."""
         return {
@@ -94,7 +85,6 @@ class UnitConverter:
             'year': 365.25 * 86400.0,
             'au_time': atomic_time_to_s,
         }
-    
     def _init_mass_conversions(self) -> Dict[str, float]:
         """Initialize mass conversion factors to kilograms."""
         return {
@@ -112,7 +102,6 @@ class UnitConverter:
             'lb': 0.45359237,
             'oz': 0.0283495231,
         }
-    
     def _init_temperature_conversions(self) -> Dict[str, Dict]:
         """Initialize temperature conversion functions."""
         return {
@@ -121,7 +110,6 @@ class UnitConverter:
             'F': {'offset': 459.67, 'scale': 5.0/9.0},
             'R': {'offset': 0.0, 'scale': 5.0/9.0},  # Rankine
         }
-    
     def _init_pressure_conversions(self) -> Dict[str, float]:
         """Initialize pressure conversion factors to Pascals."""
         return {
@@ -137,7 +125,6 @@ class UnitConverter:
             'psi': 6894.76,
             'ksi': 6.89476e6,
         }
-    
     def _init_magnetic_field_conversions(self) -> Dict[str, float]:
         """Initialize magnetic field conversion factors to Tesla."""
         return {
@@ -150,13 +137,11 @@ class UnitConverter:
             'kG': 0.1,
             'Oe': 1e-4 / (4*np.pi*1e-7) * 4*np.pi*1e-7,  # Oersted (approximately)
         }
-    
-    def convert(self, value: Union[float, np.ndarray], 
-                from_unit: str, to_unit: str, 
+    def convert(self, value: Union[float, np.ndarray],
+                from_unit: str, to_unit: str,
                 quantity_type: str) -> Union[float, np.ndarray]:
         """
         Convert between units of the same physical quantity.
-        
         Parameters
         ----------
         value : float or array
@@ -166,9 +151,8 @@ class UnitConverter:
         to_unit : str
             Target unit
         quantity_type : str
-            Type of physical quantity ('energy', 'length', 'time', 'mass', 
+            Type of physical quantity ('energy', 'length', 'time', 'mass',
             'temperature', 'pressure', 'magnetic_field')
-            
         Returns
         -------
         float or array
@@ -190,133 +174,111 @@ class UnitConverter:
             return self._convert_magnetic_field(value, from_unit, to_unit)
         else:
             raise ValueError(f"Unknown quantity type: {quantity_type}")
-    
-    def _convert_energy(self, value: Union[float, np.ndarray], 
+    def _convert_energy(self, value: Union[float, np.ndarray],
                        from_unit: str, to_unit: str) -> Union[float, np.ndarray]:
         """Convert energy units."""
         if from_unit not in self._energy_conversions:
             raise ValueError(f"Unknown energy unit: {from_unit}")
         if to_unit not in self._energy_conversions:
             raise ValueError(f"Unknown energy unit: {to_unit}")
-        
         # Convert to Joules first, then to target unit
         joules = value * self._energy_conversions[from_unit]
         return joules / self._energy_conversions[to_unit]
-    
-    def _convert_length(self, value: Union[float, np.ndarray], 
+    def _convert_length(self, value: Union[float, np.ndarray],
                        from_unit: str, to_unit: str) -> Union[float, np.ndarray]:
         """Convert length units."""
         if from_unit not in self._length_conversions:
             raise ValueError(f"Unknown length unit: {from_unit}")
         if to_unit not in self._length_conversions:
             raise ValueError(f"Unknown length unit: {to_unit}")
-        
         # Convert to meters first, then to target unit
         meters = value * self._length_conversions[from_unit]
         return meters / self._length_conversions[to_unit]
-    
-    def _convert_time(self, value: Union[float, np.ndarray], 
+    def _convert_time(self, value: Union[float, np.ndarray],
                      from_unit: str, to_unit: str) -> Union[float, np.ndarray]:
         """Convert time units."""
         if from_unit not in self._time_conversions:
             raise ValueError(f"Unknown time unit: {from_unit}")
         if to_unit not in self._time_conversions:
             raise ValueError(f"Unknown time unit: {to_unit}")
-        
         # Convert to seconds first, then to target unit
         seconds = value * self._time_conversions[from_unit]
         return seconds / self._time_conversions[to_unit]
-    
-    def _convert_mass(self, value: Union[float, np.ndarray], 
+    def _convert_mass(self, value: Union[float, np.ndarray],
                      from_unit: str, to_unit: str) -> Union[float, np.ndarray]:
         """Convert mass units."""
         if from_unit not in self._mass_conversions:
             raise ValueError(f"Unknown mass unit: {from_unit}")
         if to_unit not in self._mass_conversions:
             raise ValueError(f"Unknown mass unit: {to_unit}")
-        
         # Convert to kilograms first, then to target unit
         kilograms = value * self._mass_conversions[from_unit]
         return kilograms / self._mass_conversions[to_unit]
-    
-    def _convert_temperature(self, value: Union[float, np.ndarray], 
+    def _convert_temperature(self, value: Union[float, np.ndarray],
                            from_unit: str, to_unit: str) -> Union[float, np.ndarray]:
         """Convert temperature units."""
         if from_unit not in self._temperature_conversions:
             raise ValueError(f"Unknown temperature unit: {from_unit}")
         if to_unit not in self._temperature_conversions:
             raise ValueError(f"Unknown temperature unit: {to_unit}")
-        
         # Convert to Kelvin first
         from_conv = self._temperature_conversions[from_unit]
         kelvin = (value + from_conv['offset']) * from_conv['scale']
-        
         # Convert from Kelvin to target unit
         to_conv = self._temperature_conversions[to_unit]
         return kelvin / to_conv['scale'] - to_conv['offset']
-    
-    def _convert_pressure(self, value: Union[float, np.ndarray], 
+    def _convert_pressure(self, value: Union[float, np.ndarray],
                          from_unit: str, to_unit: str) -> Union[float, np.ndarray]:
         """Convert pressure units."""
         if from_unit not in self._pressure_conversions:
             raise ValueError(f"Unknown pressure unit: {from_unit}")
         if to_unit not in self._pressure_conversions:
             raise ValueError(f"Unknown pressure unit: {to_unit}")
-        
         # Convert to Pascals first, then to target unit
         pascals = value * self._pressure_conversions[from_unit]
         return pascals / self._pressure_conversions[to_unit]
-    
-    def _convert_magnetic_field(self, value: Union[float, np.ndarray], 
+    def _convert_magnetic_field(self, value: Union[float, np.ndarray],
                                from_unit: str, to_unit: str) -> Union[float, np.ndarray]:
         """Convert magnetic field units."""
         if from_unit not in self._magnetic_field_conversions:
             raise ValueError(f"Unknown magnetic field unit: {from_unit}")
         if to_unit not in self._magnetic_field_conversions:
             raise ValueError(f"Unknown magnetic field unit: {to_unit}")
-        
         # Convert to Tesla first, then to target unit
         tesla = value * self._magnetic_field_conversions[from_unit]
         return tesla / self._magnetic_field_conversions[to_unit]
-
 # Convenience functions for common conversions
-def energy_convert(value: Union[float, np.ndarray], 
+def energy_convert(value: Union[float, np.ndarray],
                   from_unit: str, to_unit: str) -> Union[float, np.ndarray]:
     """Convert energy units."""
     converter = UnitConverter()
     return converter.convert(value, from_unit, to_unit, 'energy')
-
-def length_convert(value: Union[float, np.ndarray], 
+def length_convert(value: Union[float, np.ndarray],
                   from_unit: str, to_unit: str) -> Union[float, np.ndarray]:
     """Convert length units."""
     converter = UnitConverter()
     return converter.convert(value, from_unit, to_unit, 'length')
-
-def time_convert(value: Union[float, np.ndarray], 
+def time_convert(value: Union[float, np.ndarray],
                 from_unit: str, to_unit: str) -> Union[float, np.ndarray]:
     """Convert time units."""
     converter = UnitConverter()
     return converter.convert(value, from_unit, to_unit, 'time')
-
-def mass_convert(value: Union[float, np.ndarray], 
+def mass_convert(value: Union[float, np.ndarray],
                 from_unit: str, to_unit: str) -> Union[float, np.ndarray]:
     """Convert mass units."""
     converter = UnitConverter()
     return converter.convert(value, from_unit, to_unit, 'mass')
-
-def temperature_convert(value: Union[float, np.ndarray], 
+def temperature_convert(value: Union[float, np.ndarray],
                        from_unit: str, to_unit: str) -> Union[float, np.ndarray]:
     """Convert temperature units."""
     converter = UnitConverter()
     return converter.convert(value, from_unit, to_unit, 'temperature')
-
-def pressure_convert(value: Union[float, np.ndarray], 
+def pressure_convert(value: Union[float, np.ndarray],
                     from_unit: str, to_unit: str) -> Union[float, np.ndarray]:
     """Convert pressure units."""
     converter = UnitConverter()
     return converter.convert(value, from_unit, to_unit, 'pressure')
-
-def magnetic_field_convert(value: Union[float, np.ndarray], 
+def magnetic_field_convert(value: Union[float, np.ndarray],
                           from_unit: str, to_unit: str) -> Union[float, np.ndarray]:
     """Convert magnetic field units."""
     converter = UnitConverter()

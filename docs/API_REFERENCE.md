@@ -1,20 +1,12 @@
 
 # 🐻 SciComp - API Reference
-
 ![Berkeley SciComp](https://img.shields.io/badge/SciComp-003262?style=flat-square&logo=university)
-
-**University of California, Berkeley**  
+**University of California, Berkeley**
 **Scientific Computing Excellence Since 1868**
-
 ---
-
-
 ## Module Index
-
 Complete API reference for all modules in the SciComp.
-
 ### Quantum Physics
-
 - **[cavity_qed](cavity_qed.md)** - `Python/QuantumOptics/core/cavity_qed.py`
   Cavity Quantum Electrodynamics (QED) simulations.
 - **[quantum_algorithms](quantum_algorithms.md)** - `Python/Quantum/core/quantum_algorithms.py`
@@ -25,27 +17,21 @@ Complete API reference for all modules in the SciComp.
   Quantum operators and gates.
 - **[quantum_states](quantum_states.md)** - `Python/Quantum/core/quantum_states.py`
   Quantum state representations and operations.
-
 ### Thermal Transport
-
 - **[heat_conduction](heat_conduction.md)** - `Python/Thermal_Transport/core/heat_conduction.py`
   Heat conduction and thermal transport modeling.
 - **[heat_equation](heat_equation.md)** - `Python/Thermal_Transport/core/heat_equation.py`
   Heat equation solvers for thermal transport simulations.
 - **[thermal_mechanical](thermal_mechanical.md)** - `Python/Multiphysics/thermal_mechanical.py`
   Thermal-Mechanical Coupling Module.
-
 ### Signal Processing
-
 - **[fourier_transforms](fourier_transforms.md)** - `Python/Signal_Processing/core/fourier_transforms.py`
   Fourier transform implementations and spectral analysis tools.
 - **[signal_analysis](signal_analysis.md)** - `Python/Signal_Processing/signal_analysis.py`
   Signal Analysis and Processing.
 - **[spectral_analysis](spectral_analysis.md)** - `Python/Signal_Processing/spectral_analysis.py`
   Spectral Analysis Module.
-
 ### Optimization
-
 - **[constrained](constrained.md)** - `Python/Optimization/constrained.py`
   Constrained Optimization Algorithms.
 - **[genetic_algorithms](genetic_algorithms.md)** - `Python/Optimization/genetic_algorithms.py`
@@ -68,18 +54,14 @@ Complete API reference for all modules in the SciComp.
   Unconstrained Optimization Algorithms.
 - **[utils](utils.md)** - `Python/Optimization/utils.py`
   Optimization Utilities and Benchmark Functions.
-
 ### Control Systems
-
 - **[pid_controller](pid_controller.md)** - `Python/Control/core/pid_controller.py`
   PID Controller Implementation.
 - **[robust_control](robust_control.md)** - `Python/Control/core/robust_control.py`
   Robust Control Methods.
 - **[state_space](state_space.md)** - `Python/Control/core/state_space.py`
   State-Space Control Systems.
-
 ### Machine Learning
-
 - **[neural_networks](neural_networks.md)** - `Python/Machine_Learning/neural_networks.py`
   Neural Networks for Scientific Computing.
 - **[physics_informed](physics_informed.md)** - `Python/Machine_Learning/physics_informed.py`
@@ -92,14 +74,10 @@ Complete API reference for all modules in the SciComp.
   Unsupervised Learning Algorithms for Scientific Computing.
 - **[utils](utils.md)** - `Python/Machine_Learning/utils.py`
   Machine Learning Utilities for Scientific Computing.
-
 ### GPU Acceleration
-
 - **[cuda_kernels](cuda_kernels.md)** - `Python/gpu_acceleration/cuda_kernels.py`
   GPU acceleration support for SciComp.
-
 ### Utilities
-
 - **[advanced_analytics](advanced_analytics.md)** - `Python/utils/advanced_analytics.py`
   Advanced analytics and machine learning utilities for SciComp.
 - **[cli](cli.md)** - `Python/utils/cli.py`
@@ -120,9 +98,7 @@ Complete API reference for all modules in the SciComp.
   Multiphysics Utility Functions.
 - **[utils](utils.md)** - `Python/ODE_PDE/utils.py`
   Utility Functions for ODE and PDE Solvers.
-
 ### Other
-
 - **[adaptive_methods](adaptive_methods.md)** - `Python/ODE_PDE/adaptive_methods.py`
   Adaptive Methods for ODE and PDE Solvers.
 - **[assembly](assembly.md)** - `Python/FEM/core/assembly.py`
@@ -219,16 +195,11 @@ Complete API reference for all modules in the SciComp.
   Wave Optics Module.
 - **[wave_propagation](wave_propagation.md)** - `Python/Elasticity/core/wave_propagation.py`
   Elastic Wave Propagation Analysis.
-
 ## Quick Links
-
 - [Installation Guide](../docs/INSTALLATION_GUIDE.md)
 - [Contributing Guide](../CONTRIBUTING.md)
 - [Examples](../examples/)
 - [GitHub Repository](https://github.com/berkeley/scicomp)
-
 ---
-
 **🐻💙💛 University of California, Berkeley 💙💛🐻**
-
 *Scientific Computing Excellence Since 1868*

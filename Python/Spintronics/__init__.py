@@ -1,13 +1,11 @@
 """
 Spintronics module for SciComp.
-
 Provides comprehensive spintronics simulation tools including:
 - Spin dynamics and magnetization evolution
 - Spin transport phenomena
 - Magnetoresistive devices
 - Spin-orbit coupling effects
 """
-
 from .core.spin_dynamics import (
     LandauLifshitzGilbert,
     SpinWaves,
@@ -15,7 +13,6 @@ from .core.spin_dynamics import (
     SpinTorque,
     MagnetocrystallineAnisotropy
 )
-
 from .core.spin_transport import (
     SpinDiffusion,
     MagnetoresistiveDevices,
@@ -24,7 +21,6 @@ from .core.spin_transport import (
     MagnonTransport,
     SpinValve
 )
-
 __all__ = [
     # Spin Dynamics
     'LandauLifshitzGilbert',
@@ -32,7 +28,6 @@ __all__ = [
     'MagneticDomains',
     'SpinTorque',
     'MagnetocrystallineAnisotropy',
-    
     # Spin Transport
     'SpinDiffusion',
     'MagnetoresistiveDevices',
@@ -41,6 +36,5 @@ __all__ = [
     'MagnonTransport',
     'SpinValve'
 ]
-
 __version__ = '1.0.0'
 __author__ = 'UC Berkeley SciComp Team'

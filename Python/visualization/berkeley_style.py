@@ -1,21 +1,17 @@
 #!/usr/bin/env python3
 """
 Berkeley Visual Identity - Scientific Plotting Style
-
 Official UC Berkeley color scheme and styling for publication-quality figures.
 Implements university branding guidelines for academic and research publications.
-
 Colors follow UC Berkeley's official brand guidelines:
-- Primary: Berkeley Blue (#003262), California Gold (#FDB515)  
+- Primary: Berkeley Blue (#003262), California Gold (#FDB515)
 - Secondary palette for diverse visualizations
 - High-contrast accessibility compliance
-
 Author: Dr. Meshal Alawein (meshal@berkeley.edu)
 Institution: University of California, Berkeley
 License: MIT
 Copyright © 2025 Dr. Meshal Alawein — All rights reserved.
 """
-
 import matplotlib.pyplot as plt
 import matplotlib as mpl
 from matplotlib.colors import LinearSegmentedColormap
@@ -23,7 +19,6 @@ import numpy as np
 from typing import Optional, Dict, List, Tuple, Union
 import seaborn as sns
 from pathlib import Path
-
 # UC Berkeley Official Color Palette
 BERKELEY_COLORS = {
     'primary': {
@@ -32,7 +27,7 @@ BERKELEY_COLORS = {
     },
     'secondary': {
         'blue_dark': '#010133',
-        'gold_dark': '#FC9313', 
+        'gold_dark': '#FC9313',
         'green_dark': '#00553A',
         'rose_dark': '#770747',
         'purple_dark': '#431170',
@@ -42,17 +37,15 @@ BERKELEY_COLORS = {
     },
     'neutral': {
         'grey_light': '#D9D9D9',
-        'grey_medium': '#999999', 
+        'grey_medium': '#999999',
         'grey_dark': '#666666',
         'black': '#000000',
         'white': '#FFFFFF'
     }
 }
-
 # Flattened color lists for easy access
 BERKELEY_BLUE = BERKELEY_COLORS['primary']['berkeley_blue']
 CALIFORNIA_GOLD = BERKELEY_COLORS['primary']['california_gold']
-
 # Color sequences for multi-line plots
 BERKELEY_SEQUENCE = [
     BERKELEY_BLUE,
@@ -64,7 +57,6 @@ BERKELEY_SEQUENCE = [
     BERKELEY_COLORS['secondary']['orange_dark'],
     BERKELEY_COLORS['secondary']['teal_dark']
 ]
-
 # Plot style configuration
 BERKELEY_STYLE = {
     'figure.figsize': (10, 6),
@@ -72,14 +64,12 @@ BERKELEY_STYLE = {
     'savefig.dpi': 300,
     'savefig.bbox': 'tight',
     'savefig.pad_inches': 0.1,
-    
     # Colors
     'axes.prop_cycle': plt.cycler('color', BERKELEY_SEQUENCE),
     'axes.facecolor': 'white',
     'figure.facecolor': 'white',
     'axes.edgecolor': BERKELEY_COLORS['neutral']['black'],
     'axes.linewidth': 1.5,
-    
     # Fonts
     'font.family': 'sans-serif',
     'font.sans-serif': ['Arial', 'Helvetica', 'DejaVu Sans'],
@@ -90,7 +80,6 @@ BERKELEY_STYLE = {
     'ytick.labelsize': 10,
     'legend.fontsize': 10,
     'figure.titlesize': 18,
-    
     # Ticks
     'xtick.direction': 'in',
     'ytick.direction': 'in',
@@ -102,18 +91,15 @@ BERKELEY_STYLE = {
     'ytick.major.width': 1.0,
     'xtick.color': BERKELEY_COLORS['neutral']['black'],
     'ytick.color': BERKELEY_COLORS['neutral']['black'],
-    
     # Lines and markers
     'lines.linewidth': 2.0,
     'lines.markersize': 8,
     'patch.linewidth': 1.0,
-    
     # Grid
     'axes.grid': False,  # Berkeley style avoids grids unless needed
     'grid.color': BERKELEY_COLORS['neutral']['grey_light'],
     'grid.linewidth': 0.5,
     'grid.alpha': 0.8,
-    
     # Legend
     'legend.frameon': True,
     'legend.fancybox': False,
@@ -125,22 +111,18 @@ BERKELEY_STYLE = {
     'legend.columnspacing': 1.0,
     'legend.handlelength': 1.5,
 }
-
 def apply_berkeley_style():
     """Apply Berkeley visual identity to matplotlib."""
     plt.style.use('default')  # Reset to default first
     mpl.rcParams.update(BERKELEY_STYLE)
-    
     # Register custom colormaps
     _register_berkeley_colormaps()
-
 def _register_berkeley_colormaps():
     """Register Berkeley-themed colormaps."""
     # Blue-Gold gradient
     blue_gold_colors = [BERKELEY_BLUE, CALIFORNIA_GOLD]
     blue_gold_cmap = LinearSegmentedColormap.from_list('berkeley_blue_gold', blue_gold_colors)
     plt.cm.register_cmap(name='berkeley_blue_gold', cmap=blue_gold_cmap)
-    
     # Full spectrum using Berkeley colors
     spectrum_colors = [
         BERKELEY_BLUE,
@@ -152,25 +134,20 @@ def _register_berkeley_colormaps():
     ]
     spectrum_cmap = LinearSegmentedColormap.from_list('berkeley_spectrum', spectrum_colors)
     plt.cm.register_cmap(name='berkeley_spectrum', cmap=spectrum_cmap)
-    
     # Sequential blue
     blue_colors = ['white', BERKELEY_BLUE]
     blue_cmap = LinearSegmentedColormap.from_list('berkeley_blues', blue_colors)
     plt.cm.register_cmap(name='berkeley_blues', cmap=blue_cmap)
-
 class BerkeleyPlot:
     """
     Berkeley-styled plotting class for scientific figures.
-    
     Provides convenient methods for creating publication-quality plots
     following UC Berkeley's visual identity guidelines.
     """
-    
-    def __init__(self, figsize: Tuple[float, float] = (10, 6), 
+    def __init__(self, figsize: Tuple[float, float] = (10, 6),
                  style: str = 'publication'):
         """
         Initialize Berkeley-styled plot.
-        
         Parameters
         ----------
         figsize : tuple, default (10, 6)
@@ -180,10 +157,8 @@ class BerkeleyPlot:
         """
         self.figsize = figsize
         self.style = style
-        
         # Apply Berkeley styling
         apply_berkeley_style()
-        
         # Adjust for different contexts
         if style == 'presentation':
             mpl.rcParams['font.size'] = 14
@@ -195,16 +170,13 @@ class BerkeleyPlot:
             mpl.rcParams['axes.labelsize'] = 18
             mpl.rcParams['lines.linewidth'] = 3.0
             mpl.rcParams['lines.markersize'] = 10
-        
         self.fig = None
         self.axes = None
-    
     def create_figure(self, nrows: int = 1, ncols: int = 1,
                      subplot_kw: Optional[Dict] = None,
                      gridspec_kw: Optional[Dict] = None) -> Tuple[plt.Figure, Union[plt.Axes, np.ndarray]]:
         """
         Create Berkeley-styled figure and axes.
-        
         Parameters
         ----------
         nrows, ncols : int, default 1
@@ -213,7 +185,6 @@ class BerkeleyPlot:
             Additional subplot keywords
         gridspec_kw : dict, optional
             GridSpec keywords
-            
         Returns
         -------
         fig : Figure
@@ -225,7 +196,6 @@ class BerkeleyPlot:
                                           subplot_kw=subplot_kw,
                                           gridspec_kw=gridspec_kw)
         return self.fig, self.axes
-    
     def line_plot(self, x: np.ndarray, y: Union[np.ndarray, List[np.ndarray]],
                  labels: Optional[List[str]] = None,
                  colors: Optional[List[str]] = None,
@@ -238,7 +208,6 @@ class BerkeleyPlot:
                  ax: Optional[plt.Axes] = None) -> plt.Axes:
         """
         Create Berkeley-styled line plot.
-        
         Parameters
         ----------
         x : ndarray
@@ -261,7 +230,6 @@ class BerkeleyPlot:
             Whether to show legend
         ax : Axes, optional
             Matplotlib axes to plot on
-            
         Returns
         -------
         Axes
@@ -271,13 +239,11 @@ class BerkeleyPlot:
             if self.fig is None:
                 self.create_figure()
             ax = self.axes if not isinstance(self.axes, np.ndarray) else self.axes[0]
-        
         # Handle single vs multiple y arrays
         if isinstance(y, np.ndarray) and y.ndim == 1:
             y = [y]
         elif isinstance(y, list) and not isinstance(y[0], np.ndarray):
             y = [np.array(y)]
-        
         # Default parameters
         n_lines = len(y)
         if colors is None:
@@ -288,17 +254,15 @@ class BerkeleyPlot:
             markers = [''] * n_lines
         if labels is None:
             labels = [f'Line {i+1}' for i in range(n_lines)]
-        
         # Plot lines
         for i, y_data in enumerate(y):
-            ax.plot(x, y_data, 
+            ax.plot(x, y_data,
                    color=colors[i % len(colors)],
                    linestyle=linestyles[i % len(linestyles)],
                    marker=markers[i % len(markers)],
                    label=labels[i],
                    linewidth=mpl.rcParams['lines.linewidth'],
                    markersize=mpl.rcParams['lines.markersize'])
-        
         # Formatting
         if title:
             ax.set_title(title, fontweight='bold', color=BERKELEY_BLUE)
@@ -306,12 +270,9 @@ class BerkeleyPlot:
             ax.set_xlabel(xlabel)
         if ylabel:
             ax.set_ylabel(ylabel)
-        
         if legend and len(y) > 1:
             ax.legend()
-        
         return ax
-    
     def scatter_plot(self, x: np.ndarray, y: np.ndarray,
                     c: Optional[np.ndarray] = None,
                     s: Optional[Union[float, np.ndarray]] = None,
@@ -324,7 +285,6 @@ class BerkeleyPlot:
                     ax: Optional[plt.Axes] = None) -> plt.Axes:
         """
         Create Berkeley-styled scatter plot.
-        
         Parameters
         ----------
         x, y : ndarray
@@ -345,7 +305,6 @@ class BerkeleyPlot:
             Whether to show colorbar
         ax : Axes, optional
             Matplotlib axes to plot on
-            
         Returns
         -------
         Axes
@@ -355,24 +314,19 @@ class BerkeleyPlot:
             if self.fig is None:
                 self.create_figure()
             ax = self.axes if not isinstance(self.axes, np.ndarray) else self.axes[0]
-        
         # Default point size
         if s is None:
             s = mpl.rcParams['lines.markersize']**2
-        
         # Default color
         if c is None:
             c = BERKELEY_BLUE
             colorbar = False
-        
         # Create scatter plot
         scatter = ax.scatter(x, y, c=c, s=s, alpha=alpha, cmap=cmap)
-        
         # Add colorbar if requested and c is array
         if colorbar and isinstance(c, np.ndarray):
             cbar = plt.colorbar(scatter, ax=ax)
             cbar.ax.tick_params(direction='in')
-        
         # Formatting
         if title:
             ax.set_title(title, fontweight='bold', color=BERKELEY_BLUE)
@@ -380,9 +334,7 @@ class BerkeleyPlot:
             ax.set_xlabel(xlabel)
         if ylabel:
             ax.set_ylabel(ylabel)
-        
         return ax
-    
     def heatmap(self, data: np.ndarray,
                x_labels: Optional[List[str]] = None,
                y_labels: Optional[List[str]] = None,
@@ -394,7 +346,6 @@ class BerkeleyPlot:
                ax: Optional[plt.Axes] = None) -> plt.Axes:
         """
         Create Berkeley-styled heatmap.
-        
         Parameters
         ----------
         data : ndarray
@@ -411,7 +362,6 @@ class BerkeleyPlot:
             Whether to show colorbar
         ax : Axes, optional
             Matplotlib axes to plot on
-            
         Returns
         -------
         Axes
@@ -421,10 +371,8 @@ class BerkeleyPlot:
             if self.fig is None:
                 self.create_figure()
             ax = self.axes if not isinstance(self.axes, np.ndarray) else self.axes[0]
-        
         # Create heatmap
         im = ax.imshow(data, cmap=cmap, aspect='auto', origin='lower')
-        
         # Set labels
         if x_labels is not None:
             ax.set_xticks(range(len(x_labels)))
@@ -432,12 +380,10 @@ class BerkeleyPlot:
         if y_labels is not None:
             ax.set_yticks(range(len(y_labels)))
             ax.set_yticklabels(y_labels)
-        
         # Add colorbar
         if colorbar:
             cbar = plt.colorbar(im, ax=ax)
             cbar.ax.tick_params(direction='in')
-        
         # Formatting
         if title:
             ax.set_title(title, fontweight='bold', color=BERKELEY_BLUE)
@@ -445,16 +391,13 @@ class BerkeleyPlot:
             ax.set_xlabel(xlabel)
         if ylabel:
             ax.set_ylabel(ylabel)
-        
         return ax
-    
     def wavefunction(self, x: np.ndarray, psi: np.ndarray,
                     title: Optional[str] = None,
                     show_probability: bool = True,
                     ax: Optional[plt.Axes] = None) -> plt.Axes:
         """
         Plot quantum wavefunction with Berkeley styling.
-        
         Parameters
         ----------
         x : ndarray
@@ -467,7 +410,6 @@ class BerkeleyPlot:
             Whether to show probability density
         ax : Axes, optional
             Matplotlib axes to plot on
-            
         Returns
         -------
         Axes
@@ -477,32 +419,25 @@ class BerkeleyPlot:
             if self.fig is None:
                 self.create_figure()
             ax = self.axes if not isinstance(self.axes, np.ndarray) else self.axes[0]
-        
         # Plot real and imaginary parts
-        ax.plot(x, np.real(psi), color=BERKELEY_BLUE, linewidth=2, 
+        ax.plot(x, np.real(psi), color=BERKELEY_BLUE, linewidth=2,
                label='Re[ψ(x)]')
-        
         if np.any(np.imag(psi) != 0):
-            ax.plot(x, np.imag(psi), color=CALIFORNIA_GOLD, linewidth=2, 
+            ax.plot(x, np.imag(psi), color=CALIFORNIA_GOLD, linewidth=2,
                    linestyle='--', label='Im[ψ(x)]')
-        
         # Probability density
         if show_probability:
-            ax.fill_between(x, np.abs(psi)**2, alpha=0.3, 
+            ax.fill_between(x, np.abs(psi)**2, alpha=0.3,
                            color=BERKELEY_COLORS['secondary']['green_dark'],
                            label='|ψ(x)|²')
-        
         # Formatting
         ax.set_xlabel('Position')
         ax.set_ylabel('Wavefunction')
         ax.legend()
         ax.grid(True, alpha=0.3)
-        
         if title:
             ax.set_title(title, fontweight='bold', color=BERKELEY_BLUE)
-        
         return ax
-    
     def save_figure(self, filename: Union[str, Path],
                    dpi: int = 300,
                    format: str = 'png',
@@ -511,7 +446,6 @@ class BerkeleyPlot:
                    transparent: bool = False) -> None:
         """
         Save figure with Berkeley styling.
-        
         Parameters
         ----------
         filename : str or Path
@@ -529,29 +463,23 @@ class BerkeleyPlot:
         """
         if self.fig is None:
             raise ValueError("No figure to save. Create a figure first.")
-        
         self.fig.savefig(filename, dpi=dpi, format=format,
                         bbox_inches=bbox_inches, pad_inches=pad_inches,
                         transparent=transparent, facecolor='white')
-
 # Convenience functions
 def publication_figure(figsize: Tuple[float, float] = (10, 6)) -> BerkeleyPlot:
     """Create publication-ready Berkeley-styled figure."""
     return BerkeleyPlot(figsize=figsize, style='publication')
-
 def presentation_figure(figsize: Tuple[float, float] = (12, 8)) -> BerkeleyPlot:
-    """Create presentation-ready Berkeley-styled figure.""" 
+    """Create presentation-ready Berkeley-styled figure."""
     return BerkeleyPlot(figsize=figsize, style='presentation')
-
 def poster_figure(figsize: Tuple[float, float] = (16, 10)) -> BerkeleyPlot:
     """Create poster-ready Berkeley-styled figure."""
     return BerkeleyPlot(figsize=figsize, style='poster')
-
 def save_publication_figure(fig: plt.Figure, filename: Union[str, Path],
                           dpi: int = 300, format: str = 'png') -> None:
     """
     Save publication-quality figure with proper settings.
-    
     Parameters
     ----------
     fig : Figure
@@ -565,6 +493,5 @@ def save_publication_figure(fig: plt.Figure, filename: Union[str, Path],
     """
     fig.savefig(filename, dpi=dpi, format=format, bbox_inches='tight',
                pad_inches=0.1, facecolor='white', edgecolor='none')
-
 # Initialize Berkeley style on import
 apply_berkeley_style()

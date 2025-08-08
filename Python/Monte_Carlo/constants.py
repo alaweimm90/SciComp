@@ -1,25 +1,19 @@
 """Physical Constants and Standard Distributions for Monte Carlo Methods.
-
 This module provides physical constants, mathematical constants,
 and standard probability distributions commonly used in Monte Carlo simulations.
-
 Constants:
     PHYSICAL_CONSTANTS: Physical constants with 2018 CODATA values
     MATHEMATICAL_CONSTANTS: Mathematical constants (π, e, etc.)
-    
 Functions:
     get_distribution: Get standard probability distribution
     standard_distributions: Dictionary of standard distributions
-
 Author: Berkeley SciComp Team
 Date: 2024
 """
-
 import numpy as np
 from typing import Dict, Any, Callable, Optional, Union
 from scipy import stats
 import warnings
-
 # Physical Constants (2018 CODATA values)
 PHYSICAL_CONSTANTS = {
     # Fundamental constants
@@ -31,26 +25,22 @@ PHYSICAL_CONSTANTS = {
     'N_A': 6.02214076e23,  # Avogadro constant (mol⁻¹)
     'R': 8.314462618,  # Gas constant (J/(mol⋅K))
     'sigma_SB': 5.670374419e-8,  # Stefan-Boltzmann constant (W/(m²⋅K⁴))
-    
     # Electromagnetic constants
     'mu_0': 4e-7 * np.pi,  # Magnetic permeability of vacuum (H/m)
     'epsilon_0': 8.8541878128e-12,  # Electric permittivity of vacuum (F/m)
     'Z_0': 376.730313668,  # Impedance of vacuum (Ω)
     'alpha': 7.2973525693e-3,  # Fine structure constant
-    
     # Particle masses (kg)
     'm_e': 9.1093837015e-31,  # Electron mass
     'm_p': 1.67262192369e-27,  # Proton mass
     'm_n': 1.67492749804e-27,  # Neutron mass
     'm_u': 1.66053906660e-27,  # Atomic mass unit
-    
     # Other useful constants
     'g': 9.80665,  # Standard gravity (m/s²)
     'atm': 101325.0,  # Standard atmosphere (Pa)
     'cal': 4.184,  # Thermochemical calorie (J)
     'eV': 1.602176634e-19,  # Electron volt (J)
 }
-
 # Mathematical Constants
 MATHEMATICAL_CONSTANTS = {
     'pi': np.pi,
@@ -63,18 +53,14 @@ MATHEMATICAL_CONSTANTS = {
     'ln_10': np.log(10),
     'log10_e': np.log10(np.e),
 }
-
 # Standard Probability Distributions
 def get_distribution(name: str, **params) -> stats.rv_continuous:
     """Get a standard probability distribution.
-    
     Args:
         name: Distribution name
         **params: Distribution parameters
-        
     Returns:
         Scipy distribution object
-        
     Examples:
         >>> normal = get_distribution('normal', loc=0, scale=1)
         >>> uniform = get_distribution('uniform', loc=-1, scale=2)
@@ -108,17 +94,13 @@ def get_distribution(name: str, **params) -> stats.rv_continuous:
         'wishart': stats.wishart,
         'inverse_wishart': stats.invwishart
     }
-    
     if name not in distributions:
         available = list(distributions.keys())
         raise ValueError(f"Unknown distribution '{name}'. Available: {available}")
-    
     try:
         return distributions[name](**params)
     except Exception as e:
         raise ValueError(f"Failed to create {name} distribution with params {params}: {e}")
-
-
 # Predefined standard distributions
 standard_distributions = {
     'standard_normal': lambda: get_distribution('normal', loc=0, scale=1),
@@ -132,31 +114,24 @@ standard_distributions = {
     'standard_chi2': lambda: get_distribution('chi2', df=1),
     'student_t': lambda df=1: get_distribution('t', df=df),
 }
-
-
 class DistributionSampler:
     """Advanced distribution sampler with caching and validation.
-    
     Provides efficient sampling from various distributions with
     automatic parameter validation and result caching.
     """
-    
     def __init__(self, random_state: Optional[int] = None):
         self.random_state = random_state
         self.rng = np.random.RandomState(random_state)
         self._distribution_cache = {}
-        
-    def sample(self, 
+    def sample(self,
                distribution: Union[str, stats.rv_continuous, Callable],
                size: Optional[Union[int, tuple]] = None,
                **params) -> np.ndarray:
         """Sample from a distribution.
-        
         Args:
             distribution: Distribution name, scipy distribution, or callable
             size: Sample size
             **params: Distribution parameters
-            
         Returns:
             Generated samples
         """
@@ -169,17 +144,13 @@ class DistributionSampler:
             return distribution(size)
         else:
             raise ValueError("Invalid distribution type")
-    
     def _get_cached_distribution(self, name: str, **params) -> stats.rv_continuous:
         """Get distribution with caching."""
         cache_key = (name, tuple(sorted(params.items())))
-        
         if cache_key not in self._distribution_cache:
             self._distribution_cache[cache_key] = get_distribution(name, **params)
-        
         return self._distribution_cache[cache_key]
-    
-    def pdf(self, 
+    def pdf(self,
             distribution: Union[str, stats.rv_continuous],
             x: np.ndarray,
             **params) -> np.ndarray:
@@ -191,8 +162,7 @@ class DistributionSampler:
             return distribution.pdf(x)
         else:
             raise ValueError("Invalid distribution type")
-    
-    def logpdf(self, 
+    def logpdf(self,
                distribution: Union[str, stats.rv_continuous],
                x: np.ndarray,
                **params) -> np.ndarray:
@@ -204,8 +174,7 @@ class DistributionSampler:
             return distribution.logpdf(x)
         else:
             raise ValueError("Invalid distribution type")
-    
-    def cdf(self, 
+    def cdf(self,
             distribution: Union[str, stats.rv_continuous],
             x: np.ndarray,
             **params) -> np.ndarray:
@@ -217,22 +186,17 @@ class DistributionSampler:
             return distribution.cdf(x)
         else:
             raise ValueError("Invalid distribution type")
-
-
 # Physics-specific distributions
 def maxwell_boltzmann_3d(temperature: float, mass: float) -> Callable:
     """Maxwell-Boltzmann distribution for 3D velocities.
-    
     Args:
         temperature: Temperature (K)
         mass: Particle mass (kg)
-        
     Returns:
         Sampling function
     """
     k_B = PHYSICAL_CONSTANTS['k_B']
     sigma = np.sqrt(k_B * temperature / mass)
-    
     def sample(size=None):
         if size is None:
             return np.random.normal(0, sigma, 3)
@@ -240,101 +204,72 @@ def maxwell_boltzmann_3d(temperature: float, mass: float) -> Callable:
             return np.random.normal(0, sigma, (size, 3))
         else:
             return np.random.normal(0, sigma, size + (3,))
-    
     return sample
-
-
 def planck_distribution(temperature: float) -> stats.rv_continuous:
     """Planck distribution for blackbody radiation.
-    
     Args:
         temperature: Temperature (K)
-        
     Returns:
         Planck distribution object
     """
     h = PHYSICAL_CONSTANTS['h']
     c = PHYSICAL_CONSTANTS['c']
     k_B = PHYSICAL_CONSTANTS['k_B']
-    
     # Custom Planck distribution (simplified implementation)
     class PlanckDistribution(stats.rv_continuous):
         def _pdf(self, f):
             # Frequency-based Planck distribution
             hf_kT = h * f / (k_B * temperature)
             return (8 * np.pi * h * f**3 / c**3) / (np.exp(hf_kT) - 1)
-    
     return PlanckDistribution(a=0, name='planck')
-
-
 def fermi_dirac_distribution(temperature: float, chemical_potential: float) -> Callable:
     """Fermi-Dirac distribution.
-    
     Args:
         temperature: Temperature (K)
         chemical_potential: Chemical potential (J)
-        
     Returns:
         Fermi-Dirac probability function
     """
     k_B = PHYSICAL_CONSTANTS['k_B']
-    
     def probability(energy):
         return 1 / (1 + np.exp((energy - chemical_potential) / (k_B * temperature)))
-    
     return probability
-
-
 def bose_einstein_distribution(temperature: float, chemical_potential: float) -> Callable:
     """Bose-Einstein distribution.
-    
     Args:
         temperature: Temperature (K)
         chemical_potential: Chemical potential (J)
-        
     Returns:
         Bose-Einstein occupation function
     """
     k_B = PHYSICAL_CONSTANTS['k_B']
-    
     def occupation(energy):
         return 1 / (np.exp((energy - chemical_potential) / (k_B * temperature)) - 1)
-    
     return occupation
-
-
 # Convenience functions for common use cases
-def create_multivariate_normal(mean: np.ndarray, 
+def create_multivariate_normal(mean: np.ndarray,
                                cov: np.ndarray,
                                random_state: Optional[int] = None) -> Callable:
     """Create multivariate normal sampler.
-    
     Args:
         mean: Mean vector
         cov: Covariance matrix
         random_state: Random seed
-        
     Returns:
         Sampling function
     """
     rng = np.random.RandomState(random_state)
-    
     def sample(size=None):
         return rng.multivariate_normal(mean, cov, size)
-    
     return sample
-
-
 def create_mixture_distribution(components: list,
                                 weights: Optional[np.ndarray] = None,
                                 random_state: Optional[int] = None) -> Callable:
     """Create mixture distribution sampler.
-    
     Args:
         components: List of (distribution, params) tuples
         weights: Component weights
         random_state: Random seed
-        
     Returns:
         Sampling function
     """
@@ -343,20 +278,16 @@ def create_mixture_distribution(components: list,
     else:
         weights = np.asarray(weights)
         weights = weights / np.sum(weights)
-    
     rng = np.random.RandomState(random_state)
     sampler = DistributionSampler(random_state)
-    
     def sample(size=None):
         if size is None:
             size = 1
             single_sample = True
         else:
             single_sample = False
-        
         # Choose components
         component_indices = rng.choice(len(components), size=size, p=weights)
-        
         # Sample from chosen components
         samples = []
         for i in range(size):
@@ -364,13 +295,9 @@ def create_mixture_distribution(components: list,
             dist_name, params = components[comp_idx]
             sample_val = sampler.sample(dist_name, size=None, **params)
             samples.append(sample_val)
-        
         result = np.array(samples)
         return result[0] if single_sample else result
-    
     return sample
-
-
 # Unit conversion utilities
 UNIT_CONVERSIONS = {
     'energy': {
@@ -396,27 +323,21 @@ UNIT_CONVERSIONS = {
         'mmHg_to_Pa': PHYSICAL_CONSTANTS['atm'] / 760
     }
 }
-
-
-def convert_units(value: float, from_unit: str, to_unit: str, 
+def convert_units(value: float, from_unit: str, to_unit: str,
                   unit_type: str) -> float:
     """Convert between units.
-    
     Args:
         value: Value to convert
         from_unit: Source unit
         to_unit: Target unit
         unit_type: Type of unit (energy, temperature, pressure)
-        
     Returns:
         Converted value
     """
     if unit_type not in UNIT_CONVERSIONS:
         raise ValueError(f"Unknown unit type: {unit_type}")
-    
     conversions = UNIT_CONVERSIONS[unit_type]
     conversion_key = f"{from_unit}_to_{to_unit}"
-    
     if conversion_key in conversions:
         factor_or_func = conversions[conversion_key]
         if callable(factor_or_func):

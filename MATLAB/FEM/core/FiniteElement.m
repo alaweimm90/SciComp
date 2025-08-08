@@ -10,14 +10,12 @@ classdef FiniteElement < handle
     % Example:
     %   % Cannot instantiate directly - use derived classes
     %   element = LinearBar1D(nodes, material, area);
-    
     properties (Access = protected)
         elementId       % Element identifier
         nodes          % Array of Node objects
         material       % Material property object
         dimension      % Element dimension (1, 2, or 3)
     end
-    
     methods (Abstract)
         % Abstract methods that must be implemented by derived classes
         N = shapeFunction(obj, xi)
@@ -25,7 +23,6 @@ classdef FiniteElement < handle
         K = stiffnessMatrix(obj)
         M = massMatrix(obj)
     end
-    
     methods
         function obj = FiniteElement(elementId, nodes, material)
             % Constructor
@@ -34,15 +31,12 @@ classdef FiniteElement < handle
             %   elementId: Unique element identifier
             %   nodes: Array of Node objects
             %   material: Material property object
-            
             validateattributes(elementId, {'numeric'}, {'scalar', 'integer', 'positive'});
             validateattributes(nodes, {'cell'}, {'vector'});
-            
             obj.elementId = elementId;
             obj.nodes = nodes;
             obj.material = material;
             obj.dimension = length(nodes{1}.coordinates);
-            
             % Validate all nodes have same dimension
             for i = 1:length(nodes)
                 if length(nodes{i}.coordinates) ~= obj.dimension
@@ -50,7 +44,6 @@ classdef FiniteElement < handle
                 end
             end
         end
-        
         function J = jacobianMatrix(obj, xi)
             % Compute Jacobian matrix for coordinate transformation
             %
@@ -59,14 +52,11 @@ classdef FiniteElement < handle
             %
             % Returns:
             %   J: Jacobian matrix dx/dxi
-            
             dN_dxi = obj.shapeFunctionDerivatives(xi);
             nodeCoords = obj.getNodeCoordinates();
-            
             % J = sum(x_i * dN_i/dxi)
             J = nodeCoords' * dN_dxi;
         end
-        
         function detJ = jacobianDeterminant(obj, xi)
             % Compute Jacobian determinant
             %
@@ -75,9 +65,7 @@ classdef FiniteElement < handle
             %
             % Returns:
             %   detJ: Jacobian determinant
-            
             J = obj.jacobianMatrix(xi);
-            
             if size(J, 1) == 1
                 detJ = J(1);  % 1D case
             elseif size(J, 1) == size(J, 2)
@@ -87,7 +75,6 @@ classdef FiniteElement < handle
                 detJ = sqrt(det(J * J'));
             end
         end
-        
         function coords = globalCoordinates(obj, xi)
             % Map natural coordinates to global coordinates
             %
@@ -96,13 +83,10 @@ classdef FiniteElement < handle
             %
             % Returns:
             %   coords: Global coordinates
-            
             N = obj.shapeFunction(xi);
             nodeCoords = obj.getNodeCoordinates();
-            
             coords = N * nodeCoords;
         end
-        
         function [points, weights] = gaussQuadrature(obj, order)
             % Get Gauss quadrature points and weights
             %
@@ -112,7 +96,6 @@ classdef FiniteElement < handle
             % Returns:
             %   points: Integration points
             %   weights: Integration weights
-            
             switch order
                 case 1
                     points = 0;
@@ -126,65 +109,52 @@ classdef FiniteElement < handle
                 otherwise
                     error('Quadrature order %d not implemented', order);
             end
-            
             % For higher dimensions, use tensor products
             if obj.dimension > 1
                 points1D = points;
                 weights1D = weights;
-                
                 if obj.dimension == 2
                     [xiGrid, etaGrid] = meshgrid(points1D, points1D);
                     points = [xiGrid(:), etaGrid(:)];
-                    
                     [wXi, wEta] = meshgrid(weights1D, weights1D);
                     weights = (wXi .* wEta)';
                     weights = weights(:);
-                    
                 elseif obj.dimension == 3
                     [xiGrid, etaGrid, zetaGrid] = meshgrid(points1D, points1D, points1D);
                     points = [xiGrid(:), etaGrid(:), zetaGrid(:)];
-                    
                     [wXi, wEta, wZeta] = meshgrid(weights1D, weights1D, weights1D);
                     weights = (wXi .* wEta .* wZeta);
                     weights = weights(:);
                 end
             end
         end
-        
         function nodeCoords = getNodeCoordinates(obj)
             % Get coordinates of all nodes
             %
             % Returns:
             %   nodeCoords: Matrix of node coordinates
-            
             numNodes = length(obj.nodes);
             nodeCoords = zeros(numNodes, obj.dimension);
-            
             for i = 1:numNodes
                 nodeCoords(i, :) = obj.nodes{i}.coordinates;
             end
         end
-        
         function id = getId(obj)
             % Get element ID
             id = obj.elementId;
         end
-        
         function nodes = getNodes(obj)
             % Get element nodes
             nodes = obj.nodes;
         end
-        
         function mat = getMaterial(obj)
             % Get element material
             mat = obj.material;
         end
-        
         function dim = getDimension(obj)
             % Get element dimension
             dim = obj.dimension;
         end
-        
         function disp(obj)
             % Display element information
             fprintf('Finite Element (ID: %d)\n', obj.elementId);

@@ -1,21 +1,16 @@
 #!/usr/bin/env python3
 """
 Physical Constants Module
-
 Provides fundamental physical constants and unit conversion factors
 used throughout scientific computing applications.
-
 All constants are given in SI units unless otherwise specified.
-
 Author: Dr. Meshal Alawein (meshal@berkeley.edu)
 Institution: University of California, Berkeley
 License: MIT
 Copyright © 2025 Dr. Meshal Alawein — All rights reserved.
 """
-
 import numpy as np
 from typing import Dict, Union
-
 # Fundamental constants (2018 CODATA values)
 PHYSICAL_CONSTANTS: Dict[str, Dict[str, Union[float, str]]] = {
     # Universal constants
@@ -55,7 +50,6 @@ PHYSICAL_CONSTANTS: Dict[str, Dict[str, Union[float, str]]] = {
         'uncertainty': 0.0,
         'symbol': 'NA'
     },
-    
     # Electromagnetic constants
     'vacuum_permeability': {
         'value': 1.25663706212e-6,
@@ -75,7 +69,6 @@ PHYSICAL_CONSTANTS: Dict[str, Dict[str, Union[float, str]]] = {
         'uncertainty': 1.1e-12,
         'symbol': 'α'
     },
-    
     # Particle masses
     'electron_mass': {
         'value': 9.1093837015e-31,
@@ -101,7 +94,6 @@ PHYSICAL_CONSTANTS: Dict[str, Dict[str, Union[float, str]]] = {
         'uncertainty': 5.0e-37,
         'symbol': 'u'
     },
-    
     # Atomic units (Hartree atomic units)
     'bohr_radius': {
         'value': 5.29177210903e-11,
@@ -122,7 +114,6 @@ PHYSICAL_CONSTANTS: Dict[str, Dict[str, Union[float, str]]] = {
         'symbol': 'R∞'
     },
 }
-
 # Quick access to commonly used constants
 h = PHYSICAL_CONSTANTS['planck_constant']['value']
 hbar = PHYSICAL_CONSTANTS['reduced_planck_constant']['value']
@@ -137,7 +128,6 @@ NA = PHYSICAL_CONSTANTS['avogadro_constant']['value']
 alpha = PHYSICAL_CONSTANTS['fine_structure_constant']['value']
 a0 = PHYSICAL_CONSTANTS['bohr_radius']['value']
 Eh = PHYSICAL_CONSTANTS['hartree_energy']['value']
-
 # Common unit conversions
 eV_to_J = e  # 1 eV = 1.602176634e-19 J
 J_to_eV = 1.0 / eV_to_J
@@ -147,86 +137,67 @@ bohr_to_m = a0
 m_to_bohr = 1.0 / a0
 atomic_time_to_s = hbar / Eh  # Atomic unit of time
 s_to_atomic_time = 1.0 / atomic_time_to_s
-
 # Temperature conversions
 def celsius_to_kelvin(T_celsius: float) -> float:
     """Convert Celsius to Kelvin."""
     return T_celsius + 273.15
-
 def kelvin_to_celsius(T_kelvin: float) -> float:
     """Convert Kelvin to Celsius."""
     return T_kelvin - 273.15
-
 def fahrenheit_to_kelvin(T_fahrenheit: float) -> float:
     """Convert Fahrenheit to Kelvin."""
     return (T_fahrenheit - 32.0) * 5.0/9.0 + 273.15
-
 def kelvin_to_fahrenheit(T_kelvin: float) -> float:
     """Convert Kelvin to Fahrenheit."""
     return (T_kelvin - 273.15) * 9.0/5.0 + 32.0
-
 # Energy unit conversions
 def eV_to_wavenumber(energy_eV: float) -> float:
     """Convert energy in eV to wavenumber in cm⁻¹."""
     return energy_eV * eV_to_J / (h * c * 100)
-
 def wavenumber_to_eV(wavenumber_cm: float) -> float:
     """Convert wavenumber in cm⁻¹ to energy in eV."""
     return wavenumber_cm * h * c * 100 / eV_to_J
-
 def eV_to_frequency(energy_eV: float) -> float:
     """Convert energy in eV to frequency in Hz."""
     return energy_eV * eV_to_J / h
-
 def frequency_to_eV(frequency_Hz: float) -> float:
     """Convert frequency in Hz to energy in eV."""
     return frequency_Hz * h / eV_to_J
-
 def eV_to_wavelength(energy_eV: float) -> float:
     """Convert energy in eV to wavelength in meters."""
     return h * c / (energy_eV * eV_to_J)
-
 def wavelength_to_eV(wavelength_m: float) -> float:
     """Convert wavelength in meters to energy in eV."""
     return h * c / (wavelength_m * eV_to_J)
-
 # Quantum mechanical derived constants
 def compton_wavelength(mass_kg: float) -> float:
     """Calculate Compton wavelength for a particle of given mass."""
     return h / (mass_kg * c)
-
 def classical_electron_radius() -> float:
     """Calculate classical electron radius."""
     return e**2 / (4 * np.pi * epsilon0 * me * c**2)
-
 def cyclotron_frequency(B_tesla: float, mass_kg: float = me, charge_C: float = e) -> float:
     """Calculate cyclotron frequency for charged particle in magnetic field."""
     return charge_C * B_tesla / mass_kg
-
 def plasma_frequency(n_density: float, mass_kg: float = me, charge_C: float = e) -> float:
     """Calculate plasma frequency for given particle density."""
     return np.sqrt(n_density * charge_C**2 / (epsilon0 * mass_kg))
-
 def debye_length(T_kelvin: float, n_density: float) -> float:
     """Calculate Debye screening length in plasma."""
     return np.sqrt(epsilon0 * kb * T_kelvin / (n_density * e**2))
-
 def thermal_de_broglie_wavelength(T_kelvin: float, mass_kg: float = me) -> float:
     """Calculate thermal de Broglie wavelength."""
     return h / np.sqrt(2 * np.pi * mass_kg * kb * T_kelvin)
-
 # Atomic units conversions
 def convert_to_atomic_units(value: float, unit_type: str) -> float:
     """
     Convert physical quantities to atomic units.
-    
     Parameters
     ----------
     value : float
         Value to convert
     unit_type : str
         Type of unit: 'energy', 'length', 'time', 'mass', 'charge'
-        
     Returns
     -------
     float
@@ -244,23 +215,18 @@ def convert_to_atomic_units(value: float, unit_type: str) -> float:
         'electric_field': lambda x: x / (Eh / (e * a0)),
         'magnetic_field': lambda x: x / (hbar / (e * a0**2)),
     }
-    
     if unit_type not in conversions:
         raise ValueError(f"Unknown unit type: {unit_type}")
-    
     return conversions[unit_type](value)
-
 def convert_from_atomic_units(value: float, unit_type: str) -> float:
     """
     Convert from atomic units to SI units.
-    
     Parameters
     ----------
     value : float
         Value in atomic units
     unit_type : str
         Type of unit: 'energy', 'length', 'time', 'mass', 'charge'
-        
     Returns
     -------
     float
@@ -278,8 +244,6 @@ def convert_from_atomic_units(value: float, unit_type: str) -> float:
         'electric_field': lambda x: x * (Eh / (e * a0)),
         'magnetic_field': lambda x: x * (hbar / (e * a0**2)),
     }
-    
     if unit_type not in conversions:
         raise ValueError(f"Unknown unit type: {unit_type}")
-    
     return conversions[unit_type](value)
