@@ -11,6 +11,7 @@ Key Features:
 - Coherent state generation and dynamics
 - Phase space representations (Wigner functions)
 - Thermal state properties and expectation values
+- Comprehensive visualization tools
 Prerequisites:
 - numpy, scipy, matplotlib
 - Basic quantum mechanics knowledge
