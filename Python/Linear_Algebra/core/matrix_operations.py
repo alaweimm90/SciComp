@@ -147,6 +147,9 @@ class MatrixOperations:
         if tolerance is None:
             # Convert to float to handle integer matrices
             A_float = A.astype(float)
+            # Handle edge case of zero matrix
+            if np.all(A_float == 0):
+                return 0
             tolerance = np.finfo(A_float.dtype).eps * max(A.shape) * np.max(np.abs(A_float))
         return np.linalg.matrix_rank(A, tol=tolerance)
     @staticmethod
