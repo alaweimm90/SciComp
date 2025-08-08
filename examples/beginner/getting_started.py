@@ -63,7 +63,10 @@ def tutorial_quantum_basics(output_dir: Path):
         print(f"   P(|0⟩) = {prob_0:.3f}, P(|1⟩) = {prob_1:.3f}")
     except ImportError as e:
         print(f"   Quantum module not available: {e}")
-        print("   Install with: pip install berkeley-scicomp[quantum]")
+        print("   This is expected for basic installation. Full quantum features coming soon!")
+    except Exception as e:
+        print(f"   Error in quantum tutorial: {e}")
+        print("   Skipping quantum demonstration...")
 def tutorial_signal_processing(output_dir: Path):
     """Tutorial on signal processing basics."""
     print("   Analyzing signals with Fourier transforms...")
