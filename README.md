@@ -31,7 +31,7 @@
 - 🧮 **ML Physics Integration**: Physics-informed neural networks for PDE solving and scientific discovery
 - ⚙️ **Cross-Platform Support**: Unified workflows across Python, MATLAB, and Mathematica environments
 - 📊 **Berkeley-Themed Visualization**: Publication-ready scientific plots with UC Berkeley branding
-- 🧪 **Comprehensive Modules**: Complete libraries for quantum mechanics, thermal transport, and optimization
+- 🧪 **Comprehensive Modules**: Complete libraries for quantum mechanics, thermal transport, optimization, and interactive visualization
 ---
 ## Quick Start
 ### Prerequisites
