@@ -74,6 +74,7 @@ class MatrixOperations:
         if check_compatibility:
             if A.shape[1] != B.shape[0]:
                 raise ValueError(f"Incompatible dimensions: A{A.shape} @ B{B.shape}")
+        # TODO: Consider CUDA acceleration for large matrices (>1000x1000)
         return A @ B
     @staticmethod
     def matrix_add(A: np.ndarray, B: np.ndarray) -> np.ndarray:
