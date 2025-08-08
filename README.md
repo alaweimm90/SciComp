@@ -15,10 +15,6 @@
 - **Thermal Transport**: Heat equation solvers, phonon dynamics, and thermal conductivity calculations
 - **Signal Processing**: FFT analysis, spectral methods, and digital signal processing algorithms
 - **Cross-Platform Integration**: Seamless Python-MATLAB-Mathematica workflows with unified API
-
-**Author**: Dr. Meshal Alawein ([meshal@berkeley.edu](mailto:meshal@berkeley.edu))  
-**Institution**: University of California, Berkeley  
-**License**: MIT License © 2025 Dr. Meshal Alawein — All rights reserved
 ---
 ## Project Overview
 **SciComp** implements a comprehensive scientific computing platform designed for quantum physics research, thermal transport studies, and machine learning applications. This research-grade multiscale toolkit enables the exploration of quantum phenomena through systematic GPU-accelerated simulations, revealing how quantum mechanics, thermal dynamics, and machine learning converge in modern computational physics applications across multiple programming environments.
