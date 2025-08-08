@@ -179,13 +179,6 @@ If you use SciComp in your research, please cite:
   version={1.0.0},
   institution={University of California, Berkeley}
 }
-@misc{scicomp2025,
-  title={SciComp: Cross-Platform Scientific Computing for Quantum Physics},
-  author={Alawein, Meshal},
-  journal={Scientific Computing Research},
-  year={2025},
-  institution={University of California, Berkeley}
-}
 ```
 ---
 ## Development
