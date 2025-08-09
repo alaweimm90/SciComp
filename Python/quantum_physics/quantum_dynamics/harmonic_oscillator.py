@@ -1,32 +1,5 @@
 #!/usr/bin/env python3
-"""
-Quantum Harmonic Oscillator - Analytical and Numerical Solutions
-This module provides comprehensive tools for analyzing the quantum harmonic
-oscillator, including analytical eigenstates, time evolution, and coherent
-state dynamics. Implementations focus on numerical accuracy and educational
-clarity while maintaining computational efficiency.
-Key Features:
-- Analytical eigenstate calculations using Hermite polynomials
-- Time evolution of arbitrary initial states
-- Coherent state generation and dynamics
-- Phase space representations (Wigner functions)
-- Thermal state properties and expectation values
-- Comprehensive visualization tools
-Prerequisites:
-- numpy, scipy, matplotlib
-- Basic quantum mechanics knowledge
-- Understanding of harmonic oscillator physics
-Applications:
-- Quantum optics and cavity QED
-- Molecular vibrations and phonons
-- Quantum field theory foundations
-- Quantum information processing with continuous variables
-Author: Dr. Meshal Alawein (meshal@berkeley.edu)
-Institution: University of California, Berkeley
-Created: 2025
-License: MIT
-Copyright © 2025 Dr. Meshal Alawein — All rights reserved.
-"""
+"""Quantum harmonic oscillator with eigenstates and coherent state dynamics."""
 import numpy as np
 import scipy.linalg
 import scipy.special

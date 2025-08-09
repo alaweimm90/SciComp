@@ -1,11 +1,4 @@
-"""
-Quantum state representations and operations.
-This module provides comprehensive quantum state manipulation including:
-- Pure and mixed state representations
-- Density matrix operations
-- Entanglement measures
-- State tomography
-"""
+"""Quantum state operations including pure/mixed states and entanglement."""
 import numpy as np
 from typing import Union, List, Tuple, Optional, Dict
 from scipy.linalg import sqrtm, logm

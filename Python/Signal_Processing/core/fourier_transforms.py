@@ -1,13 +1,4 @@
-"""
-Fourier transform implementations and spectral analysis tools.
-This module provides comprehensive Fourier analysis capabilities including
-FFT, spectral analysis, and frequency domain processing.
-Classes:
-    FFT: Fast Fourier Transform implementation
-    SpectralAnalysis: Spectral analysis tools
-Author: Berkeley SciComp Team
-Date: 2025
-"""
+"""FFT and spectral analysis tools."""
 import numpy as np
 from typing import Tuple, Optional, Union
 import warnings

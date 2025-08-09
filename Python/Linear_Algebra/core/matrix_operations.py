@@ -1,23 +1,11 @@
-"""
-Matrix Operations for Scientific Computing
-Comprehensive matrix operations including basic arithmetic, decompositions,
-eigenvalue problems, and specialized algorithms for scientific applications.
-"""
+"""Matrix operations for scientific computing."""
 import numpy as np
 import scipy.linalg as la
 from scipy.sparse import csr_matrix, issparse
 from typing import Union, Tuple, Optional, List
 import warnings
 class MatrixOperations:
-    """
-    Core matrix operations for scientific computing.
-    Features:
-    - Basic matrix arithmetic with error checking
-    - Matrix decompositions (LU, QR, Cholesky, SVD)
-    - Eigenvalue and eigenvector computation
-    - Matrix norms and condition numbers
-    - Specialized algorithms for scientific computing
-    """
+    """Matrix operations including decompositions, eigenvalues, and norms."""
     
     def multiply(self, A: np.ndarray, B: np.ndarray) -> np.ndarray:
         """Matrix multiplication (instance method for compatibility)."""

@@ -1,14 +1,5 @@
 #!/usr/bin/env python3
-"""
-Quick Start Guide for SciComp
-=============================
-A complete beginner's guide to using SciComp.
-This tutorial covers basic usage, core concepts, and simple examples
-to get you started with scientific computing using our framework.
-Author: UC Berkeley SciComp Team
-Date: 2025
-License: MIT
-"""
+"""SciComp getting started tutorial with quantum states and signal processing."""
 import numpy as np
 import matplotlib.pyplot as plt
 from pathlib import Path
@@ -17,9 +8,8 @@ import sys
 sys.path.insert(0, str(Path(__file__).parent.parent.parent / "Python"))
 def main():
     """Main tutorial function."""
-    print("🎓 SciComp - Getting Started Tutorial")
-    print("=" * 60)
-    print("Welcome to scientific computing excellence from UC Berkeley!")
+    print("SciComp Tutorial")
+    print("=" * 20)
     print()
     # Create output directory
     output_dir = Path("output/getting_started")
@@ -36,8 +26,7 @@ def main():
     # Section 4: Thermal physics
     print("\n🔥 Section 4: Heat Transfer Basics")
     tutorial_heat_transfer(output_dir)
-    print(f"\n✅ Tutorial completed! All results saved to: {output_dir}")
-    print("🐻 Go Bears! Fiat Lux - Let There Be Light")
+    print(f"\nTutorial completed. Results in: {output_dir}")
 def tutorial_quantum_basics(output_dir: Path):
     """Tutorial on quantum state basics."""
     print("   Creating and manipulating quantum states...")
