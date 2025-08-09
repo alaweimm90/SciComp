@@ -1,33 +1,24 @@
-# SciComp - Installation Guide
-![Berkeley SciComp](https://img.shields.io/badge/SciComp-003262?style=flat-square&logo=university)
+# SciComp Installation
+
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue?style=flat-square&logo=python)](https://python.org)
 [![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](../LICENSE)
-**Complete installation guide for the SciComp**
----
-## 🚀 Quick Start (Recommended)
-### Option 1: PyPI Installation
+
+## Quick Start
 ```bash
-# Basic installation
 pip install berkeley-scicomp
-# Full installation with all features
-pip install berkeley-scicomp[all]
-# Verify installation
-python -c "import Python.Quantum; print('Berkeley SciComp ready!')"
+python -c "import Python.Quantum; print('SciComp ready')"
 ```
-### Option 2: Docker Container
-```bash
-# Pull and run with Jupyter Lab
+
+Docker option:
+```bash  
 docker pull berkeley/scicomp:latest
 docker run -p 8888:8888 berkeley/scicomp:latest
-# Access at: http://localhost:8888
 ```
----
-## 📋 System Requirements
-### Minimum Requirements
-- **Python**: 3.8 or higher
-- **Operating System**: Windows 10+, macOS 10.14+, Linux (Ubuntu 18.04+)
-- **Memory**: 4 GB RAM
-- **Storage**: 2 GB free space
+## Requirements
+
+- Python 3.8+
+- Windows 10+/macOS 10.14+/Linux  
+- 4 GB RAM, 2 GB storage
 ### Recommended Requirements
 - **Python**: 3.11+ (optimal performance)
 - **Operating System**: Latest versions

@@ -1,28 +1,11 @@
 # SciComp Documentation
-**Complete Scientific Computing Suite Documentation**
-*Author: Dr. Meshal Alawein (meshal@berkeley.edu)*
-*Institution: University of California, Berkeley*
-*Created: 2025*
----
-## Documentation Overview
-Welcome to the comprehensive documentation for the SciComp. This documentation provides theoretical foundations, practical guides, and implementation details for our unified scientific computing platform spanning Python, MATLAB, and Mathematica.
-### 🎯 Framework Mission
-The SciComp bridges the gap between theoretical physics, computational methods, and practical engineering applications, providing researchers and students with production-ready tools backed by rigorous theoretical foundations.
----
-## 📚 Documentation Structure
-### 🔬 Theoretical Foundations
-#### [Quantum Mechanics Theory](theory/quantum_mechanics_theory.md)
-- **Fundamental Principles**: Postulates of quantum mechanics and wave-particle duality
-- **Mathematical Formalism**: Hilbert spaces, operators, and Dirac notation
-- **Quantum Harmonic Oscillator**: Complete analytical treatment with ladder operators
-- **Time Evolution**: Schrödinger, Heisenberg, and interaction pictures
-- **Measurement Theory**: Projection operators and quantum non-demolition measurements
-- **Approximation Methods**: Perturbation theory, variational methods, and WKB
-#### [Machine Learning Physics Theory](theory/ml_physics_theory.md)
-- **Physics-Informed Neural Networks**: Theoretical foundation and architecture
-- **Neural Operators**: FNO and DeepONet with universal approximation theory
-- **Deep Learning Theory**: Optimization landscapes and generalization bounds
-- **Uncertainty Quantification**: Bayesian methods and ensemble approaches
+
+Documentation for scientific computing across Python, MATLAB, and Mathematica.
+
+## Structure
+### Theory
+- [Quantum Mechanics](theory/quantum_mechanics_theory.md): Postulates, operators, harmonic oscillator
+- [ML Physics](theory/ml_physics_theory.md): PINNs, neural operators, uncertainty quantification
 - **Multi-Fidelity Modeling**: Hierarchical modeling and co-kriging
 - **Scientific Machine Learning**: Symmetry-aware networks and physics constraints
 #### [Computational Methods](theory/computational_methods.md)
