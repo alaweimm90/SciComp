@@ -29,7 +29,11 @@ import matplotlib.pyplot as plt
 from typing import Optional, Tuple, Union, Callable, Dict, List
 import warnings
 from dataclasses import dataclass
-from ...utils.constants import hbar, me
+try:
+    from ...utils.constants import hbar, me
+except ImportError:
+    hbar = 1.054571817e-34
+    me = 9.1093837015e-31
 from ...utils.units import energy_convert
 from ...visualization.berkeley_style import BerkeleyPlot
 @dataclass

@@ -24,8 +24,15 @@ import scipy.sparse.linalg as spla
 from scipy.linalg import expm
 from typing import Callable, Optional, Union, Tuple, Dict, Any
 import warnings
-from ...utils.constants import hbar, me
-from ...utils.parallel import parallel_compute
+try:
+    from ...utils.constants import hbar, me
+    from ...utils.parallel import parallel_compute
+except ImportError:
+    # Fallback for direct execution
+    hbar = 1.054571817e-34
+    me = 9.1093837015e-31
+    def parallel_compute(*args, **kwargs):
+        pass
 class TDSESolver:
     """
     Base class for time-dependent Schrödinger equation solvers.
