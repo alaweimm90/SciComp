@@ -8,7 +8,7 @@ function solver = MultiphysicsSolver()
 % - Electromagnetic-thermal coupling
 %
 % Author: UC Berkeley SciComp Team
-% Copyright © 2025 Dr. Meshal Alawein — All rights reserved.
+% Copyright © 2025 Meshal Alawein — All rights reserved.
     solver.thermalMechanical = @thermalMechanical;
     solver.fluidStructure = @fluidStructure;
     solver.electromagneticThermal = @electromagneticThermal;

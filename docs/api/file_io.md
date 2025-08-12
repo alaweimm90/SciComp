@@ -4,10 +4,10 @@
 File I/O Module
 Provides utilities for saving and loading scientific data in various formats,
 including HDF5, NumPy, and CSV. Handles wavefunctions, results, and metadata.
-Author: Dr. Meshal Alawein (meshal@berkeley.edu)
+Author: Meshal Alawein (meshal@berkeley.edu)
 Institution: University of California, Berkeley
 License: MIT
-Copyright © 2025 Dr. Meshal Alawein — All rights reserved.
+Copyright © 2025 Meshal Alawein — All rights reserved.
 ## Functions
 ### `create_output_directory(base_path, experiment_name, timestamp)`
 Create organized output directory structure for scientific results.

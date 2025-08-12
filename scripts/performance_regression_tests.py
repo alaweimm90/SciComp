@@ -5,7 +5,7 @@ SciComp Performance Regression Tests
 Comprehensive performance testing and regression detection for SciComp framework.
 Establishes performance baselines and detects regressions across releases.
 
-Author: Dr. Meshal Alawein (meshal@berkeley.edu)
+Author: Meshal Alawein (meshal@berkeley.edu)
 Institution: University of California, Berkeley
 """
 

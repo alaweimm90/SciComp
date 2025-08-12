@@ -3,7 +3,7 @@
 **Generated:** 2025-08-07  
 **Repository:** SciComp - A Cross-Platform Scientific Computing Suite  
 **Institution:** University of California, Berkeley  
-**Lead Developer:** Dr. Meshal Alawein (meshal@berkeley.edu)
+**Lead Developer:** Meshal Alawein (meshal@berkeley.edu)
 
 ---
 
@@ -235,7 +235,7 @@ python scripts/master_test_runner.py --export-report deployment_report.json
 **Repository Status:** PRODUCTION READY ✅
 
 **Deployment Authorization:**
-- Technical Lead: Dr. Meshal Alawein
+- Technical Lead: Meshal Alawein
 - Institution: University of California, Berkeley
 - Date: 2025-08-07
 - Version: 1.0.0
@@ -254,4 +254,4 @@ The SciComp framework has successfully passed all critical tests and meets produ
 
 **Contact:** meshal@berkeley.edu | [GitHub](https://github.com/berkeley/scicomp)
 
-**License:** MIT | **Copyright:** © 2025 Dr. Meshal Alawein, UC Berkeley
+**License:** MIT | **Copyright:** © 2025 Meshal Alawein, UC Berkeley

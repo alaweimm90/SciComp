@@ -10,7 +10,7 @@ This package provides:
 - Quantum Computing: Algorithms, Circuits, Gates
 - Visualization: Berkeley-styled plotting and analysis tools
 - Utilities: Parallel computing, file I/O, constants
-Author: Dr. Meshal Alawein (meshal@berkeley.edu)
+Author: Meshal Alawein (meshal@berkeley.edu)
 Institution: University of California, Berkeley
 Created: 2025
 License: MIT

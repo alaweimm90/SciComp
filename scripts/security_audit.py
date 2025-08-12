@@ -5,7 +5,7 @@ SciComp Security Audit
 Comprehensive security vulnerability scanner for the SciComp repository.
 Identifies potential security issues, code injection risks, and unsafe practices.
 
-Author: Dr. Meshal Alawein (meshal@berkeley.edu)
+Author: Meshal Alawein (meshal@berkeley.edu)
 Institution: University of California, Berkeley
 """
 

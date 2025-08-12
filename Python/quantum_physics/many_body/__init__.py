@@ -3,10 +3,10 @@
 Many-Body Quantum Physics Module
 Advanced many-body quantum systems including exact diagonalization,
 mean-field theory, quantum Monte Carlo methods, and entanglement analysis.
-Author: Dr. Meshal Alawein (meshal@berkeley.edu)
+Author: Meshal Alawein (meshal@berkeley.edu)
 Institution: University of California, Berkeley
 License: MIT
-Copyright © 2025 Dr. Meshal Alawein — All rights reserved.
+Copyright © 2025 Meshal Alawein — All rights reserved.
 """
 from .exact_diagonalization import *
 from .hubbard_model import *

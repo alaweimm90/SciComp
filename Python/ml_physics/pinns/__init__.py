@@ -3,10 +3,10 @@
 Physics-Informed Neural Networks (PINNs) Module
 Implementation of PINNs for solving differential equations with physics constraints.
 Includes specialized architectures for quantum mechanics, heat transfer, and wave equations.
-Author: Dr. Meshal Alawein (meshal@berkeley.edu)
+Author: Meshal Alawein (meshal@berkeley.edu)
 Institution: University of California, Berkeley
 License: MIT
-Copyright © 2025 Dr. Meshal Alawein — All rights reserved.
+Copyright © 2025 Meshal Alawein — All rights reserved.
 """
 from .schrodinger_pinn import *
 from .heat_equation_pinn import *

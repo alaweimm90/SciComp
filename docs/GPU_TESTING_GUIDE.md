@@ -205,7 +205,7 @@ The SciComp includes complete GPU acceleration code with CPU fallbacks. GPU test
 - ✅ Testing procedures documented
 ## 📞 **GPU Testing Support**
 For GPU testing support or to report GPU-specific issues:
-**Primary Contact:** Dr. Meshal Alawein
+**Primary Contact:** Meshal Alawein
 **Email:** [meshal@berkeley.edu](mailto:meshal@berkeley.edu)
 **Subject:** Berkeley SciComp GPU Testing
 **Include in your report:**

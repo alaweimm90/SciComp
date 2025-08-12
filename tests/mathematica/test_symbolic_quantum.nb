@@ -20,12 +20,12 @@
 (*- Special function identities*)
 (*- Numerical precision and convergence*)
 (**)
-(*Author: Dr. Meshal Alawein (meshal@berkeley.edu)*)
+(*Author: Meshal Alawein (meshal@berkeley.edu)*)
 (*Institution: University of California, Berkeley*)
 (*Created: 2025*)
 (*License: MIT*)
 (**)
-(*Copyright \[Copyright] 2025 Dr. Meshal Alawein \[LongDash] All rights reserved.*)
+(*Copyright \[Copyright] 2025 Meshal Alawein \[LongDash] All rights reserved.*)
 
 
 (* ::Section:: *)

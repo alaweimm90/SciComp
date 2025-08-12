@@ -3,10 +3,10 @@
 Materials Machine Learning Module
 Advanced ML techniques for materials science including property prediction,
 crystal graph neural networks, inverse design, and high-throughput screening.
-Author: Dr. Meshal Alawein (meshal@berkeley.edu)
+Author: Meshal Alawein (meshal@berkeley.edu)
 Institution: University of California, Berkeley
 License: MIT
-Copyright © 2025 Dr. Meshal Alawein — All rights reserved.
+Copyright © 2025 Meshal Alawein — All rights reserved.
 """
 from .property_prediction import *
 from .crystal_graph_nn import *

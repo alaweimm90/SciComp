@@ -10,11 +10,11 @@ Test Coverage:
 - Mathematica: Symbolic quantum mechanics
 - Integration tests across platforms
 - Performance benchmarks
-Author: Dr. Meshal Alawein (meshal@berkeley.edu)
+Author: Meshal Alawein (meshal@berkeley.edu)
 Institution: University of California, Berkeley
 Created: 2025
 License: MIT
-Copyright © 2025 Dr. Meshal Alawein — All rights reserved.
+Copyright © 2025 Meshal Alawein — All rights reserved.
 """
 import os
 import sys
@@ -54,7 +54,7 @@ SciComp - Comprehensive Test Suite
 ================================================================
 {self.colors['reset']}
 {self.colors['california_gold']}University of California, Berkeley{self.colors['reset']}
-{self.colors['founders_rock']}Dr. Meshal Alawein (meshal@berkeley.edu){self.colors['reset']}
+{self.colors['founders_rock']}Meshal Alawein (meshal@berkeley.edu){self.colors['reset']}
 Testing across platforms: Python, MATLAB, Mathematica
 Validating: Quantum Physics, ML Physics, Engineering Analysis
 {self.colors['berkeley_blue']}Starting comprehensive validation...{self.colors['reset']}

@@ -4,18 +4,18 @@ SciComp
 ==========================
 UC Berkeley Scientific Computing Framework for multi-platform scientific
 computing, quantum physics, machine learning, and engineering applications.
-Author: Dr. Meshal Alawein (meshal@berkeley.edu)
+Author: Meshal Alawein (meshal@berkeley.edu)
 Institution: University of California, Berkeley
 Created: 2025
 License: MIT
 """
 # Version information
 __version__ = "1.0.0"
-__author__ = "Dr. Meshal Alawein"
+__author__ = "Meshal Alawein"
 __email__ = "meshal@berkeley.edu"
 __institution__ = "University of California, Berkeley"
 __license__ = "MIT"
-__copyright__ = "Copyright © 2025 Dr. Meshal Alawein — All rights reserved."
+__copyright__ = "Copyright © 2025 Meshal Alawein — All rights reserved."
 # SciComp metadata
 __title__ = "SciComp"
 __description__ = "UC Berkeley Scientific Computing Framework"

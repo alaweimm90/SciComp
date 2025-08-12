@@ -1,6 +1,6 @@
 # Machine Learning Physics Theory Reference
 **SciComp - ML Physics Foundation**
-*Author: Dr. Meshal Alawein (meshal@berkeley.edu)*
+*Author: Meshal Alawein (meshal@berkeley.edu)*
 *Institution: University of California, Berkeley*
 *Created: 2025*
 ---
@@ -330,5 +330,5 @@ h_i' = f_v(h_i, Σⱼ m_ij)
 4. Li, Z., et al. "Fourier Neural Operator for Parametric Partial Differential Equations" ICLR (2021)
 5. Raissi, M., Perdikaris, P., Karniadakis, G.E. "Physics-informed Neural Networks" Journal of Computational Physics (2019)
 ---
-*Copyright © 2025 Dr. Meshal Alawein — All rights reserved.*
+*Copyright © 2025 Meshal Alawein — All rights reserved.*
 *University of California, Berkeley*

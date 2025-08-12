@@ -1,6 +1,6 @@
 # Quantum Mechanics Theory Reference
 **SciComp - Theoretical Foundation**
-*Author: Dr. Meshal Alawein (meshal@berkeley.edu)*
+*Author: Meshal Alawein (meshal@berkeley.edu)*
 *Institution: University of California, Berkeley*
 *Created: 2025*
 ---
@@ -297,5 +297,5 @@ The Berkeley SciComp framework implements these theoretical concepts through:
 4. Tannor, D.J. "Introduction to Quantum Mechanics: A Time-Dependent Perspective"
 5. Messiah, A. "Quantum Mechanics" (Dover Publications)
 ---
-*Copyright © 2025 Dr. Meshal Alawein — All rights reserved.*
+*Copyright © 2025 Meshal Alawein — All rights reserved.*
 *University of California, Berkeley*

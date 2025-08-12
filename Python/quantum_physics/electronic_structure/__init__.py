@@ -3,10 +3,10 @@
 Electronic Structure Module
 Advanced electronic structure calculations including density functional theory,
 band structure computation, density of states, and strain engineering effects.
-Author: Dr. Meshal Alawein (meshal@berkeley.edu)
+Author: Meshal Alawein (meshal@berkeley.edu)
 Institution: University of California, Berkeley
 License: MIT
-Copyright © 2025 Dr. Meshal Alawein — All rights reserved.
+Copyright © 2025 Meshal Alawein — All rights reserved.
 """
 from .dft_basics import *
 from .band_structure import *

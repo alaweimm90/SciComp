@@ -35,10 +35,10 @@ classdef MonteCarloIsing < handle
     %   plotResults       - Berkeley-styled visualization
     %   correlationFunction - Compute spin correlations
     %
-    % Author: Dr. Meshal Alawein (meshal@berkeley.edu)
+    % Author: Meshal Alawein (meshal@berkeley.edu)
     % Institution: University of California, Berkeley
     % License: MIT
-    % Copyright © 2025 Dr. Meshal Alawein — All rights reserved.
+    % Copyright © 2025 Meshal Alawein — All rights reserved.
     properties (SetAccess = private)
         L           % Lattice size (L×L)
         J           % Exchange coupling constant

@@ -4,7 +4,7 @@ SciComp Runtime Monitoring System
 
 Continuous health monitoring and performance tracking for deployed SciComp instances.
 
-Author: Dr. Meshal Alawein (meshal@berkeley.edu)
+Author: Meshal Alawein (meshal@berkeley.edu)
 Institution: University of California, Berkeley
 """
 

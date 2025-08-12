@@ -3,7 +3,7 @@
 [![Contributors Welcome](https://img.shields.io/badge/contributors-welcome-brightgreen?style=flat-square)](https://github.com/berkeley/scicomp/contribute)
 **Welcome to the SciComp community!**
 We're excited that you're interested in contributing to our scientific computing suite. This guide will help you get started with contributing code, documentation, examples, or bug reports.
-**Author**: Dr. Meshal Alawein (meshal@berkeley.edu)
+**Author**: Meshal Alawein (meshal@berkeley.edu)
 **Institution**: University of California, Berkeley
 **License**: MIT
 ---
@@ -355,7 +355,7 @@ The SciComp serves UC Berkeley's educational mission:
 - **Berkeley Pride**: Represent UC Berkeley excellence
 ---
 ## 📞 Contact
-**Primary Developer**: Dr. Meshal Alawein
+**Primary Developer**: Meshal Alawein
 **Email**: [meshal@berkeley.edu](mailto:meshal@berkeley.edu)
 **Institution**: University of California, Berkeley
 **GitHub**: [@berkeley-scicomp](https://github.com/berkeley-scicomp)
@@ -364,5 +364,5 @@ The SciComp serves UC Berkeley's educational mission:
 Thank you for contributing to the SciComp! Your contributions help advance scientific computing education and research at UC Berkeley and beyond.
 **💙💛 University of California, Berkeley 💛💙**
 ---
-*Copyright © 2025 Dr. Meshal Alawein — All rights reserved.*
+*Copyright © 2025 Meshal Alawein — All rights reserved.*
 *University of California, Berkeley*

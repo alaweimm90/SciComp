@@ -15,10 +15,10 @@ Applications:
 - Formation energy for stability analysis
 - Mechanical properties prediction
 - Thermal and electronic transport properties
-Author: Dr. Meshal Alawein (meshal@berkeley.edu)
+Author: Meshal Alawein (meshal@berkeley.edu)
 Institution: University of California, Berkeley
 License: MIT
-Copyright © 2025 Dr. Meshal Alawein — All rights reserved.
+Copyright © 2025 Meshal Alawein — All rights reserved.
 """
 import numpy as np
 import pandas as pd

@@ -14,17 +14,17 @@
 % - Performance optimization settings
 % - Cross-platform compatibility checks
 %
-% Author: Dr. Meshal Alawein (meshal@berkeley.edu)
+% Author: Meshal Alawein (meshal@berkeley.edu)
 % Institution: University of California, Berkeley
 % License: MIT
-% Copyright © 2025 Dr. Meshal Alawein — All rights reserved.
+% Copyright © 2025 Meshal Alawein — All rights reserved.
 %% Display startup message
 fprintf('\n');
 fprintf('🔬 SciComp: Professional Scientific Computing Portfolio\n');
 fprintf('========================================================\n');
-fprintf('Author: Dr. Meshal Alawein (meshal@berkeley.edu)\n');
+fprintf('Author: Meshal Alawein (meshal@berkeley.edu)\n');
 fprintf('Institution: University of California, Berkeley\n');
-fprintf('License: MIT © 2025 Dr. Meshal Alawein — All rights reserved\n\n');
+fprintf('License: MIT © 2025 Meshal Alawein — All rights reserved\n\n');
 %% Get SciComp root directory
 scicompRoot = fileparts(mfilename('fullpath'));
 fprintf('📁 SciComp root directory: %s\n', scicompRoot);

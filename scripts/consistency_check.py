@@ -9,7 +9,7 @@ Comprehensive pre-deployment verification script that checks:
 - File structure and organization
 - Dependencies and requirements
 - Cross-platform compatibility markers
-Author: Dr. Meshal Alawein (meshal@berkeley.edu)
+Author: Meshal Alawein (meshal@berkeley.edu)
 Institution: University of California, Berkeley
 """
 import os
@@ -41,13 +41,13 @@ class ConsistencyChecker:
         self.correct_names = {
             'project_name': 'SciComp',
             'full_name': 'SciComp: A Cross-Platform Scientific Computing Suite for Research and Education',
-            'author': 'Dr. Meshal Alawein',
+            'author': 'Meshal Alawein',
             'email': 'meshal@berkeley.edu',
             'institution': 'University of California, Berkeley',
             'license': 'MIT',
             'tagline': 'Crafted with love, 🐻 energy, and zero sleep.',
             'repo_url': 'https://github.com/berkeley/scicomp',
-            'copyright': '© 2025 Dr. Meshal Alawein'
+            'copyright': '© 2025 Meshal Alawein'
         }
         # Deprecated/incorrect naming patterns to flag
         self.deprecated_patterns = [

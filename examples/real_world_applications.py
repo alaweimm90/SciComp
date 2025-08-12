@@ -8,7 +8,7 @@ Demonstrates practical applications of the framework in:
 - Financial physics
 - Biomedical engineering
 Author: UC Berkeley SciComp Team
-Copyright © 2025 Dr. Meshal Alawein — All rights reserved.
+Copyright © 2025 Meshal Alawein — All rights reserved.
 """
 import numpy as np
 import matplotlib.pyplot as plt

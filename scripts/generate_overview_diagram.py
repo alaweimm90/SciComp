@@ -3,7 +3,7 @@
 SciComp Overview Diagram Generator
 Generates the framework overview diagram programmatically using matplotlib.
 Creates a professional visualization showing the SciComp architecture.
-Author: Dr. Meshal Alawein (meshal@berkeley.edu)
+Author: Meshal Alawein (meshal@berkeley.edu)
 Institution: University of California, Berkeley
 """
 import matplotlib.pyplot as plt

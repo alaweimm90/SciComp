@@ -8,7 +8,7 @@ sys.path.insert(0, os.path.abspath('../Python'))
 # -- Project information -----------------------------------------------------
 project = 'SciComp'
 copyright = f'{datetime.datetime.now().year}, University of California, Berkeley'
-author = 'Dr. Meshal Alawein, UC Berkeley SciComp Team'
+author = 'Meshal Alawein, UC Berkeley SciComp Team'
 release = '1.0.0'
 version = '1.0.0'
 # -- General configuration ---------------------------------------------------

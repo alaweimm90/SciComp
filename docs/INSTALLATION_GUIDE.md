@@ -460,7 +460,7 @@ MIT License - see [LICENSE](../LICENSE) file for details.
 The SciComp is developed at the **University of California, Berkeley**.
 **Contact Information**:
 - **Email**: scicomp@berkeley.edu
-- **Principal Architect**: Dr. Meshal Alawein (meshal@berkeley.edu)
+- **Principal Architect**: Meshal Alawein (meshal@berkeley.edu)
 - **Institution**: University of California, Berkeley
 - **GitHub**: https://github.com/berkeley/scicomp
 ---

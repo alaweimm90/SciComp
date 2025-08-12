@@ -19,12 +19,12 @@ function results = schrodinger_solver(varargin)
 % - Wavepacket spreading analysis
 % - Quantum state evolution
 %
-% Author: Dr. Meshal Alawein (meshal@berkeley.edu)
+% Author: Meshal Alawein (meshal@berkeley.edu)
 % Institution: University of California, Berkeley
 % Created: 2025
 % License: MIT
 %
-% Copyright © 2025 Dr. Meshal Alawein — All rights reserved.
+% Copyright © 2025 Meshal Alawein — All rights reserved.
     % Parse input arguments
     p = inputParser;
     addParameter(p, 'method', 'split_operator', @ischar);

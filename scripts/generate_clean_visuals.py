@@ -3,7 +3,7 @@
 SciComp Clean Visual Assets Generator
 Generates clean, professional visual assets without emojis for maximum compatibility.
 Creates overview diagram and logo suitable for all platforms and documentation.
-Author: Dr. Meshal Alawein (meshal@berkeley.edu)
+Author: Meshal Alawein (meshal@berkeley.edu)
 Institution: University of California, Berkeley
 """
 import matplotlib.pyplot as plt

@@ -3,7 +3,7 @@
 SciComp Automated Consistency Fixes
 Script to automatically fix common consistency issues found by the consistency checker.
 Only fixes safe, non-destructive changes. More complex issues require manual review.
-Author: Dr. Meshal Alawein (meshal@berkeley.edu)
+Author: Meshal Alawein (meshal@berkeley.edu)
 Institution: University of California, Berkeley
 """
 import os

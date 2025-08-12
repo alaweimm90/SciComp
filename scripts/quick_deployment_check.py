@@ -5,7 +5,7 @@ SciComp Quick Deployment Check
 Fast verification script to ensure deployment readiness.
 Runs essential checks in under 30 seconds.
 
-Author: Dr. Meshal Alawein (meshal@berkeley.edu)
+Author: Meshal Alawein (meshal@berkeley.edu)
 Institution: University of California, Berkeley
 """
 

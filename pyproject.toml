@@ -11,7 +11,7 @@ authors = [
     {name = "UC Berkeley SciComp Team", email = "scicomp@berkeley.edu"},
 ]
 maintainers = [
-    {name = "Dr. Meshal Alawein", email = "meshal@berkeley.edu"},
+    {name = "Meshal Alawein", email = "meshal@berkeley.edu"},
 ]
 keywords = [
     "berkeley", "scicomp", "quantum", "physics", "scientific-computing",

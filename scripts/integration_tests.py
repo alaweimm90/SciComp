@@ -5,7 +5,7 @@ SciComp Integration Tests
 Comprehensive integration testing to verify module interactions,
 data flow, and end-to-end workflows across the SciComp framework.
 
-Author: Dr. Meshal Alawein (meshal@berkeley.edu)
+Author: Meshal Alawein (meshal@berkeley.edu)
 Institution: University of California, Berkeley
 """
 

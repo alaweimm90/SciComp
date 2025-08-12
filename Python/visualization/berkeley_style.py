@@ -7,10 +7,10 @@ Colors follow UC Berkeley's official brand guidelines:
 - Primary: Berkeley Blue (#003262), California Gold (#FDB515)
 - Secondary palette for diverse visualizations
 - High-contrast accessibility compliance
-Author: Dr. Meshal Alawein (meshal@berkeley.edu)
+Author: Meshal Alawein (meshal@berkeley.edu)
 Institution: University of California, Berkeley
 License: MIT
-Copyright © 2025 Dr. Meshal Alawein — All rights reserved.
+Copyright © 2025 Meshal Alawein — All rights reserved.
 """
 import matplotlib.pyplot as plt
 import matplotlib as mpl

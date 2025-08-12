@@ -3,7 +3,7 @@ GPU acceleration support for SciComp.
 This module provides CUDA/GPU acceleration for computational physics using CuPy.
 Includes optimized kernels for quantum simulations, matrix operations, and FFTs.
 Author: UC Berkeley SciComp Team
-Copyright © 2025 Dr. Meshal Alawein — All rights reserved.
+Copyright © 2025 Meshal Alawein — All rights reserved.
 """
 import numpy as np
 import warnings

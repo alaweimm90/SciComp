@@ -5,7 +5,7 @@
 # Computing Framework. These packages are required for development,
 # testing, documentation, and code quality assurance.
 #
-# Author: Dr. Meshal Alawein (meshal@berkeley.edu)
+# Author: Meshal Alawein (meshal@berkeley.edu)
 # Institution: University of California, Berkeley
 # Created: 2025
 # =============================================================================

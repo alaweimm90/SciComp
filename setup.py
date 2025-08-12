@@ -65,7 +65,7 @@ setup(
     # Author and contact
     author='UC Berkeley SciComp Team',
     author_email='scicomp@berkeley.edu',
-    maintainer='Dr. Meshal Alawein',
+    maintainer='Meshal Alawein',
     maintainer_email='meshal@berkeley.edu',
     # URLs
     url='https://github.com/berkeley/scicomp',

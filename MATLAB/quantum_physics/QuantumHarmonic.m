@@ -35,10 +35,10 @@ classdef QuantumHarmonic < handle
     %   wignerFunction  - Compute Wigner function
     %   plot            - Berkeley-styled visualization
     %
-    % Author: Dr. Meshal Alawein (meshal@berkeley.edu)
+    % Author: Meshal Alawein (meshal@berkeley.edu)
     % Institution: University of California, Berkeley
     % License: MIT
-    % Copyright © 2025 Dr. Meshal Alawein — All rights reserved.
+    % Copyright © 2025 Meshal Alawein — All rights reserved.
     properties (SetAccess = private)
         omega       % Angular frequency (rad/s)
         mass        % Particle mass (kg)

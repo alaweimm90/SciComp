@@ -5,11 +5,11 @@ Berkeley SciComp Command Line Interface
 Professional command-line interface for the UC Berkeley Scientific Computing
 Framework, providing unified access to all computational tools, examples,
 and utilities with Berkeley branding and academic standards.
-Author: Dr. Meshal Alawein (meshal@berkeley.edu)
+Author: Meshal Alawein (meshal@berkeley.edu)
 Institution: University of California, Berkeley
 Created: 2025
 License: MIT
-Copyright © 2025 Dr. Meshal Alawein — All rights reserved.
+Copyright © 2025 Meshal Alawein — All rights reserved.
 """
 import argparse
 import json
@@ -50,7 +50,7 @@ class BerkeleyCLI:
 SciComp - Command Line Interface
 ================================================================{RESET}
 {CALIFORNIA_GOLD}University of California, Berkeley{RESET}
-{BERKELEY_BLUE}Dr. Meshal Alawein (meshal@berkeley.edu){RESET}
+{BERKELEY_BLUE}Meshal Alawein (meshal@berkeley.edu){RESET}
 Version: {self.version}
 Framework: Multi-platform Scientific Computing (Python, MATLAB, Mathematica)
 License: MIT
@@ -279,7 +279,7 @@ def create_parser() -> argparse.ArgumentParser:
   berkeley-scicomp docs --topic quantum --open
   berkeley-scicomp style --platform python
 {CALIFORNIA_GOLD}University of California, Berkeley{RESET}
-{BERKELEY_BLUE}Dr. Meshal Alawein (meshal@berkeley.edu){RESET}
+{BERKELEY_BLUE}Meshal Alawein (meshal@berkeley.edu){RESET}
         """
     )
     parser.add_argument('--version', action='version', version='Berkeley SciComp 1.0.0')

@@ -89,5 +89,5 @@ MIT License - see [LICENSE](LICENSE).
 
 ---
 
-**Dr. Meshal Alawein**  
+**Meshal Alawein**  
 UC Berkeley | [meshal@berkeley.edu](mailto:meshal@berkeley.edu)

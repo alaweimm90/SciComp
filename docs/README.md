@@ -226,7 +226,7 @@ If you use the SciComp in your research, please cite:
 The SciComp is released under the MIT License, promoting open collaboration while protecting academic and commercial interests.
 ### Copyright Notice
 ```
-Copyright © 2025 Dr. Meshal Alawein — All rights reserved.
+Copyright © 2025 Meshal Alawein — All rights reserved.
 University of California, Berkeley
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -252,12 +252,12 @@ copies or substantial portions of the Software.
 - **Drive Innovation**: Bridge academia and industry for practical impact
 ---
 *For questions, suggestions, or collaboration opportunities, please contact:*
-**Dr. Meshal Alawein**
+**Meshal Alawein**
 *Principal Investigator*
 University of California, Berkeley
 📧 meshal@berkeley.edu
 🌐 [Berkeley SciComp Website](https://berkeley-scicomp.github.io)
 ---
 *This documentation is continuously updated. Last revision: 2025*
-*Copyright © 2025 Dr. Meshal Alawein — All rights reserved.*
+*Copyright © 2025 Meshal Alawein — All rights reserved.*
 *University of California, Berkeley*

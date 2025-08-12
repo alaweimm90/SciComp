@@ -5,7 +5,7 @@ SciComp Master Test Runner
 Orchestrates comprehensive testing across all SciComp modules and frameworks.
 Provides unified testing interface with detailed reporting and analysis.
 
-Author: Dr. Meshal Alawein (meshal@berkeley.edu)
+Author: Meshal Alawein (meshal@berkeley.edu)
 Institution: University of California, Berkeley
 """
 

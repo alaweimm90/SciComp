@@ -2,10 +2,10 @@
 """
 Quantum Dynamics Module
 Time-dependent quantum mechanics, wavepacket evolution, and tunneling phenomena.
-Author: Dr. Meshal Alawein (meshal@berkeley.edu)
+Author: Meshal Alawein (meshal@berkeley.edu)
 Institution: University of California, Berkeley
 License: MIT
-Copyright © 2025 Dr. Meshal Alawein — All rights reserved.
+Copyright © 2025 Meshal Alawein — All rights reserved.
 """
 from .tdse_solver import *
 from .harmonic_oscillator import *

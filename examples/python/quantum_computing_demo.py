@@ -17,11 +17,11 @@ Educational Objectives:
 - Visualize quantum state evolution
 - Analyze quantum circuit performance
 - Compare classical vs quantum approaches
-Author: Dr. Meshal Alawein (meshal@berkeley.edu)
+Author: Meshal Alawein (meshal@berkeley.edu)
 Institution: University of California, Berkeley
 Created: 2025
 License: MIT
-Copyright © 2025 Dr. Meshal Alawein — All rights reserved.
+Copyright © 2025 Meshal Alawein — All rights reserved.
 """
 import sys
 import os

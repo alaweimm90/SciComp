@@ -5,7 +5,7 @@ SciComp Comprehensive Test Suite
 Advanced testing framework for deep coherence, error detection, and system integrity.
 Goes beyond basic validation to ensure production-ready quality.
 
-Author: Dr. Meshal Alawein (meshal@berkeley.edu)
+Author: Meshal Alawein (meshal@berkeley.edu)
 Institution: University of California, Berkeley
 """
 

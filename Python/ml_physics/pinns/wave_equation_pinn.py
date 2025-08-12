@@ -10,10 +10,10 @@ where:
 - u(x,t) is the wave field (displacement, pressure, etc.)
 - c is wave speed
 - f(x,t) is source term
-Author: Dr. Meshal Alawein (meshal@berkeley.edu)
+Author: Meshal Alawein (meshal@berkeley.edu)
 Institution: University of California, Berkeley
 License: MIT
-Copyright © 2025 Dr. Meshal Alawein — All rights reserved.
+Copyright © 2025 Meshal Alawein — All rights reserved.
 """
 import numpy as np
 import tensorflow as tf

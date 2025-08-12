@@ -14,10 +14,10 @@ Key Features:
 - Error mitigation techniques
 - Multi-level optimization strategies
 - Excited state calculations
-Author: Dr. Meshal Alawein (meshal@berkeley.edu)
+Author: Meshal Alawein (meshal@berkeley.edu)
 Institution: University of California, Berkeley
 License: MIT
-Copyright © 2025 Dr. Meshal Alawein — All rights reserved.
+Copyright © 2025 Meshal Alawein — All rights reserved.
 """
 import numpy as np
 from scipy.optimize import minimize
